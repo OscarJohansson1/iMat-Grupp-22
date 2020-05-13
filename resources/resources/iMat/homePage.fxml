@@ -116,7 +116,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <SplitPane dividerPositions="0.5" prefHeight="446.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.2455249153362361, 0.6930333817126271" prefHeight="446.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0">
                            <children>
@@ -160,10 +160,53 @@
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="68.0" layoutY="316.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" text="Button" />
                            </children>
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                        <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0">
+                           <children>
+                              <AnchorPane layoutX="4.0" layoutY="43.0" maxHeight="1.7976931348623157E308" prefHeight="397.0" prefWidth="240.0" AnchorPane.topAnchor="43.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.16925638179800223, 0.8157602663706993" layoutY="-1.0" orientation="VERTICAL" prefHeight="398.0" prefWidth="240.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <Label layoutX="31.0" layoutY="7.0" prefHeight="44.0" prefWidth="175.0" text="Kundvagn">
+                                                   <graphic>
+                                                      <ImageView fitHeight="32.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@scene%20Images/baseline_shopping_cart_black_18dp.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane prefHeight="131.0" prefWidth="201.0" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="201.0">
+                                             <children>
+                                                <Button layoutX="59.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="119.0" text="Till kassan" />
+                                                <Label layoutX="14.0" text="Totalt:">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="187.0" text="0 kr">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
                     </items>
                   </SplitPane>
                </children></AnchorPane>
