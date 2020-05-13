@@ -60,7 +60,7 @@
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
                   </Label>
-                  <Label fx:id="userButton" layoutX="641.0" layoutY="45.0" prefHeight="50.0" prefWidth="175.0" text="Loggin" textFill="WHITE" AnchorPane.rightAnchor="13.0">
+                  <Label fx:id="userButton" layoutX="641.0" layoutY="45.0" prefHeight="50.0" prefWidth="175.0" text="Logga in" textFill="WHITE" AnchorPane.rightAnchor="13.0">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                      </font>
@@ -116,7 +116,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <SplitPane dividerPositions="0.25" prefHeight="446.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.5" prefHeight="446.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0">
                            <children>
