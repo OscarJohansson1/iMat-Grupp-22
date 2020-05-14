@@ -28,9 +28,10 @@ public class iMat extends Application
     public static void main(String[] args) {
         initialize();
         launch(args);
+
     }
     private static void initialize(){
         IMatDataHandler datahandler = IMatDataHandler.getInstance();
-        Controller controller = new Controller(datahandler);
+        //antagligen mer som ska skapas
     }
 }
