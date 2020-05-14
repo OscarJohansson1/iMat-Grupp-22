@@ -26,7 +26,7 @@ public class iMat //extends Application
     } */
     public static void main(String[] args) {
         initialize();
-        launch(args);
+        //launch(args);
 
     }
     private static void initialize(){
