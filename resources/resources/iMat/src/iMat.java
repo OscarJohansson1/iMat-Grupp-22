@@ -8,7 +8,6 @@ public class iMat {
         System.out.println("hej");
         System.out.println("Pool");
         initialize();
-
     }
     private static void initialize(){
         IMatDataHandler datahandler = IMatDataHandler.getInstance();
