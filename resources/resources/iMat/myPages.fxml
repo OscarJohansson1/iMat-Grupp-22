@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="53.0" layoutY="45.0" prefHeight="18.0" prefWidth="133.0" text="Mina sidor" underline="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="100.0" text="Mina favoriter">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@outline_grade_black_18dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="140.0" text="Mina uppgifter">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@baseline_perm_identity_black_18dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="180.0" text="Köphistorik">
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@outline_assignment_black_18dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
