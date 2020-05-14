@@ -27,7 +27,7 @@
                <graphic>
                   <ImageView fx:id="logginCloseButton" fitHeight="22.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@scene%20Images/baseline_cancel_presentation_black_18dp.png" />
+                        <Image url="@sceneImages/baseline_cancel_presentation_black_18dp.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -42,7 +42,7 @@
                <graphic>
                   <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@scene%20Images/baseline_help_outline_black_18dp.png" />
+                        <Image url="@sceneImages/baseline_help_outline_black_18dp.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -67,7 +67,7 @@
                      <graphic>
                         <ImageView fitHeight="57.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@scene%20Images/interface%20(1).png" />
+                              <Image url="@sceneImages/interface (1).png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -91,7 +91,7 @@
                            <graphic>
                               <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@scene%20Images/outline_grade_black_18dp.png" />
+                                    <Image url="@sceneImages/outline_grade_black_18dp.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -103,7 +103,7 @@
                            <graphic>
                               <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@scene%20Images/baseline_perm_identity_black_18dp.png" />
+                                    <Image url="@sceneImages/baseline_perm_identity_black_18dp.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -115,7 +115,7 @@
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@scene%20Images/outline_assignment_black_18dp.png" />
+                                    <Image url="@sceneImages/outline_assignment_black_18dp.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -128,7 +128,7 @@
                            <children>
                               <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@scene%20Images/home_button3.png" />
+                                    <Image url="@sceneImages/home_button3.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="fruitsAndGreens" layoutX="25.0" layoutY="75.0" text="Frukt och grönt">
@@ -181,7 +181,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="32.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@scene%20Images/baseline_shopping_cart_black_18dp.png" />
+                                                            <Image url="@sceneImages/baseline_shopping_cart_black_18dp.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>

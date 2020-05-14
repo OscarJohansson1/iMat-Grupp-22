@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class iMat extends Application
@@ -13,7 +14,7 @@ public class iMat extends Application
     @Override
     public void start(Stage stage) throws Exception {
 
-        //ResourceBundle bundle = java.util.ResourceBundle.getBundle("resources/resources/iMat/scene Images/iMat");
+        //ResourceBundle bundle = java.util.ResourceBundle.getBundle("resources/resources/iMat/sceneImages/rb/rb_sv_SE", Locale.forLanguageTag("sv-se"));
 
         Parent root = FXMLLoader.load(getClass().getResource("homePage.fxml"));
 
@@ -31,6 +32,6 @@ public class iMat extends Application
     }
     private static void initialize(){
         IMatDataHandler datahandler = IMatDataHandler.getInstance();
-        //anagligen mer som ska skapas
+        //antagligen mer som ska skapas
     }
 }
