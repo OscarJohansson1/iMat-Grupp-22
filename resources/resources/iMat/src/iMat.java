@@ -7,26 +7,26 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.util.ResourceBundle;
 
-public class iMat //extends Application
+public class iMat extends Application
  {
 
-    /*@Override
+    @Override
     public void start(Stage stage) throws Exception {
 
-        ResourceBundle bundle = java.util.ResourceBundle.getBundle("iMat");
+        //ResourceBundle bundle = java.util.ResourceBundle.getBundle("resources/resources/iMat/scene Images/iMat");
 
-        Parent root = FXMLLoader.load(getClass().getResource("homePage.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("homePage.fxml"));
 
         Scene scene = new Scene(root, 800, 500);
 
-        stage.setTitle(bundle.getString("application.name"));
+        //stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
         stage.show();
 
-    } */
+    }
     public static void main(String[] args) {
         initialize();
-        //launch(args);
+        launch(args);
 
     }
     private static void initialize(){
