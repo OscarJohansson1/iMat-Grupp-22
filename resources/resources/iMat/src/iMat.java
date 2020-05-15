@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 
@@ -14,15 +15,20 @@ public class iMat extends Application
     @Override
     public void start(Stage stage) throws Exception {
 
-        //ResourceBundle bundle = java.util.ResourceBundle.getBundle("resources/resources/iMat/sceneImages/rb/rb_sv_SE", Locale.forLanguageTag("sv-se"));
+        try {
 
-        Parent root = FXMLLoader.load(getClass().getResource("homePage.fxml"));
+            FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
+            Parent root = tmp.load();
+            Controller controller = tmp.getController();
+            Scene scene = new Scene(root, 1200, 720);
+            controller.setDatahandler(IMatDataHandler.getInstance());
+            stage.setTitle("iMat");
+            stage.setScene(scene);
+            stage.show();
 
-        Scene scene = new Scene(root, 800, 500);
-
-        //stage.setTitle(bundle.getString("application.name"));
-        stage.setScene(scene);
-        stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 
     }
     public static void main(String[] args) {
@@ -31,7 +37,7 @@ public class iMat extends Application
 
     }
     private static void initialize(){
-        IMatDataHandler datahandler = IMatDataHandler.getInstance();
+        //IMatDataHandler datahandler = IMatDataHandler.getInstance();
         //antagligen mer som ska skapas
     }
 }

@@ -20,12 +20,12 @@
       <TextField fx:id="quantityItemsTextField" layoutX="73.0" layoutY="200.0" prefHeight="26.0" prefWidth="54.0" />
       <ImageView fx:id="minusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="26.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@scene%20Images/baseline_remove_circle_outline_black_18dp.png" />
+            <Image url="@sceneImages/baseline_remove_circle_outline_black_18dp.png" />
          </image>
       </ImageView>
       <ImageView fx:id="plusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="146.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@scene%20Images/baseline_add_circle_outline_black_18dp.png" />
+            <Image url="@sceneImages/baseline_add_circle_outline_black_18dp.png" />
          </image>
       </ImageView>
    </children>

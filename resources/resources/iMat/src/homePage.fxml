@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="515.0" prefWidth="342.0" style="-fx-background-color: #AAAAAA;">
          <children>
@@ -55,7 +55,7 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="140.0" prefWidth="847.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" onMouseClicked="#testMethodMouseEvent" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
                      <font>
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
@@ -194,7 +194,7 @@
                                           <AnchorPane fx:id="cartItemPane" prefHeight="131.0" prefWidth="201.0" />
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="201.0">
                                              <children>
-                                                <Button fx:id="checkoutButton" layoutX="59.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="119.0" text="Till kassan" />
+                                                <Button fx:id="checkoutButton" layoutX="59.0" layoutY="37.0" mnemonicParsing="false" onAction="#testMethodActionEvent" prefHeight="26.0" prefWidth="119.0" text="Till kassan" />
                                                 <Label fx:id="totalLabel" layoutX="14.0" text="Totalt:">
                                                    <font>
                                                       <Font size="18.0" />
