@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="logginPane" layoutX="244.0" layoutY="40.0" prefHeight="515.0" prefWidth="342.0" style="-fx-background-color: #AAAAAA;">
+      <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="515.0" prefWidth="342.0" style="-fx-background-color: #AAAAAA;">
          <children>
             <Label layoutX="96.0" layoutY="41.0" text="iMAT Logga in" underline="true">
                <font>
@@ -25,14 +25,14 @@
             <Label layoutX="17.0" layoutY="177.0" text="Lösenord:" textAlignment="RIGHT" />
             <Button layoutX="302.0" layoutY="14.0" minHeight="18.0" minWidth="25.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="25.0" style="-fx-background-color: #AAAAAA;" AnchorPane.bottomAnchor="479.0" AnchorPane.leftAnchor="302.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0">
                <graphic>
-                  <ImageView fx:id="logginCloseButton" fitHeight="22.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="loginCloseButton" fitHeight="22.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/baseline_cancel_presentation_black_18dp.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="logginButton" layoutX="137.0" layoutY="229.0" minWidth="30.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" text="Logga in">
+            <Button fx:id="loginButton" layoutX="137.0" layoutY="229.0" minWidth="30.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="66.0" text="Logga in">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -96,7 +96,7 @@
                               </ImageView>
                            </graphic>
                         </Label>
-                        <Label fx:id="myDeatils" layoutX="22.0" layoutY="75.0" text="Mina uppgifter">
+                        <Label fx:id="myDetailsLabel" layoutX="22.0" layoutY="75.0" text="Mina uppgifter">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -168,7 +168,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                      <AnchorPane fx:id="differentDetalisPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane fx:id="differentDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
                         <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0">
                            <children>
                               <AnchorPane layoutX="4.0" layoutY="43.0" maxHeight="1.7976931348623157E308" prefHeight="397.0" prefWidth="240.0" AnchorPane.topAnchor="43.0">
