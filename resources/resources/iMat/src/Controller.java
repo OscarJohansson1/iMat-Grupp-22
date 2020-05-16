@@ -9,10 +9,9 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.WindowEvent;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingItem;
-    import java.io.IOException;
+import se.chalmers.cse.dat216.project.*;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -45,6 +44,8 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
         @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
         @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
+        @FXML private AnchorPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
+        @FXML private Label totalPrizeLabel;
 
         @FXML
         protected void plusButtonActionPerformed (ActionEvent event){
@@ -72,7 +73,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         /* counter är det som finns mellan Plus och Minus
             if (counter > 0) {
                 for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
-                    if (si.getProduct() == p){
+                    if (si.getProduct().equals(p)){
                         si.setAmount(si.getAmount() - 1);
                         datahandler.getShoppingCart().removeItem(si);
                         counter--
@@ -91,6 +92,10 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             System.out.println("hi");
         }
         @FXML
+        protected void testMethodMouseEvent2(MouseEvent event){
+            searchBar.clear();
+        }
+        @FXML
         protected void testMethodKeyEvent(KeyEvent event){
             System.out.println("hello");
         }
@@ -101,6 +106,10 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
         public void setDatahandler(IMatDataHandler dh){
             this.datahandler = dh;
+        }
+
+        public void addShoppingCartListener(){
+            datahandler.getShoppingCart().addShoppingCartListener(cartEvent -> totalPrizeLabel.setText(String.valueOf(datahandler.getShoppingCart().getTotal())));
         }
 
     }

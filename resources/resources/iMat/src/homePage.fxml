@@ -72,7 +72,7 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" prefHeight="26.0" prefWidth="302.0" promptText="Search" style="-fx-background-color: #FFFFFF;" text="Search" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="275.4" />
+                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" promptText="Search" style="-fx-background-color: #FFFFFF;" text="Search" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="275.4" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
