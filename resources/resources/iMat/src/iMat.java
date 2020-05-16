@@ -2,36 +2,49 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public class iMat extends Application
- {
+public class iMat extends Application {
 
+    /**
+     * hade det varit bättre om datahandler skapades i controller?
+     */
+    private static IMatDataHandler datahandler;
+   private static Controller controller;
+
+   public static void main(String[] args) {
+        initialize();
+        launch(args);
+    }
+    private static void initialize(){
+        datahandler = IMatDataHandler.getInstance();
+    }
     @Override
     public void start(Stage stage) throws Exception {
 
-        //ResourceBundle bundle = java.util.ResourceBundle.getBundle("resources/resources/iMat/sceneImages/rb/rb_sv_SE", Locale.forLanguageTag("sv-se"));
+        try {
 
-        Parent root = FXMLLoader.load(getClass().getResource("homePage.fxml"));
+            FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
+            Parent root = tmp.load();
+            controller = tmp.getController();
+            Scene scene = new Scene(root, 1200, 720);
+            controller.setDatahandler(datahandler);
+            stage.setTitle("iMat");
+            stage.setScene(scene);
+            stage.show();
+            controller.addShoppingCartListener();
 
-        Scene scene = new Scene(root, 800, 500);
-
-        //stage.setTitle(bundle.getString("application.name"));
-        stage.setScene(scene);
-        stage.show();
-
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
-    public static void main(String[] args) {
-        initialize();
-        launch(args);
 
-    }
-    private static void initialize(){
-        IMatDataHandler datahandler = IMatDataHandler.getInstance();
-        //antagligen mer som ska skapas
-    }
+
 }
