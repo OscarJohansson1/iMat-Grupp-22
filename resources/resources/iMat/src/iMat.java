@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -20,8 +21,12 @@ public class iMat extends Application {
    private static Controller controller;
 
    public static void main(String[] args) {
+       System.out.println("1");
         initialize();
+       System.out.println("2");
         launch(args);
+        System.out.println("3");
+
     }
     private static void initialize(){
         datahandler = IMatDataHandler.getInstance();
@@ -37,9 +42,17 @@ public class iMat extends Application {
             Scene scene = new Scene(root, 1200, 720);
             controller.setDatahandler(datahandler);
             stage.setTitle("iMat");
+            //controller.newWindowMethod(stage);
             stage.setScene(scene);
+            controller.initialize();
             stage.show();
+
+
             controller.addShoppingCartListener();
+            //controller.newWindow();
+
+
+
 
         } catch(Exception e) {
             e.printStackTrace();

@@ -1,5 +1,6 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -66,6 +67,48 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
                 datahandler.removeFavorite(p);
             }
             else datahandler.addFavorite(p);
+        }
+
+        @FXML
+        protected void newWindow (MouseEvent event) throws IOException {
+            /*
+            AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("homPageDetail.fxml"));
+            Scene homePageScene = new Scene(homePageDetail);
+             */
+            //homPageDetailController hej = new homPageDetailController();
+            /*
+            FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
+            homePageDetail.setRoot(this);
+            homePageDetail.setController(this);
+
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
+
+            fxmlLoader.setRoot(this);
+            fxmlLoader.setController(this);
+            */
+            //Stage window = (Stage) homePageScene.getWindow();
+        /*
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                    //(Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setScene(homePageScene);
+            window.show();
+
+         */
+        }
+
+        protected void initialize(){
+            differentDetailPane.getChildren().clear();
+            homPageDetailController c = new homPageDetailController(this);
+            differentDetailPane.getChildren().add(c);
+
+        }
+
+        protected void newWindowMethod (Stage stage) throws IOException {
+            AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("homPageDetail.fxml"));
+            Scene homePageScene = new Scene(homePageDetail);
+
+            stage.setScene(homePageScene);
+
         }
 /*
         @FXML
