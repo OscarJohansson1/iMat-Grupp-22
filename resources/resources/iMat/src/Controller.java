@@ -176,6 +176,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             String s = tmp.getText();
             FruitsAndGreensController c = new FruitsAndGreensController(this, s);
             differentDetailPane.getChildren().add(c);
+            updateItemList();
    /*
    Lägg till metod som sätter in alla BigItemViews under vald kategori
 
@@ -225,7 +226,6 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
                 tmpItem = bigItemViewMap.get(p.getName());
                 tmpItem.setLayoutX(x);
                 tmpItem.setLayoutY(y);
-                System.out.println(tmpItem.getLayoutY());
                 differentDetailPane.getChildren().add(tmpItem);
                 x=x+190;
                 if (count%3 == 0){

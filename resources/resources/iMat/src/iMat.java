@@ -47,7 +47,7 @@ public class iMat extends Application {
             controller.showHomePageDetail();
             controller.initialize();
             stage.show();
-
+            controller.createBigItemViewMap();
             controller.addShoppingCartListener();
             //controller.newWindow();
 
