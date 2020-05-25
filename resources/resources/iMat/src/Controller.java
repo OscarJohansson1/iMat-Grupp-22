@@ -157,7 +157,6 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         @FXML
         public void iMatLogoPressed(MouseEvent event){
             homePagePane.toFront();
-            System.out.println("hej");
         }
         @FXML
         public void loginPressed(MouseEvent event){
