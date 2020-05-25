@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="515.0" prefWidth="342.0" style="-fx-background-color: #AAAAAA;">
@@ -51,7 +52,7 @@
             <Button fx:id="createAccountButton" layoutX="113.0" layoutY="439.0" mnemonicParsing="false" text="Skapa nytt konto" />
          </children>
       </AnchorPane>
-      <SplitPane dividerPositions="0.2209106239460371" orientation="VERTICAL" prefHeight="595.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.2209" orientation="VERTICAL" prefHeight="595.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="140.0" prefWidth="847.0" style="-fx-background-color: #2ba23a;">
                <children>
@@ -72,7 +73,16 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" promptText="Search" style="-fx-background-color: #FFFFFF;" text="Search" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="275.4" />
+                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #FFFFFF;" text="Sök" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="300.0" />
+                  <Button fx:id="searchButton" layoutX="497.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" style="-fx-background-color: #ffffff;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sceneImages/baseline_search_black_36dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -124,9 +134,9 @@
                   </AnchorPane>
                   <SplitPane dividerPositions="0.2455249153362361, 0.6930333817126271" prefHeight="446.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
-                      <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0">
+                      <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #DCDFDA;">
                            <children>
-                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" onMouseClicked="#newWindow" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@sceneImages/home_button3.png" />
                                  </image>
@@ -169,7 +179,7 @@
                            </children>
                         </AnchorPane>
                       <AnchorPane fx:id="differentDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                        <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0">
+                        <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: DCDFDA;">
                            <children>
                               <AnchorPane layoutX="4.0" layoutY="43.0" maxHeight="1.7976931348623157E308" prefHeight="397.0" prefWidth="240.0" AnchorPane.topAnchor="43.0">
                                  <children>
