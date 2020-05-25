@@ -182,7 +182,9 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
     */
             //BigItemView b = new BigItemView(this);
             //differentDetailPane.getChildren().add(b);
+            //ngwrenergöleagrö
         }
+
         @FXML
         protected void showMyPagesPane(MouseEvent event){
             myPagesPane.toFront();
