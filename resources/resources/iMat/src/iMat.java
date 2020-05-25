@@ -39,7 +39,7 @@ public class iMat extends Application {
             FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
             Parent root = tmp.load();
             controller = tmp.getController();
-            Scene scene = new Scene(root, 1200, 720);
+            Scene scene = new Scene(root, 1200, 700);
             controller.setDatahandler(datahandler);
             stage.setTitle("iMat");
             //controller.newWindowMethod(stage);
