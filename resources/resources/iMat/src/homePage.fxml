@@ -139,37 +139,37 @@
                               </ImageView>
                               <Label fx:id="fruitsAndGreens" layoutX="25.0" layoutY="75.0" onMouseClicked="#showFruitsAndGreens" text="Frukt och grönt">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                               <Label fx:id="dairyItems" layoutX="25.0" layoutY="100.0" onMouseClicked="#showFruitsAndGreens" text="Mejeriprodukter">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                               <Label fx:id="breadItems" layoutX="25.0" layoutY="125.0" onMouseClicked="#showFruitsAndGreens" text="Bröd">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                               <Label fx:id="fishItems" layoutX="25.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" text="Fisk">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                               <Label fx:id="meatItems" layoutX="25.0" layoutY="175.0" onMouseClicked="#showFruitsAndGreens" text="Kött">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                               <Label fx:id="pantryItems" layoutX="25.0" layoutY="200.0" onMouseClicked="#showFruitsAndGreens" text="Skafferi">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                               <Label fx:id="drinkItems" layoutX="25.0" layoutY="225.0" onMouseClicked="#showFruitsAndGreens" text="Drycker">
                                  <font>
-                                    <Font size="15.0" />
+                                    <Font size="18.0" />
                                  </font>
                               </Label>
                            </children>
