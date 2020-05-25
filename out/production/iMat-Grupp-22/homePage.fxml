@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="homePagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane fx:id="homePagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="515.0" prefWidth="342.0" style="-fx-background-color: #AAAAAA;">
          <children>
@@ -72,16 +72,13 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #FFFFFF;" text="Sök" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="300.0" />
-                  <Button fx:id="searchButton" layoutX="497.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" style="-fx-background-color: #ffffff;">
-                     <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@sceneImages/baseline_search_black_36dp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onAction="#searchBarUpdate" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #FFFFFF;" text="Sök" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="300.0" />
+                  <Button fx:id="searchButton" layoutX="497.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" style="-fx-background-color: #ffffff;" />
+                  <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="870.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/baseline_search_black_36dp.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -177,7 +174,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                      <AnchorPane fx:id="differentDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                      <AnchorPane fx:id="differentDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="725.0" />
                         <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: DCDFDA;">
                            <children>
                               <AnchorPane layoutX="4.0" layoutY="43.0" maxHeight="1.7976931348623157E308" prefHeight="397.0" prefWidth="240.0" AnchorPane.topAnchor="43.0">
@@ -203,7 +200,7 @@
                                           <AnchorPane fx:id="cartItemPane" prefHeight="131.0" prefWidth="201.0" />
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="201.0">
                                              <children>
-                                                <Button fx:id="checkoutButton" layoutX="59.0" layoutY="37.0" mnemonicParsing="false" onAction="#testMethodActionEvent" prefHeight="26.0" prefWidth="119.0" text="Till kassan" />
+                                                <Button fx:id="checkoutButton" layoutX="59.0" layoutY="37.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="119.0" text="Till kassan" />
                                                 <Label fx:id="totalLabel" layoutX="14.0" text="Totalt:">
                                                    <font>
                                                       <Font size="18.0" />
