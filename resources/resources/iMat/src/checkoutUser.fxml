@@ -10,14 +10,14 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="605.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="60.0" layoutY="53.0" text="Varukorgen" underline="true">
+      <Label layoutX="60.0" layoutY="35.0" text="Varukorgen" underline="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="60.0" layoutY="117.0" prefHeight="200.0" prefWidth="727.0" style="-fx-border-color: #000000;">
+      <AnchorPane layoutX="60.0" layoutY="100.0" prefHeight="200.0" prefWidth="727.0" style="-fx-border-color: #000000;">
          <children>
             <ScrollPane layoutX="6.0" prefHeight="200.0" prefWidth="727.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <content>
@@ -26,26 +26,26 @@
             </ScrollPane>
          </children>
       </AnchorPane>
-      <TextField layoutX="60.0" layoutY="362.0" prefHeight="27.0" prefWidth="330.0" style="-fx-border-color: #000000;" text="adress" />
-      <TextField layoutX="59.0" layoutY="423.0" prefHeight="27.0" prefWidth="330.0" style="-fx-border-color: #000000;" text="kortnummer" />
-      <Label layoutX="60.0" layoutY="344.0" text="Köpta varor kommer att levereras till följande adress" />
-      <Label layoutX="60.0" layoutY="405.0" text="Följande kort kommer att användas för köpet" />
-      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="394.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+      <TextField layoutX="60.0" layoutY="350.0" prefHeight="27.0" prefWidth="330.0" style="-fx-border-color: #000000;" text="adress" />
+      <TextField layoutX="59.0" layoutY="415.0" prefHeight="27.0" prefWidth="330.0" style="-fx-border-color: #000000;" text="kortnummer" />
+      <Label layoutX="60.0" layoutY="330.0" text="Köpta varor kommer att levereras till följande adress" />
+      <Label layoutX="60.0" layoutY="395.0" text="Följande kort kommer att användas för köpet" />
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="394.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_create_black_48dp.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="394.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="394.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_create_black_48dp.png" />
          </image>
       </ImageView>
-      <Button layoutX="205.0" layoutY="485.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="450.0" style="-fx-background-color: #2ba23a;" text="Betala som...  : 0 kr " textFill="WHITE">
+      <Button layoutX="205.0" layoutY="475.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="450.0" style="-fx-background-color: #2ba23a;" text="Betala som...  : 0 kr " textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <ImageView fitHeight="42.0" fitWidth="56.0" layoutX="568.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="42.0" fitWidth="56.0" layoutX="568.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_done_outline_white_36dp.png" />
          </image>
