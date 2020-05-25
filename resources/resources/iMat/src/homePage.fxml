@@ -55,7 +55,7 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="140.0" prefWidth="847.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" onMouseClicked="#iMatLogoPressed" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" onMouseClicked="#showHomePageDetail" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
                      <font>
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
