@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="categoryItemViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.40299051787016776" layoutY="-8.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="616.0">
+        <items>
+          <AnchorPane fx:id="categoryViewPane" minHeight="0.0" minWidth="0.0" prefHeight="297.0" prefWidth="614.0">
+               <children>
+                  <Label fx:id="categoryTitleLabel" layoutX="35.0" layoutY="30.0" text="Frukt och grönt" underline="true">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="categoryShowAllLabel" layoutX="35.0" layoutY="90.0" mnemonicParsing="false" text="Visa allt" />
+                  <CheckBox fx:id="categoryOneLabel" layoutX="169.0" layoutY="90.0" mnemonicParsing="false" text="Baljväxter" />
+                  <CheckBox fx:id="categoryTwoLabel" layoutX="313.0" layoutY="90.0" mnemonicParsing="false" text="Bär" />
+                  <CheckBox fx:id="categoryThreeLabel" layoutX="423.0" layoutY="90.0" mnemonicParsing="false" text="Citrusfrukter" />
+                  <CheckBox fx:id="categoryFourLabel" layoutX="35.0" layoutY="130.0" mnemonicParsing="false" text="Exotiska frukter" />
+                  <CheckBox fx:id="categoryFiveLabel" layoutX="169.0" layoutY="130.0" mnemonicParsing="false" text="Grönsaksfrukter" />
+                  <CheckBox fx:id="categorySixLabel" layoutX="313.0" layoutY="130.0" mnemonicParsing="false" text="Kål" />
+                  <CheckBox fx:id="categorySevenLabel" layoutX="423.0" layoutY="130.0" mnemonicParsing="false" text="Meloner" />
+                  <CheckBox fx:id="categoryEightLabel" layoutX="35.0" layoutY="170.0" mnemonicParsing="false" text="Rotfrukter" />
+                  <CheckBox fx:id="categoryNineLabel" layoutX="169.0" layoutY="170.0" mnemonicParsing="false" text="Stenfrukter" />
+                  <CheckBox fx:id="categoryTenLabel" layoutX="313.0" layoutY="170.0" mnemonicParsing="false" text="Örtfrukter" />
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="itemViewPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
