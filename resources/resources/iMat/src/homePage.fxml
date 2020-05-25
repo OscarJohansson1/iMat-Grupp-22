@@ -132,7 +132,7 @@
                     <items>
                       <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #DCDFDA;">
                            <children>
-                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" onMouseClicked="#newWindow" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" onMouseClicked="#showHomePageDetail" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@sceneImages/home_button3.png" />
                                  </image>
@@ -142,32 +142,32 @@
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="dairyItems" layoutX="25.0" layoutY="100.0" text="Mejeriprodukter">
+                              <Label fx:id="dairyItems" layoutX="25.0" layoutY="100.0" onMouseClicked="#showFruitsAndGreens" text="Mejeriprodukter">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="breadItems" layoutX="25.0" layoutY="125.0" text="Bröd">
+                              <Label fx:id="breadItems" layoutX="25.0" layoutY="125.0" onMouseClicked="#showFruitsAndGreens" text="Bröd">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="fishItems" layoutX="25.0" layoutY="150.0" text="Fisk">
+                              <Label fx:id="fishItems" layoutX="25.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" text="Fisk">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="meatItems" layoutX="25.0" layoutY="175.0" text="Kött">
+                              <Label fx:id="meatItems" layoutX="25.0" layoutY="175.0" onMouseClicked="#showFruitsAndGreens" text="Kött">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="pantryItems" layoutX="25.0" layoutY="200.0" text="Skafferi">
+                              <Label fx:id="pantryItems" layoutX="25.0" layoutY="200.0" onMouseClicked="#showFruitsAndGreens" text="Skafferi">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="drinkItems" layoutX="25.0" layoutY="225.0" text="Drycker">
+                              <Label fx:id="drinkItems" layoutX="25.0" layoutY="225.0" onMouseClicked="#showFruitsAndGreens" text="Drycker">
                                  <font>
                                     <Font size="15.0" />
                                  </font>

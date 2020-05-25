@@ -86,76 +86,76 @@ public class FruitsAndGreensController extends AnchorPane {
     }
 
     private void setMejeriprodukter(){
-        categoryOneLabel.setText("");
-        categoryTwoLabel.setText("");
-        categoryThreeLabel.setText("");
-        categoryFourLabel.setText("");
-        categoryFiveLabel.setText("");
-        categorySixLabel.setText("");
-        categorySevenLabel.setText("");
-        categoryEightLabel.setText("");
-        categoryNineLabel.setText("");
-        categoryTenLabel.setText("");
+        categoryOneLabel.setVisible(false);
+        categoryTwoLabel.setVisible(false);
+        categoryThreeLabel.setVisible(false);
+        categoryFourLabel.setVisible(false);
+        categoryFiveLabel.setVisible(false);
+        categorySixLabel.setVisible(false);
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
     }
     private void setBröd(){
-        categoryOneLabel.setText("");
-        categoryTwoLabel.setText("");
-        categoryThreeLabel.setText("");
-        categoryFourLabel.setText("");
-        categoryFiveLabel.setText("");
-        categorySixLabel.setText("");
-        categorySevenLabel.setText("");
-        categoryEightLabel.setText("");
-        categoryNineLabel.setText("");
-        categoryTenLabel.setText("");
+        categoryOneLabel.setVisible(false);
+        categoryTwoLabel.setVisible(false);
+        categoryThreeLabel.setVisible(false);
+        categoryFourLabel.setVisible(false);
+        categoryFiveLabel.setVisible(false);
+        categorySixLabel.setVisible(false);
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
     }
     private void setFisk(){
-        categoryOneLabel.setText("");
-        categoryTwoLabel.setText("");
-        categoryThreeLabel.setText("");
-        categoryFourLabel.setText("");
-        categoryFiveLabel.setText("");
-        categorySixLabel.setText("");
-        categorySevenLabel.setText("");
-        categoryEightLabel.setText("");
-        categoryNineLabel.setText("");
-        categoryTenLabel.setText("");
+        categoryOneLabel.setVisible(false);
+        categoryTwoLabel.setVisible(false);
+        categoryThreeLabel.setVisible(false);
+        categoryFourLabel.setVisible(false);
+        categoryFiveLabel.setVisible(false);
+        categorySixLabel.setVisible(false);
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
     }
     private void setKött(){
-        categoryOneLabel.setText("");
-        categoryTwoLabel.setText("");
-        categoryThreeLabel.setText("");
-        categoryFourLabel.setText("");
-        categoryFiveLabel.setText("");
-        categorySixLabel.setText("");
-        categorySevenLabel.setText("");
-        categoryEightLabel.setText("");
-        categoryNineLabel.setText("");
-        categoryTenLabel.setText("");
+        categoryOneLabel.setVisible(false);
+        categoryTwoLabel.setVisible(false);
+        categoryThreeLabel.setVisible(false);
+        categoryFourLabel.setVisible(false);
+        categoryFiveLabel.setVisible(false);
+        categorySixLabel.setVisible(false);
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
     }
     private void setSkafferi(){
-        categoryOneLabel.setText("");
-        categoryTwoLabel.setText("");
-        categoryThreeLabel.setText("");
-        categoryFourLabel.setText("");
-        categoryFiveLabel.setText("");
-        categorySixLabel.setText("");
-        categorySevenLabel.setText("");
-        categoryEightLabel.setText("");
-        categoryNineLabel.setText("");
-        categoryTenLabel.setText("");
+        categoryOneLabel.setText("FLOUR_SUGAR_SALT");
+        categoryTwoLabel.setText("NUTS_AND_SEEDS");
+        categoryThreeLabel.setText("PASTA");
+        categoryFourLabel.setText("POTATO_RICE");
+        categoryFiveLabel.setText("SWEET");
+        categorySixLabel.setText("HERB");
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
     }
     private void setDrycker(){
-        categoryOneLabel.setText("");
-        categoryTwoLabel.setText("");
-        categoryThreeLabel.setText("");
-        categoryFourLabel.setText("");
-        categoryFiveLabel.setText("");
-        categorySixLabel.setText("");
-        categorySevenLabel.setText("");
-        categoryEightLabel.setText("");
-        categoryNineLabel.setText("");
-        categoryTenLabel.setText("");
+        categoryOneLabel.setText("HOT_DRINKS");
+        categoryTwoLabel.setText("COLD_DRINKS");
+        categoryThreeLabel.setVisible(false);
+        categoryFourLabel.setVisible(false);
+        categoryFiveLabel.setVisible(false);
+        categorySixLabel.setVisible(false);
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
     }
 
 }
