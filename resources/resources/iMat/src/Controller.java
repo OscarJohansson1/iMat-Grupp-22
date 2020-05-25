@@ -14,7 +14,7 @@ import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -37,6 +37,8 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         private IMatDataHandler datahandler;
         //Product p finns endast för att slippa errors (ska egentligen vara det man trycker på)
         private Product p;
+        private Map<String, BigItemView> bigItemViewMap = new HashMap<>();
+
         @FXML private AnchorPane loginPane; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
         @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
         @FXML private Button createAccountButton; @FXML private Label iMatLogo; @FXML private Label userButton;
@@ -181,6 +183,53 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             //BigItemView b = new BigItemView(this);
             //differentDetailPane.getChildren().add(b);
         }
+
+        @FXML
+        protected void showMyPagesPane(MouseEvent event){
+            myPagesPane.toFront();
+            updateItemList();
+        }
+
+        @FXML
+        protected void searchBarUpdate(ActionEvent event){
+            List list = new ArrayList<>();
+            list = getSearchedProducts();
+            System.out.println(list);
+        }
+
+        protected void createBigItemViewMap(){
+            for (Product p : datahandler.getProducts()){
+                BigItemView item = new BigItemView(this);
+                bigItemViewMap.put(p.getName(), item);
+            }
+        }
+
+        //testametod för att få fram bigItemViews.
+//kom ihåg: gör om differentDetailPane till en FlowPane pga den har setVgap och setHgap
+        public void updateItemList(){
+            double x = 10;
+            double y = 180;
+            int count = 0;
+            List<Product> productList = datahandler.getProducts();
+            BigItemView tmpItem;
+
+            for (Product p : productList){
+                count++;
+                tmpItem = bigItemViewMap.get(p.getName());
+                tmpItem.setLayoutX(x);
+                tmpItem.setLayoutY(y);
+                System.out.println(tmpItem.getLayoutY());
+                differentDetailPane.getChildren().add(tmpItem);
+                x=x+190;
+                if (count%3 == 0){
+                    y=y+150;
+                    x=10;
+                    //hej
+                }
+            }
+        }
+
+
 
 
     }
