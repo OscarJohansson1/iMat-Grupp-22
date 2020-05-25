@@ -46,7 +46,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
         @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
         @FXML private AnchorPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
-        @FXML private Label totalPrizeLabel;
+        @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
 
         @FXML
         protected void plusButtonActionPerformed (ActionEvent event){
@@ -153,6 +153,14 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
         public void addShoppingCartListener(){
             datahandler.getShoppingCart().addShoppingCartListener(cartEvent -> totalPrizeLabel.setText(String.valueOf(datahandler.getShoppingCart().getTotal())));
+        }
+        @FXML
+        public void iMatLogoPressed(MouseEvent event){
+            homePagePane.toFront();
+        }
+        @FXML
+        public void loginPressed(MouseEvent event){
+            loginPane.toFront();
         }
 
     }
