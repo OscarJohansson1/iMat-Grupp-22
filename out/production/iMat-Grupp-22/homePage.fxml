@@ -135,7 +135,7 @@
                     <items>
                       <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #DCDFDA;">
                            <children>
-                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" onMouseClicked="#newWindow" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" onMouseClicked="#showHomePageDetail" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@sceneImages/home_button3.png" />
                                  </image>
