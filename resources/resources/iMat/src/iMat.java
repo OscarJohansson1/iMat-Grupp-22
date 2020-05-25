@@ -44,15 +44,12 @@ public class iMat extends Application {
             stage.setTitle("iMat");
             //controller.newWindowMethod(stage);
             stage.setScene(scene);
+            controller.showHomePageDetail();
             controller.initialize();
             stage.show();
 
-
             controller.addShoppingCartListener();
             //controller.newWindow();
-
-
-
 
         } catch(Exception e) {
             e.printStackTrace();

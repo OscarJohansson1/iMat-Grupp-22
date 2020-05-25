@@ -162,7 +162,11 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         public void loginPressed(MouseEvent event){
             loginPane.toFront();
         }
-
+        @FXML protected void showHomePageDetail(){
+            differentDetailPane.getChildren().clear();
+            homPageDetailController c = new homPageDetailController(this);
+            differentDetailPane.getChildren().add(c);
+        }
     }
 
 
