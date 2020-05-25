@@ -37,7 +37,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         private IMatDataHandler datahandler;
         //Product p finns endast för att slippa errors (ska egentligen vara det man trycker på)
         private Product p;
-        private Map<String, BigItemView> bigItemViewMap = new HashMap<>();
+        protected Map<String, BigItemView> bigItemViewMap = new HashMap<>();
 
         @FXML private AnchorPane loginPane; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
         @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
@@ -171,25 +171,23 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         }
         @FXML
         protected void showFruitsAndGreens(MouseEvent event){
+            System.out.println("i Controller");
             differentDetailPane.getChildren().clear();
             Label tmp = (Label) event.getSource();
             String s = tmp.getText();
             FruitsAndGreensController c = new FruitsAndGreensController(this, s);
             differentDetailPane.getChildren().add(c);
-            updateItemList();
    /*
    Lägg till metod som sätter in alla BigItemViews under vald kategori
 
     */
             //BigItemView b = new BigItemView(this);
             //differentDetailPane.getChildren().add(b);
-            //ngwrenergöleagrö
         }
 
         @FXML
         protected void showMyPagesPane(MouseEvent event){
             myPagesPane.toFront();
-            updateItemList();
         }
 
         @FXML
@@ -202,9 +200,6 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             return datahandler.findProducts(searchBar.getText());
         }
 
-
-
-
         protected void createBigItemViewMap(){
             for (Product p : datahandler.getProducts()){
                 BigItemView item = new BigItemView(this);
@@ -212,29 +207,6 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             }
         }
 
-        //testametod för att få fram bigItemViews.
-//kom ihåg: gör om differentDetailPane till en FlowPane pga den har setVgap och setHgap
-        public void updateItemList(){
-            double x = 10;
-            double y = 180;
-            int count = 0;
-            List<Product> productList = datahandler.getProducts();
-            BigItemView tmpItem;
-
-            for (Product p : productList){
-                count++;
-                tmpItem = bigItemViewMap.get(p.getName());
-                tmpItem.setLayoutX(x);
-                tmpItem.setLayoutY(y);
-                differentDetailPane.getChildren().add(tmpItem);
-                x=x+190;
-                if (count%3 == 0){
-                    y=y+150;
-                    x=10;
-                    //hej
-                }
-            }
-        }
 
 
 
