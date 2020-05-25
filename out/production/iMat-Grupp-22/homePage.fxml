@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<AnchorPane fx:id="homePagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
       <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="515.0" prefWidth="342.0" style="-fx-background-color: #AAAAAA;">
          <children>
@@ -56,12 +55,12 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="140.0" prefWidth="847.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" onMouseClicked="#testMethodMouseEvent" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" onMouseClicked="#iMatLogoPressed" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
                      <font>
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
                   </Label>
-                  <Label fx:id="userButton" layoutX="641.0" layoutY="45.0" prefHeight="50.0" prefWidth="175.0" text="Logga in" textFill="WHITE" AnchorPane.rightAnchor="13.0">
+                  <Label fx:id="userButton" layoutX="641.0" layoutY="45.0" onMouseClicked="#loginPressed" prefHeight="50.0" prefWidth="175.0" text="Logga in" textFill="WHITE" AnchorPane.rightAnchor="13.0">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                      </font>
