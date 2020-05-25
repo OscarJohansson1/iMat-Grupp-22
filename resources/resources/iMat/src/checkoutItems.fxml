@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="checkoutsItemsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="725.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="checkoutItemImage" fitHeight="46.0" fitWidth="51.0" layoutX="6.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="checkoutItemLabel" layoutX="76.0" layoutY="12.0" prefHeight="26.0" prefWidth="102.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="checkoutItemAmount" layoutX="234.0" layoutY="12.0" text="Label">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="checkoutItemTotalCost" layoutX="607.0" layoutY="12.0" prefHeight="26.0" prefWidth="59.0" text="Label">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="checkoutItemPen" fitHeight="40.0" fitWidth="44.0" layoutX="675.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sceneImages/baseline_create_black_48dp.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="checkoutItemEditPane" layoutX="301.0" layoutY="2.0" prefHeight="46.0" prefWidth="267.0">
+         <children>
+            <ImageView fx:id="checkoutItemTrashcan" fitHeight="40.0" fitWidth="40.0" layoutX="24.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_delete_black_24dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="checkoutItemMinusImage" fitHeight="33.0" fitWidth="38.0" layoutX="102.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_remove_circle_outline_black_18dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="checkoutItemPlusImage" fitHeight="33.0" fitWidth="38.0" layoutX="198.4" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_add_circle_outline_black_18dp.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="checkoutItemTextField" layoutX="150.0" layoutY="10.0" prefHeight="26.0" prefWidth="38.0" style="-fx-border-color: #000000;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="300.0" prefHeight="46.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" />
+   </children>
+</AnchorPane>
