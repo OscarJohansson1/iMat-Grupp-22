@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="bigItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="bigItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
    <children>
       <ImageView fx:id="itemImage" fitHeight="102.0" fitWidth="121.0" layoutX="40.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="itemNameLabel" layoutX="86.0" layoutY="139.0" text="Label" />
@@ -29,4 +29,4 @@
          </image>
       </ImageView>
    </children>
-</AnchorPane>
+</fx:root>

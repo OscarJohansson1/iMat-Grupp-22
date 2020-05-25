@@ -13,7 +13,7 @@ public class homPageDetailController extends AnchorPane {
 
     public homPageDetailController(Controller c){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
-        //fxmlLoader.setRoot(this);
+        fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         try {

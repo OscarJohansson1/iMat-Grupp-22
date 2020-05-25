@@ -167,6 +167,22 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             homPageDetailController c = new homPageDetailController(this);
             differentDetailPane.getChildren().add(c);
         }
+        @FXML
+        protected void showFruitsAndGreens(MouseEvent event){
+            differentDetailPane.getChildren().clear();
+            Label tmp = (Label) event.getSource();
+            String s = tmp.getText();
+            FruitsAndGreensController c = new FruitsAndGreensController(this, s);
+            differentDetailPane.getChildren().add(c);
+   /*
+   Lägg till metod som sätter in alla BigItemViews under vald kategori
+
+    */
+            //BigItemView b = new BigItemView(this);
+            //differentDetailPane.getChildren().add(b);
+        }
+
+
     }
 
 

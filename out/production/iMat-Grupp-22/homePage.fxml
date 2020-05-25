@@ -140,7 +140,7 @@
                                     <Image url="@sceneImages/home_button3.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="fruitsAndGreens" layoutX="25.0" layoutY="75.0" text="Frukt och grönt">
+                              <Label fx:id="fruitsAndGreens" layoutX="25.0" layoutY="75.0" onMouseClicked="#showFruitsAndGreens" text="Frukt och grönt">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
