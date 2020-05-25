@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="categoryItemViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="616.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
+<AnchorPane fx:id="categoryItemViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="829.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.40299051787016776" layoutY="-8.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="616.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -35,7 +35,7 @@
                <children>
                   <ScrollPane fx:id="foodCategoryScroll" layoutY="-1.0" prefHeight="325.0" prefWidth="614.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <content>
-                      <AnchorPane fx:id="itemViewPane" minHeight="0.0" minWidth="0.0" prefHeight="325.0" prefWidth="616.0" />
+                      <AnchorPane fx:id="itemViewPane" minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="827.0" />
                     </content>
                   </ScrollPane>
                </children>
@@ -43,4 +43,4 @@
         </items>
       </SplitPane>
    </children>
-</fx:root>
+</AnchorPane>
