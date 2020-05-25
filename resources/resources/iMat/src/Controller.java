@@ -188,15 +188,19 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
             myPagesPane.toFront();
             updateItemList();
         }
-/*
+
         @FXML
         protected void searchBarUpdate(ActionEvent event){
             List list = new ArrayList<>();
             list = getSearchedProducts();
             System.out.println(list);
         }
+        private List getSearchedProducts() {
+            return datahandler.findProducts(searchBar.getText());
+        }
 
- */
+
+
 
         protected void createBigItemViewMap(){
             for (Product p : datahandler.getProducts()){
