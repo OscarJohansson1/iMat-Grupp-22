@@ -73,7 +73,6 @@
                      </graphic>
                   </Label>
                   <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onAction="#searchBarUpdate" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #FFFFFF;" text="Sök" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="300.0" />
-                  <Button fx:id="searchButton" layoutX="497.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" style="-fx-background-color: #ffffff;" />
                   <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="870.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/baseline_search_black_36dp.png" />
@@ -217,6 +216,11 @@
                                     </SplitPane>
                                  </children>
                               </AnchorPane>
+                              <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="95.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@sceneImages/Namnlöst-1.png" />
+                                 </image>
+                              </ImageView>
                            </children>
                         </AnchorPane>
                     </items>
