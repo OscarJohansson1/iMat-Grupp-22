@@ -1,6 +1,6 @@
 .scroll-bar:vertical .increment-button ,
 .scroll-bar:vertical .decrement-button {
-    -fx-padding :20.0;
+    -fx-padding :1.0;
 }
 
 .scroll-bar:vertical .increment-arrow ,
