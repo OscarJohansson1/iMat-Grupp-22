@@ -7,6 +7,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
 
@@ -14,38 +15,54 @@
    <children>
       <Label layoutX="60.0" layoutY="35.0" text="Varukorgen" underline="true">
          <font>
-            <Font size="20.0" />
+            <Font size="30.0" />
          </font>
       </Label>
       <AnchorPane layoutX="60.0" layoutY="100.0" prefHeight="200.0" prefWidth="727.0" style="-fx-border-color: #000000;">
          <children>
-            <ScrollPane layoutX="6.0" prefHeight="200.0" prefWidth="727.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="724.0" />
-              </content>
+            <ScrollPane layoutX="100.0" layoutY="17.0" prefHeight="200.0" prefWidth="629.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="200.0" prefWidth="723.0" />
+               </content>
             </ScrollPane>
          </children>
       </AnchorPane>
-      <TextField layoutX="60.0" layoutY="350.0" prefHeight="27.0" prefWidth="330.0" style="-fx-border-color: #000000;" text="adress" />
-      <TextField layoutX="59.0" layoutY="415.0" prefHeight="27.0" prefWidth="330.0" style="-fx-border-color: #000000;" text="kortnummer" />
-      <Label layoutX="60.0" layoutY="330.0" text="Köpta varor kommer att levereras till följande adress" />
-      <Label layoutX="60.0" layoutY="395.0" text="Följande kort kommer att användas för köpet" />
-      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="394.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="checkoutaAdressTextField" layoutX="60.0" layoutY="363.0" prefHeight="34.0" prefWidth="417.0" style="-fx-border-color: #000000;" text="Adress">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="checkoutCardTextField" layoutX="61.0" layoutY="449.0" prefHeight="34.0" prefWidth="417.0" style="-fx-border-color: #000000;" text="Kortnummer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="60.0" layoutY="335.0" text="Köpta varor kommer att levereras till följande adress">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="420.0" text="Följande kort kommer att användas för köpet">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="479.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_create_black_48dp.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="394.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="478.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_create_black_48dp.png" />
          </image>
       </ImageView>
-      <Button layoutX="205.0" layoutY="475.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="450.0" style="-fx-background-color: #2ba23a;" text="Betala som...  : 0 kr " textFill="WHITE">
+      <Button fx:id="payAsUserButton" layoutX="724.0" layoutY="468.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="450.0" style="-fx-background-color: #2ba23a;" text="Betala som...  : 0 kr " textFill="WHITE">
          <font>
             <Font size="27.0" />
          </font>
       </Button>
-      <ImageView fitHeight="42.0" fitWidth="56.0" layoutX="568.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="42.0" fitWidth="56.0" layoutX="1104.0" layoutY="486.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_done_outline_white_36dp.png" />
          </image>
