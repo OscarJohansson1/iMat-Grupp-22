@@ -5,6 +5,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
@@ -27,7 +28,7 @@ public class FruitsAndGreensController extends AnchorPane {
     @FXML private CheckBox categoryEightLabel;
     @FXML private CheckBox categoryNineLabel;
     @FXML private CheckBox categoryTenLabel;
-    @FXML public AnchorPane itemViewPane;
+    @FXML public FlowPane itemViewPane;
 
     private Controller controller;
     private IMatDataHandler dh;
