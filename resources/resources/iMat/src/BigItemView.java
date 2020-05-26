@@ -31,7 +31,7 @@ public class BigItemView extends AnchorPane {
         //this.controller = c;
         this.itemImage.setImage(datahandler.getFXImage(product));
         this.itemNameLabel.setText(product.getName());
-        this.costPerKiloLabel.setText(product.getPrice() + " " + product.getUnitSuffix());
+        this.costPerKiloLabel.setText(product.getPrice() + " " + product.getUnit());
         this.quantityItemsTextField.setText(String.valueOf(quantity));
 
 

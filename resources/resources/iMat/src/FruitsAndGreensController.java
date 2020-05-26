@@ -103,7 +103,7 @@ public class FruitsAndGreensController extends AnchorPane {
             }
             itemViewPane.getChildren().add(tmpItem);
         }
-        itemViewPane.setPadding(new Insets(10,10,10,30));
+        itemViewPane.setPadding(new Insets(10,10,10,15));
         itemViewPane.setVgap(20);
         itemViewPane.setHgap(20);
     }
