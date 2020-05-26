@@ -1,6 +1,7 @@
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -9,6 +10,7 @@ import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.List;
 
@@ -86,27 +88,24 @@ public class FruitsAndGreensController extends AnchorPane {
 
     }
     public void updateItemList2(IMatDataHandler dh, Controller c){
-        double x = 10;
-        double y = -20;
+
         int count = 0;
         List<Product> productList = dh.getProducts();
         BigItemView tmpItem;
 
         for (Product p : productList){
+
             count++;
             tmpItem = c.bigItemViewMap.get(p.getName());
-            tmpItem.setLayoutX(x);
-            tmpItem.setLayoutY(y);
-            System.out.println(tmpItem.getLayoutY());
-            itemViewPane.getChildren().add(tmpItem);
-            System.out.println("la till i itemViewPane");
-            x=x+190;
-            if (count%3 == 0){
-                y=y+150;
-                x=10;
-                //hej
+            if (count==1){
+                tmpItem.setLayoutX(100);
+                tmpItem.setLayoutY(50);
             }
+            itemViewPane.getChildren().add(tmpItem);
         }
+        itemViewPane.setPadding(new Insets(10,10,10,30));
+        itemViewPane.setVgap(20);
+        itemViewPane.setHgap(20);
     }
 
     private void setFruitsAndGreens(){

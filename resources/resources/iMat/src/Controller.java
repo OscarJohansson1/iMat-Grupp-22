@@ -202,7 +202,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
         protected void createBigItemViewMap(){
             for (Product p : datahandler.getProducts()){
-                BigItemView item = new BigItemView(this);
+                BigItemView item = new BigItemView(datahandler, p);
                 bigItemViewMap.put(p.getName(), item);
             }
         }
