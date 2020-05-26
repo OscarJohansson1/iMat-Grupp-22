@@ -51,16 +51,16 @@
             <Button fx:id="createAccountButton" layoutX="113.0" layoutY="439.0" mnemonicParsing="false" text="Skapa nytt konto" />
          </children>
       </AnchorPane>
-      <SplitPane dividerPositions="0.2209" orientation="VERTICAL" prefHeight="595.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="595.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="140.0" prefWidth="847.0" style="-fx-background-color: #2ba23a;">
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1198.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogo" layoutX="25.0" layoutY="32.0" onMouseClicked="#showHomePageDetail" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogo" layoutX="23.0" layoutY="18.0" onMouseClicked="#showHomePageDetail" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
                      <font>
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
                   </Label>
-                  <Label fx:id="userButton" layoutX="641.0" layoutY="45.0" onMouseClicked="#loginPressed" prefHeight="50.0" prefWidth="175.0" text="Logga in" textFill="WHITE" AnchorPane.rightAnchor="13.0">
+                  <Label fx:id="userButton" layoutX="990.0" layoutY="29.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Logga in" textFill="WHITE" AnchorPane.rightAnchor="14.0">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="19.0" />
                      </font>
@@ -72,12 +72,17 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="251.0" layoutY="57.0" onAction="#searchBarUpdate" onMouseClicked="#testMethodMouseEvent2" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #FFFFFF;" text="Sök" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="300.0" />
-                  <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="870.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdate" onMouseClicked="#testMethodMouseEvent2" prefHeight="44.0" prefWidth="647.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="306.0" />
+                  <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="848.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/baseline_search_black_36dp.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="251.0" layoutY="44.0" prefHeight="34.0" prefWidth="200.0" text="Sök produkt" textFill="#b5b3b3">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
@@ -131,44 +136,44 @@
                     <items>
                       <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: #DCDFDA;">
                            <children>
-                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="44.0" fitWidth="186.0" layoutX="25.0" layoutY="15.0" onMouseClicked="#showHomePageDetail" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="homeButton" accessibleRole="BUTTON" fitHeight="64.0" fitWidth="175.0" layoutX="13.0" layoutY="14.0" onMouseClicked="#showHomePageDetail" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@sceneImages/home_button3.png" />
                                  </image>
                               </ImageView>
                               <Label fx:id="fruitsAndGreens" layoutX="25.0" layoutY="75.0" onMouseClicked="#showFruitsAndGreens" text="Frukt och grönt">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Label>
                               <Label fx:id="dairyItems" layoutX="25.0" layoutY="100.0" onMouseClicked="#showFruitsAndGreens" text="Mejeriprodukter">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Label>
                               <Label fx:id="breadItems" layoutX="25.0" layoutY="125.0" onMouseClicked="#showFruitsAndGreens" text="Bröd">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Label>
                               <Label fx:id="fishItems" layoutX="25.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" text="Fisk">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Label>
                               <Label fx:id="meatItems" layoutX="25.0" layoutY="175.0" onMouseClicked="#showFruitsAndGreens" text="Kött">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Label>
                               <Label fx:id="pantryItems" layoutX="25.0" layoutY="200.0" onMouseClicked="#showFruitsAndGreens" text="Skafferi">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font size="20.0" />
                                  </font>
                               </Label>
                               <Label fx:id="drinkItems" layoutX="25.0" layoutY="225.0" onMouseClicked="#showFruitsAndGreens" text="Drycker">
                                  <font>
-                                    <Font size="18.0" />
+                                    <Font name="Calibri" size="20.0" />
                                  </font>
                               </Label>
                            </children>
