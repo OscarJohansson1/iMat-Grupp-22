@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="cartItemsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="cartItemsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
    <children>
       <ImageView fx:id="cartItemImage" fitHeight="84.0" fitWidth="98.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="cartItemLabel" layoutX="117.0" layoutY="35.0" text="Label">
@@ -23,4 +23,4 @@
          </image>
       </ImageView>
    </children>
-</AnchorPane>
+</fx:root>

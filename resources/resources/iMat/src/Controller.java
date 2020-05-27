@@ -164,8 +164,23 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         }
 
         public void addShoppingCartListener(){
-            datahandler.getShoppingCart().addShoppingCartListener(cartEvent -> totalPrizeLabel.setText(String.valueOf(datahandler.getShoppingCart().getTotal())));
+            datahandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+                @Override
+                public void shoppingCartChanged(CartEvent cartEvent) {
+                    totalPrizeLabel.setText(String.valueOf(datahandler.getShoppingCart().getTotal()));
+                    updateCart();
+                }
+            });
         }
+
+        private void updateCart(){
+            cartItemPane.getChildren().clear();
+            for (ShoppingItem shoppingItem : datahandler.getShoppingCart().getItems()){
+                CartItemView cartItemView = new CartItemView(shoppingItem);
+                cartItemPane.getChildren().add(cartItemView);
+            }
+        }
+
         @FXML
         public void iMatLogoPressed(MouseEvent event){
             homePagePane.toFront();
