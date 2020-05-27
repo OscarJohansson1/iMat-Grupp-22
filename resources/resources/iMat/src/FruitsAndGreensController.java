@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -30,6 +31,7 @@ public class FruitsAndGreensController extends AnchorPane {
     @FXML private CheckBox categoryEightLabel;
     @FXML private CheckBox categoryNineLabel;
     @FXML private CheckBox categoryTenLabel;
+    @FXML private SplitPane splitPane;
     @FXML public FlowPane itemViewPane;
 
     private Controller controller;
@@ -56,30 +58,37 @@ public class FruitsAndGreensController extends AnchorPane {
         switch(s){
             case "Frukt och grönt":
                 setFruitsAndGreens();
+                splitPane.setDividerPosition(0, 0.38);
                 updateItemList2(dh, this.controller);
                 break;
             case "Mejeriprodukter":
                 setMejeriprodukter();
+                splitPane.setDividerPosition(0, 0.23);
                 updateItemList2(dh, this.controller);
                 break;
             case "Bröd":
                 setBröd();
+                splitPane.setDividerPosition(0, 0.23);
                 updateItemList2(dh, this.controller);
                 break;
             case "Fisk":
                 setFisk();
+                splitPane.setDividerPosition(0, 0.23);
                 updateItemList2(dh, this.controller);
                 break;
             case "Kött":
                 setKött();
+                splitPane.setDividerPosition(0, 0.23);
                 updateItemList2(dh, this.controller);
                 break;
             case "Skafferi":
                 setSkafferi();
+                splitPane.setDividerPosition(0, 0.30);
                 updateItemList2(dh, this.controller);
                 break;
             case "Drycker":
                 setDrycker();
+                splitPane.setDividerPosition(0, 0.23);
                 updateItemList2(dh, this.controller);
                 break;
             default:
