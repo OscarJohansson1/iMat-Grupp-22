@@ -15,6 +15,8 @@ import javafx.stage.WindowEvent;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.URL;
 import java.util.*;
 
@@ -51,6 +53,14 @@ public class Controller {
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
+
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = BigDecimal.valueOf(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
 
     @FXML
     protected void plusButtonActionPerformed (ActionEvent event){
@@ -123,21 +133,6 @@ public class Controller {
        }
 
         */
-/*
-       @FXML
-       protected void minusButtonActionPerformed (ActionEvent event) {
-       /* counter är det som finns mellan Plus och Minus
-           if (counter > 0) {
-               for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
-                   if (si.getProduct().equals(p)){
-                       si.setAmount(si.getAmount() - 1);
-                       datahandler.getShoppingCart().removeItem(si);
-                       counter--
-                   }
-               }
-           }
-       }
-        */
 
     @FXML
     protected void testMethodActionEvent(ActionEvent event){
@@ -168,7 +163,7 @@ public class Controller {
         datahandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
             @Override
             public void shoppingCartChanged(CartEvent cartEvent) {
-                totalPrizeLabel.setText(datahandler.getShoppingCart().getTotal() + " kr");
+                totalPrizeLabel.setText(round(datahandler.getShoppingCart().getTotal(), 2) + " kr");
                 updateCart();
                 for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
                     System.out.println(si.getProduct());
@@ -185,10 +180,6 @@ public class Controller {
         }
     }
 
-    @FXML
-    public void iMatLogoPressed(MouseEvent event){
-        homePagePane.toFront();
-    }
 
     @FXML protected void showHomePageDetail(){
         differentDetailPane.getChildren().clear();
@@ -226,19 +217,6 @@ public class Controller {
         differentDetailPane.getChildren().add(fgc);
     }
 
-    @FXML
-    protected void searchBarUpdateOnClick(MouseEvent event){
-        FruitsAndGreensController fgc = new FruitsAndGreensController(this, searchBar.getText());
-        fgc.itemViewPane.getChildren().clear();
-        for (Product p : datahandler.findProducts(searchBar.getText())){
-            BigItemView tmpItem = bigItemViewMap.get(p.getName());
-            fgc.itemViewPane.getChildren().add(tmpItem);
-        }
-        fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
-        fgc.itemViewPane.setVgap(20);
-        fgc.itemViewPane.setHgap(20);
-    }
-
 
     @FXML
     protected void showMyPagesPane(MouseEvent event){
@@ -248,6 +226,21 @@ public class Controller {
     protected void closeLogInPopUp(MouseEvent event){
         loginPane.toBack();
         LogInPopUp.toBack();
+        textFieldEmail.clear();
+        textFieldPassword.clear();
+    }
+    @FXML
+    private void createNewAccountFromLogInPopUp(ActionEvent event){
+        //TODO behövs FXML
+        //TODO ska man logga in med användarnamn eller email?
+        User user = new User();
+        String tmpEmail = textFieldEmail.getText();
+        //user.setUserName();
+        //user.setPassword();
+        loginPane.toBack();
+        LogInPopUp.toBack();
+        textFieldEmail.clear();
+        textFieldPassword.clear();
     }
     @FXML
     public void loginPressed(MouseEvent event){
