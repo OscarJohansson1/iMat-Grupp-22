@@ -109,7 +109,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdate" onMouseClicked="#testMethodMouseEvent2" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0">
+                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" onMouseClicked="#testMethodMouseEvent2" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -117,7 +117,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <Button layoutX="795.0" layoutY="39.0" mnemonicParsing="false" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE" AnchorPane.leftAnchor="798.0">
+                  <Button layoutX="795.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE" AnchorPane.leftAnchor="798.0">
                      <font>
                         <Font name="Arial Bold" size="18.0" />
                      </font>

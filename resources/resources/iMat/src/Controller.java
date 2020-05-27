@@ -1,5 +1,6 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -212,21 +213,45 @@ public class Controller {
         //BigItemView b = new BigItemView(this);
         //differentDetailPane.getChildren().add(b);
     }
+    @FXML
+    protected void searchBarUpdateOnEnter(ActionEvent event){
+        differentDetailPane.getChildren().clear();
+        FruitsAndGreensController fgc = new FruitsAndGreensController(this, searchBar.getText());
+        fgc.itemViewPane.getChildren().clear();
+        for (Product p : datahandler.findProducts(searchBar.getText())){
+            BigItemView tmpItem = bigItemViewMap.get(p.getName());
+            fgc.itemViewPane.getChildren().add(tmpItem);
+        }
+        fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
+        fgc.itemViewPane.setVgap(20);
+        fgc.itemViewPane.setHgap(20);
+        System.out.println("används");
+        differentDetailPane.getChildren().add(fgc);
+    }
+
+    @FXML
+    protected void searchBarUpdateOnClick(MouseEvent event){
+        FruitsAndGreensController fgc = new FruitsAndGreensController(this, searchBar.getText());
+        fgc.itemViewPane.getChildren().clear();
+        for (Product p : datahandler.findProducts(searchBar.getText())){
+            BigItemView tmpItem = bigItemViewMap.get(p.getName());
+            fgc.itemViewPane.getChildren().add(tmpItem);
+        }
+        fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
+        fgc.itemViewPane.setVgap(20);
+        fgc.itemViewPane.setHgap(20);
+    }
+
+    private List getSearchedProducts() {
+        return datahandler.findProducts(searchBar.getText());
+    }
 
     @FXML
     protected void showMyPagesPane(MouseEvent event){
         myPagesPane.toFront();
     }
 
-    @FXML
-    protected void searchBarUpdate(ActionEvent event){
-        List list = new ArrayList<>();
-        list = getSearchedProducts();
-        System.out.println(list);
-    }
-    private List getSearchedProducts() {
-        return datahandler.findProducts(searchBar.getText());
-    }
+
 
     protected void createBigItemViewMap(){
         for (Product p : datahandler.getProducts()){

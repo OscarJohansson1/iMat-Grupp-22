@@ -92,7 +92,8 @@ public class FruitsAndGreensController extends AnchorPane {
                 updateItemList2(dh, this.controller);
                 break;
             default:
-                System.out.println("något gick fel med kategorierna");
+                splitPane.setDividerPosition(0, 0.15);
+                categoryTitleLabel.setText("Sökresultat för \"" +  s + "\":");
         }
 
     }
@@ -188,6 +189,19 @@ public class FruitsAndGreensController extends AnchorPane {
     private void setDrycker(){
         categoryOneLabel.setText("HOT_DRINKS");
         categoryTwoLabel.setText("COLD_DRINKS");
+        categoryThreeLabel.setVisible(false);
+        categoryFourLabel.setVisible(false);
+        categoryFiveLabel.setVisible(false);
+        categorySixLabel.setVisible(false);
+        categorySevenLabel.setVisible(false);
+        categoryEightLabel.setVisible(false);
+        categoryNineLabel.setVisible(false);
+        categoryTenLabel.setVisible(false);
+    }
+    private void setSearch(){
+        categoryShowAllLabel.setVisible(false);
+        categoryOneLabel.setVisible(false);
+        categoryTwoLabel.setVisible(false);
         categoryThreeLabel.setVisible(false);
         categoryFourLabel.setVisible(false);
         categoryFiveLabel.setVisible(false);
