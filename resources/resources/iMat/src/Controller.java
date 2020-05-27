@@ -34,205 +34,209 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
-    public class Controller {
-        private IMatDataHandler datahandler;
-        //Product p finns endast för att slippa errors (ska egentligen vara det man trycker på)
-        private Product p;
-        protected Map<String, BigItemView> bigItemViewMap = new HashMap<>();
+public class Controller {
+    private IMatDataHandler datahandler;
+    //Product p finns endast för att slippa errors (ska egentligen vara det man trycker på)
+    private Product p;
+    protected Map<String, BigItemView> bigItemViewMap = new HashMap<>();
 
-        @FXML private AnchorPane loginPane; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
-        @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
-        @FXML private Button createAccountButton; @FXML private Label iMatLogo; @FXML private Label userButton;
-        @FXML private TextField searchBar; @FXML private AnchorPane myPagesPane; @FXML private Label myPages;
-        @FXML private Label myFavorites; @FXML private Label myDetailsLabel; @FXML private Label purchaseHistory;
-        @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
-        @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
-        @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
-        @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
-        @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
+    @FXML private AnchorPane loginPane; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
+    @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
+    @FXML private Button createAccountButton; @FXML private Label iMatLogo; @FXML private Label userButton;
+    @FXML private TextField searchBar; @FXML private AnchorPane myPagesPane; @FXML private Label myPages;
+    @FXML private Label myFavorites; @FXML private Label myDetailsLabel; @FXML private Label purchaseHistory;
+    @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
+    @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
+    @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
+    @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
+    @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
 
-        @FXML
-        protected void plusButtonActionPerformed (ActionEvent event){
-            for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
-                if (si.getProduct() == p){
-                    si.setAmount(si.getAmount() + 1);
-                    //Öka countern mellan Plus och Minus
-                    return;
-                }
+    @FXML
+    protected void plusButtonActionPerformed (ActionEvent event){
+        for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
+            if (si.getProduct() == p){
+                si.setAmount(si.getAmount() + 1);
+                //Öka countern mellan Plus och Minus
+                return;
             }
-            datahandler.getShoppingCart().addProduct(p);
-            //Öka countern mellan Plus och Minus
         }
-        @FXML
-        protected void favoriteButtonActionPerformed (ActionEvent event){
+        datahandler.getShoppingCart().addProduct(p);
+        //Öka countern mellan Plus och Minus
+    }
+    @FXML
+    protected void favoriteButtonActionPerformed (ActionEvent event){
 
-            if (datahandler.isFavorite(p)) {
-                datahandler.removeFavorite(p);
-            }
-            else datahandler.addFavorite(p);
+        if (datahandler.isFavorite(p)) {
+            datahandler.removeFavorite(p);
         }
+        else datahandler.addFavorite(p);
+    }
 
-        @FXML
-        protected void newWindow (MouseEvent event) throws IOException {
-            /*
-            AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-            Scene homePageScene = new Scene(homePageDetail);
+    @FXML
+    protected void newWindow (MouseEvent event) throws IOException {
+           /*
+           AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+           Scene homePageScene = new Scene(homePageDetail);
 
-            //homPageDetailController hej = new homPageDetailController();
-            /*
-            FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
-            homePageDetail.setRoot(this);
-            homePageDetail.setController(this);
+           //homPageDetailController hej = new homPageDetailController();
+           /*
+           FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
+           homePageDetail.setRoot(this);
+           homePageDetail.setController(this);
 
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
 
-            fxmlLoader.setRoot(this);
-            fxmlLoader.setController(this);
-            */
-            //Stage window = (Stage) homePageScene.getWindow();
-        /*
-            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                    //(Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(homePageScene);
-            window.show();
+           fxmlLoader.setRoot(this);
+           fxmlLoader.setController(this);
+           */
+        //Stage window = (Stage) homePageScene.getWindow();
+       /*
+           Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                   //(Stage)((Node)event.getSource()).getScene().getWindow();
+           window.setScene(homePageScene);
+           window.show();
 
-         */
-        }
+        */
+    }
 
-        protected void initialize(){
-            differentDetailPane.getChildren().clear();
-            homPageDetailController c = new homPageDetailController(this);
-            differentDetailPane.getChildren().add(c);
+    protected void initialize(){
+        differentDetailPane.getChildren().clear();
+        homPageDetailController c = new homPageDetailController(this);
+        differentDetailPane.getChildren().add(c);
 
-        }
+    }
 
-        /*
-        @FXML
-        public void toCheckout (Stage stage) throws IOException {
-            newWindowMethod(stage);
-        }
+       /*
+       @FXML
+       public void toCheckout (Stage stage) throws IOException {
+           newWindowMethod(stage);
+       }
 
 
 
-        protected void newWindowMethod (Stage stage) throws IOException {
-            AnchorPane wizard1 = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-            Scene wizard1Scene = new Scene(wizard1);
+       protected void newWindowMethod (Stage stage) throws IOException {
+           AnchorPane wizard1 = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+           Scene wizard1Scene = new Scene(wizard1);
 
-            stage.setScene(wizard1Scene);
-        }
+           stage.setScene(wizard1Scene);
+       }
 
-         */
+        */
 /*
-        @FXML
-        protected void minusButtonActionPerformed (ActionEvent event) {
-        /* counter är det som finns mellan Plus och Minus
-            if (counter > 0) {
+       @FXML
+       protected void minusButtonActionPerformed (ActionEvent event) {
+       /* counter är det som finns mellan Plus och Minus
+           if (counter > 0) {
+               for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
+                   if (si.getProduct().equals(p)){
+                       si.setAmount(si.getAmount() - 1);
+                       datahandler.getShoppingCart().removeItem(si);
+                       counter--
+                   }
+               }
+           }
+       }
+        */
+
+    @FXML
+    protected void testMethodActionEvent(ActionEvent event){
+        System.out.println("hej");
+    }
+    @FXML
+    protected void testMethodMouseEvent(MouseEvent event){
+        System.out.println("hi");
+    }
+    @FXML
+    protected void testMethodMouseEvent2(MouseEvent event){
+        searchBar.clear();
+    }
+    @FXML
+    protected void testMethodKeyEvent(KeyEvent event){
+        System.out.println("hello");
+    }
+    @FXML
+    protected void testMethodWindowEvent(WindowEvent event){
+        System.out.println("hola");
+    }
+
+    public void setDatahandler(IMatDataHandler dh){
+        this.datahandler = dh;
+    }
+
+    public void addShoppingCartListener(){
+        datahandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                totalPrizeLabel.setText(datahandler.getShoppingCart().getTotal() + " kr");
+                updateCart();
                 for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
-                    if (si.getProduct().equals(p)){
-                        si.setAmount(si.getAmount() - 1);
-                        datahandler.getShoppingCart().removeItem(si);
-                        counter--
-                    }
+                    System.out.println(si.getProduct());
                 }
             }
-        }
-         */
+        });
+    }
 
-        @FXML
-        protected void testMethodActionEvent(ActionEvent event){
-            System.out.println("hej");
+    private void updateCart(){
+        cartItemPane.getChildren().clear();
+        for (ShoppingItem shoppingItem : datahandler.getShoppingCart().getItems()){
+            CartItemView cartItemView = new CartItemView(shoppingItem);
+            cartItemPane.getChildren().add(cartItemView);
         }
-        @FXML
-        protected void testMethodMouseEvent(MouseEvent event){
-            System.out.println("hi");
-        }
-        @FXML
-        protected void testMethodMouseEvent2(MouseEvent event){
-            searchBar.clear();
-        }
-        @FXML
-        protected void testMethodKeyEvent(KeyEvent event){
-            System.out.println("hello");
-        }
-        @FXML
-        protected void testMethodWindowEvent(WindowEvent event){
-            System.out.println("hola");
-        }
+    }
 
-        public void setDatahandler(IMatDataHandler dh){
-            this.datahandler = dh;
-        }
+    @FXML
+    public void iMatLogoPressed(MouseEvent event){
+        homePagePane.toFront();
+    }
+    @FXML
+    public void loginPressed(MouseEvent event){
+        loginPane.toFront();
+    }
+    @FXML protected void showHomePageDetail(){
+        differentDetailPane.getChildren().clear();
+        homPageDetailController c = new homPageDetailController(this);
+        differentDetailPane.getChildren().add(c);
+    }
+    @FXML
+    protected void showFruitsAndGreens(MouseEvent event){
+        System.out.println("i Controller");
+        differentDetailPane.getChildren().clear();
+        Label tmp = (Label) event.getSource();
+        String s = tmp.getText();
+        FruitsAndGreensController c = new FruitsAndGreensController(this, s);
+        differentDetailPane.getChildren().add(c);
+  /*
+  Lägg till metod som sätter in alla BigItemViews under vald kategori
 
-        public void addShoppingCartListener(){
-            datahandler.getShoppingCart().addShoppingCartListener(new ShoppingCartListener() {
-                @Override
-                public void shoppingCartChanged(CartEvent cartEvent) {
-                    totalPrizeLabel.setText(String.valueOf(datahandler.getShoppingCart().getTotal()));
-                    updateCart();
-                }
-            });
-        }
+   */
+        //BigItemView b = new BigItemView(this);
+        //differentDetailPane.getChildren().add(b);
+    }
 
-        private void updateCart(){
-            cartItemPane.getChildren().clear();
-            for (ShoppingItem shoppingItem : datahandler.getShoppingCart().getItems()){
-                CartItemView cartItemView = new CartItemView(shoppingItem);
-                cartItemPane.getChildren().add(cartItemView);
-            }
-        }
+    @FXML
+    protected void showMyPagesPane(MouseEvent event){
+        myPagesPane.toFront();
+    }
 
-        @FXML
-        public void iMatLogoPressed(MouseEvent event){
-            homePagePane.toFront();
-        }
-        @FXML
-        public void loginPressed(MouseEvent event){
-            loginPane.toFront();
-        }
-        @FXML protected void showHomePageDetail(){
-            differentDetailPane.getChildren().clear();
-            homPageDetailController c = new homPageDetailController(this);
-            differentDetailPane.getChildren().add(c);
-        }
-        @FXML
-        protected void showFruitsAndGreens(MouseEvent event){
-            System.out.println("i Controller");
-            differentDetailPane.getChildren().clear();
-            Label tmp = (Label) event.getSource();
-            String s = tmp.getText();
-            FruitsAndGreensController c = new FruitsAndGreensController(this, s);
-            differentDetailPane.getChildren().add(c);
-   /*
-   Lägg till metod som sätter in alla BigItemViews under vald kategori
+    @FXML
+    protected void searchBarUpdate(ActionEvent event){
+        List list = new ArrayList<>();
+        list = getSearchedProducts();
+        System.out.println(list);
+    }
+    private List getSearchedProducts() {
+        return datahandler.findProducts(searchBar.getText());
+    }
 
-    */
-            //BigItemView b = new BigItemView(this);
-            //differentDetailPane.getChildren().add(b);
-        }
-
-        @FXML
-        protected void showMyPagesPane(MouseEvent event){
-            myPagesPane.toFront();
-        }
-
-        @FXML
-        protected void searchBarUpdate(ActionEvent event){
-            List list = new ArrayList<>();
-            list = getSearchedProducts();
-            System.out.println(list);
-        }
-        private List getSearchedProducts() {
-            return datahandler.findProducts(searchBar.getText());
-        }
-
-        protected void createBigItemViewMap(){
-            for (Product p : datahandler.getProducts()){
-                BigItemView item = new BigItemView(datahandler, p);
-                bigItemViewMap.put(p.getName(), item);
-            }
+    protected void createBigItemViewMap(){
+        for (Product p : datahandler.getProducts()){
+            BigItemView item = new BigItemView(datahandler, p);
+            bigItemViewMap.put(p.getName(), item);
         }
     }
 
 
 
+
+}
 

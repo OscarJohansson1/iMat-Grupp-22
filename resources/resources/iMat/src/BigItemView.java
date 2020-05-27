@@ -63,6 +63,7 @@ public class BigItemView extends AnchorPane {
         datahandler.getShoppingCart().addProduct(product);
         updateQuantity(true);
     }
+
     @FXML
     protected void minusButtonActionPerformed (MouseEvent event){
         if (quantity>0){
@@ -70,12 +71,14 @@ public class BigItemView extends AnchorPane {
                 if (si.getProduct() == product){
                     si.setAmount(si.getAmount() - 1);
                     updateQuantity(false);
+                    if (quantity==0){
+                        datahandler.getShoppingCart().removeItem(si);
+
+                        return;
+                    }
                     datahandler.getShoppingCart().fireShoppingCartChanged(si, true);
-                    return;
                 }
             }
-            datahandler.getShoppingCart().addProduct(product);
-            updateQuantity(false);
         }
     }
 

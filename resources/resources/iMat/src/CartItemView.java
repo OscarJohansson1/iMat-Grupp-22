@@ -20,7 +20,7 @@ public class CartItemView extends AnchorPane {
     @FXML
     Label cartItemPerKilo;
     @FXML
-    Label carTotalItemPrize;
+    Label cartTotalItemPrize;
     @FXML
     ImageView cartEditPen;
 
@@ -45,7 +45,6 @@ public class CartItemView extends AnchorPane {
 
         this.cartItemImage.setImage(datahandler.getFXImage(shoppingItem.getProduct()));
         this.cartItemLabel.setText(shoppingItem.getProduct().getName());
-        this.cartItemPerKilo.setText(shoppingItem.getProduct().getPrice() + " " + shoppingItem.getProduct().getUnit());
-        this.cartEditPen.setImage(datahandler.getFXImage(shoppingItem.getProduct()));
+        this.cartItemPerKilo.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
     }
 }
