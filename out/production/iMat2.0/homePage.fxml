@@ -219,7 +219,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                      <AnchorPane fx:id="differentDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="725.0" />
+                      <AnchorPane fx:id="differentDetailPane" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="725.0" style="-fx-background-color: #ffffff;" />
                         <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: DCDFDA;">
                            <children>
                               <AnchorPane layoutX="4.0" layoutY="43.0" maxHeight="1.7976931348623157E308" prefHeight="397.0" prefWidth="240.0" AnchorPane.topAnchor="43.0">
