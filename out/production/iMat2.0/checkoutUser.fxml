@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="60.0" layoutY="35.0" text="Varukorgen" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="60.0" layoutY="100.0" prefHeight="200.0" prefWidth="727.0" style="-fx-border-color: #000000;">
+         <children>
+            <ScrollPane layoutX="6.0" prefHeight="200.0" prefWidth="727.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="724.0" />
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="60.0" layoutY="365.0" prefHeight="39.0" prefWidth="440.0" style="-fx-border-color: #000000;" text="Adress">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <Label layoutX="60.0" layoutY="330.0" text="Köpta varor kommer att levereras till följande adress">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Label layoutX="60.0" layoutY="425.0" text="Följande kort kommer att användas för köpet">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="503.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sceneImages/baseline_create_black_48dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="503.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sceneImages/baseline_create_black_48dp.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="695.0" layoutY="443.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="450.0" style="-fx-background-color: #2ba23a;" text="Betala som...  : 0 kr " textFill="WHITE" AnchorPane.rightAnchor="54.60000000000002">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="42.0" fitWidth="56.0" layoutX="1064.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sceneImages/baseline_done_outline_white_36dp.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="60.0" layoutY="460.0" prefHeight="39.0" prefWidth="440.0" style="-fx-border-color: #000000;" text="Kortnummer">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

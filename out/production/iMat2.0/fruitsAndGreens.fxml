@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="categoryItemViewPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="725.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.40299051787016776" layoutY="-8.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="725.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="categoryViewPane" minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="614.0">
+               <children>
+                  <Label fx:id="categoryTitleLabel" layoutX="35.0" layoutY="30.0" text="Frukt och grönt" underline="true">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="categoryShowAllLabel" layoutX="35.0" layoutY="90.0" mnemonicParsing="false" text="Visa allt">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryOneLabel" layoutX="169.0" layoutY="90.0" mnemonicParsing="false" text="Baljväxter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryTwoLabel" layoutX="313.0" layoutY="90.0" mnemonicParsing="false" text="Bär">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryThreeLabel" layoutX="423.0" layoutY="90.0" mnemonicParsing="false" text="Citrusfrukter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryFourLabel" layoutX="35.0" layoutY="130.0" mnemonicParsing="false" text="Exotiska frukter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryFiveLabel" layoutX="169.0" layoutY="130.0" mnemonicParsing="false" text="Grönsaksfrukter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categorySixLabel" layoutX="313.0" layoutY="130.0" mnemonicParsing="false" text="Kål">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categorySevenLabel" layoutX="423.0" layoutY="130.0" mnemonicParsing="false" text="Meloner">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryEightLabel" layoutX="35.0" layoutY="170.0" mnemonicParsing="false" text="Rotfrukter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryNineLabel" layoutX="169.0" layoutY="170.0" mnemonicParsing="false" text="Stenfrukter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="categoryTenLabel" layoutX="313.0" layoutY="170.0" mnemonicParsing="false" text="Örtfrukter">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <ScrollPane prefHeight="325.0" prefWidth="726.0" stylesheets="@scrollbar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <FlowPane fx:id="itemViewPane" prefHeight="326.0" prefWidth="657.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</fx:root>

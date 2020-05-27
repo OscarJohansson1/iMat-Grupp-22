@@ -1,0 +1,18 @@
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-padding :1.0;
+}
+
+.scroll-bar:vertical .increment-arrow ,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-padding: 1em;
+
+}
+
+.scroll-bar:vertical .increment-arrow{
+    -fx-shape: "M0, 0L10, 0L5, 10 Z"
+}
+
+.scroll-bar:vertical .decrement-arrow{
+    -fx-shape: "M0, 10L5, 0L10, 10 Z"
+}

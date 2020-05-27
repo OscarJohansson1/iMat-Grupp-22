@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root fx:id="bigItemPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="200.0" style="-fx-border-color: #000000;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="itemImage" fitHeight="102.0" fitWidth="121.0" layoutX="40.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="itemNameLabel" layoutX="86.0" layoutY="139.0" text="Label" />
+      <Label fx:id="costPerKiloLabel" layoutX="78.0" layoutY="157.0" text="Label">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="quantityItemsTextField" layoutX="73.0" layoutY="200.0" prefHeight="26.0" prefWidth="54.0" />
+      <ImageView fx:id="minusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="26.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sceneImages/baseline_remove_circle_outline_black_18dp.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="146.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@sceneImages/baseline_add_circle_outline_black_18dp.png" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>
