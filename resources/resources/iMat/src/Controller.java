@@ -75,9 +75,9 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         @FXML
         protected void newWindow (MouseEvent event) throws IOException {
             /*
-            AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("homPageDetail.fxml"));
+            AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
             Scene homePageScene = new Scene(homePageDetail);
-             */
+
             //homPageDetailController hej = new homPageDetailController();
             /*
             FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
@@ -106,13 +106,22 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
         }
 
-        protected void newWindowMethod (Stage stage) throws IOException {
-            AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("homPageDetail.fxml"));
-            Scene homePageScene = new Scene(homePageDetail);
-
-            stage.setScene(homePageScene);
-
+        /*
+        @FXML
+        public void toCheckout (Stage stage) throws IOException {
+            newWindowMethod(stage);
         }
+
+
+
+        protected void newWindowMethod (Stage stage) throws IOException {
+            AnchorPane wizard1 = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+            Scene wizard1Scene = new Scene(wizard1);
+
+            stage.setScene(wizard1Scene);
+        }
+
+         */
 /*
         @FXML
         protected void minusButtonActionPerformed (ActionEvent event) {
