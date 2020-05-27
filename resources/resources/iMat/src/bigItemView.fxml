@@ -21,12 +21,12 @@
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
-      <ImageView fx:id="minusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="26.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="minusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="26.0" layoutY="200.0" onMouseClicked="#minusButtonActionPerformed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_remove_circle_outline_black_18dp.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="plusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="146.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="plusItemImage" fitHeight="36.0" fitWidth="28.0" layoutX="146.0" layoutY="200.0" onMouseClicked="#plusButtonActionPerformed" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_add_circle_outline_black_18dp.png" />
          </image>

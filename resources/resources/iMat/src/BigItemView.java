@@ -19,8 +19,8 @@ public class BigItemView extends AnchorPane {
     @FXML ImageView minusItemImage;
     @FXML ImageView plusItemImage;
     public int quantity = 0;
-    private Product product;
-    private IMatDataHandler datahandler;
+    private final Product product;
+    private final IMatDataHandler datahandler;
 
     //private Controller controller;
     public BigItemView(IMatDataHandler datahandler, Product product){
@@ -45,21 +45,52 @@ public class BigItemView extends AnchorPane {
 
     /**
      * Får inte detta att fungera. Om man kopplar den nu så kommer:
-     * "Controller already specified"
-     * Om man tar bort
-     *
+     * "Controller value already specified"
+     * Om man tar bort fx:controller="BigItemView" så fungerar inte metoden
+     * Om man tar bort setController så går inte BigItemView-objekt att skapas
+     * OBS! fungerar nu
      */
     @FXML
     protected void plusButtonActionPerformed (MouseEvent event){
         for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
             if (si.getProduct() == product){
                 si.setAmount(si.getAmount() + 1);
-                //Öka countern mellan Plus och Minus
+                updateQuantity(true);
+                datahandler.getShoppingCart().fireShoppingCartChanged(si, true);
                 return;
             }
         }
         datahandler.getShoppingCart().addProduct(product);
-        //Öka countern mellan Plus och Minus
+        updateQuantity(true);
     }
+    @FXML
+    protected void minusButtonActionPerformed (MouseEvent event){
+        if (quantity>0){
+            for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
+                if (si.getProduct() == product){
+                    si.setAmount(si.getAmount() - 1);
+                    updateQuantity(false);
+                    datahandler.getShoppingCart().fireShoppingCartChanged(si, true);
+                    return;
+                }
+            }
+            datahandler.getShoppingCart().addProduct(product);
+            updateQuantity(false);
+        }
+    }
+
+    private void updateQuantity(boolean b){
+        if (b){
+            System.out.println(product + " har lags till i kundvagnen");
+            quantity++;
+            quantityItemsTextField.setText(String.valueOf(quantity));
+        }
+        else {
+            System.out.println(product + " har tagits bort från kundvagnen");
+            quantity--;
+            quantityItemsTextField.setText(String.valueOf(quantity));
+        }
+    }
+
 
 }
