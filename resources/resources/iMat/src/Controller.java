@@ -231,10 +231,6 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
                 bigItemViewMap.put(p.getName(), item);
             }
         }
-
-
-
-
     }
 
 
