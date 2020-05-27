@@ -6,21 +6,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="724.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="724.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="howToShopButton" layoutX="135.0" layoutY="66.0" mnemonicParsing="false" prefHeight="134.0" prefWidth="454.0" style="-fx-background-color: #61E054;" text="Så här handlar du online">
+      <Button fx:id="howToShopButton" layoutX="86.0" layoutY="14.0" mnemonicParsing="false" prefHeight="246.0" prefWidth="507.0" style="-fx-background-color: #ffffff;">
          <font>
             <Font size="29.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="92.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="308.0" fitWidth="757.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@sceneImages/baseline_play_circle_outline_black_36dp.png" />
+                  <Image url="@sceneImages/videon.jpg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="startShoppingButton" layoutX="163.0" layoutY="253.0" mnemonicParsing="false" prefHeight="134.0" prefWidth="398.0" style="-fx-background-color: #61E054;" text="Börja handla">
+      <Button fx:id="startShoppingButton" layoutX="163.0" layoutY="372.0" mnemonicParsing="false" prefHeight="134.0" prefWidth="398.0" style="-fx-background-color: #61E054;" text="Börja handla">
          <font>
             <Font size="29.0" />
          </font>
