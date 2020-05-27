@@ -67,9 +67,9 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <ScrollPane prefHeight="325.0" prefWidth="726.0" stylesheets="@scrollbar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <ScrollPane prefHeight="324.0" prefWidth="723.0" stylesheets="@scrollbar.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <content>
-                        <FlowPane fx:id="itemViewPane" prefHeight="326.0" prefWidth="657.0" />
+                        <FlowPane fx:id="itemViewPane" prefHeight="326.0" prefWidth="695.0" />
                      </content>
                   </ScrollPane>
                </children>

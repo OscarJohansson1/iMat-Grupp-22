@@ -9,6 +9,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.WindowEvent;
 import se.chalmers.cse.dat216.project.*;
 
@@ -47,7 +48,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
         @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
         @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
         @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
-        @FXML private AnchorPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
+        @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
         @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
 
         @FXML

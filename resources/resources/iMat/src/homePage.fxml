@@ -244,9 +244,9 @@
                                           </AnchorPane>
                                           <AnchorPane prefHeight="131.0" prefWidth="238.0">
                                              <children>
-                                                <ScrollPane layoutX="19.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <ScrollPane layoutX="19.0" layoutY="25.0" prefHeight="250.0" prefWidth="238.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <content>
-                                                      <FlowPane fx:id="cartItemPane" prefHeight="254.0" prefWidth="236.0" />
+                                                      <FlowPane fx:id="cartItemPane" prefHeight="250.0" prefWidth="222.0" />
                                                    </content>
                                                 </ScrollPane>
                                              </children></AnchorPane>

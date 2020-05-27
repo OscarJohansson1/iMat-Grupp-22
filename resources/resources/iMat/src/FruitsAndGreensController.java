@@ -94,16 +94,11 @@ public class FruitsAndGreensController extends AnchorPane {
         BigItemView tmpItem;
 
         for (Product p : productList){
-
             count++;
             tmpItem = c.bigItemViewMap.get(p.getName());
-            if (count==1){
-                tmpItem.setLayoutX(100);
-                tmpItem.setLayoutY(50);
-            }
             itemViewPane.getChildren().add(tmpItem);
         }
-        itemViewPane.setPadding(new Insets(10,10,10,7));
+        itemViewPane.setPadding(new Insets(10,10,10,27));
         itemViewPane.setVgap(20);
         itemViewPane.setHgap(20);
     }
