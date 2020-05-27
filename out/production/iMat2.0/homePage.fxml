@@ -16,7 +16,7 @@
    <children>
       <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="665.0" prefWidth="959.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane layoutX="372.0" layoutY="52.0" prefHeight="574.0" prefWidth="427.0" style="-fx-background-color: #2ba23a;">
+            <AnchorPane fx:id="LogInPopUp" layoutX="372.0" layoutY="52.0" prefHeight="574.0" prefWidth="427.0" style="-fx-background-color: #2ba23a;">
                <children>
                   <Label layoutX="109.0" layoutY="17.0" prefHeight="99.0" prefWidth="222.0" text="iMAT Logga in" underline="true">
                      <font>
@@ -70,7 +70,7 @@
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <ImageView fx:id="loginCloseButton" fitHeight="38.0" fitWidth="37.0" layoutX="380.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="loginCloseButton" fitHeight="38.0" fitWidth="37.0" layoutX="380.0" layoutY="7.0" onMouseClicked="#closeLogInPopUp" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/baseline_cancel_presentation_black_18dp.png" />
                      </image>

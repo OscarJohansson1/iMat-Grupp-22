@@ -41,7 +41,7 @@ public class Controller {
     private Product p;
     protected Map<String, BigItemView> bigItemViewMap = new HashMap<>();
 
-    @FXML private AnchorPane loginPane; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
+    @FXML private AnchorPane loginPane; @FXML AnchorPane LogInPopUp; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
     @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
     @FXML private Button createAccountButton; @FXML private Label iMatLogo; @FXML private Label userButton;
     @FXML private TextField searchBar; @FXML private AnchorPane myPagesPane; @FXML private Label myPages;
@@ -189,10 +189,7 @@ public class Controller {
     public void iMatLogoPressed(MouseEvent event){
         homePagePane.toFront();
     }
-    @FXML
-    public void loginPressed(MouseEvent event){
-        loginPane.toFront();
-    }
+
     @FXML protected void showHomePageDetail(){
         differentDetailPane.getChildren().clear();
         homPageDetailController c = new homPageDetailController(this);
@@ -242,15 +239,21 @@ public class Controller {
         fgc.itemViewPane.setHgap(20);
     }
 
-    private List getSearchedProducts() {
-        return datahandler.findProducts(searchBar.getText());
-    }
 
     @FXML
     protected void showMyPagesPane(MouseEvent event){
         myPagesPane.toFront();
     }
-
+    @FXML
+    protected void closeLogInPopUp(MouseEvent event){
+        loginPane.toBack();
+        LogInPopUp.toBack();
+    }
+    @FXML
+    public void loginPressed(MouseEvent event){
+        loginPane.toFront();
+        LogInPopUp.toFront();
+    }
 
 
     protected void createBigItemViewMap(){
