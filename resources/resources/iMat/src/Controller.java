@@ -116,7 +116,15 @@ public class Controller {
         differentDetailPane.getChildren().add(c);
 
     }
-
+    @FXML
+    public void toCheckout(ActionEvent event) throws IOException {
+        Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+        Scene tmpScene = new Scene(tmp);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(tmpScene);
+        window.show();
+        System.out.println("användes");
+    }
        /*
        @FXML
        public void toCheckout (Stage stage) throws IOException {
