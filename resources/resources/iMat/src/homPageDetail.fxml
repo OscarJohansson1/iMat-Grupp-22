@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -20,10 +21,13 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="startShoppingButton" layoutX="163.0" layoutY="372.0" mnemonicParsing="false" prefHeight="134.0" prefWidth="398.0" style="-fx-background-color: #61E054;" text="Börja handla">
+      <Button fx:id="startShoppingButton" layoutX="163.0" layoutY="372.0" mnemonicParsing="false" onAction="#startShopping" prefHeight="134.0" prefWidth="398.0" style="-fx-background-color: #61E054;" text="Börja handla">
          <font>
             <Font size="29.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </fx:root>

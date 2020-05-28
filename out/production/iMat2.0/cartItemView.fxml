@@ -8,8 +8,8 @@
 <fx:root fx:id="cartItemsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="222.0" style="-fx-border-color: #BBC1BC;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="cartItemImage" fitHeight="38.0" fitWidth="42.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="cartItemLabel" layoutX="48.0" layoutY="16.0" text="Label" />
-      <Label fx:id="cartItemPerKilo" layoutX="120.0" layoutY="16.0" text="Label" />
+      <Label fx:id="cartItemLabel" layoutX="55.0" layoutY="16.0" prefHeight="17.0" prefWidth="76.0" text="Label" />
+      <Label fx:id="cartItemPerKilo" alignment="CENTER" layoutX="133.0" layoutY="16.0" prefHeight="17.0" prefWidth="35.0" text="Label" />
       <ImageView fx:id="cartEditPen" fitHeight="26.0" fitWidth="28.0" layoutX="190.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/baseline_create_black_48dp.png" />

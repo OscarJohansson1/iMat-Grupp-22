@@ -50,7 +50,7 @@ public class Controller {
     @FXML private Label myFavorites; @FXML private Label myDetailsLabel; @FXML private Label purchaseHistory;
     @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
     @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
-    @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML private AnchorPane differentDetailPane;
+    @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
 
@@ -110,20 +110,18 @@ public class Controller {
         */
     }
 
-    protected void initialize(){
-        differentDetailPane.getChildren().clear();
-        homPageDetailController c = new homPageDetailController(this);
-        differentDetailPane.getChildren().add(c);
-
-    }
     @FXML
     public void toCheckout(ActionEvent event) throws IOException {
+        //TODO checkoutPane är inte klar ännu
+        //Parent tmp = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
+
         Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
         Scene tmpScene = new Scene(tmp);
+
+
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
-        System.out.println("användes");
     }
        /*
        @FXML
@@ -196,10 +194,10 @@ public class Controller {
     }
     @FXML
     protected void showFruitsAndGreens(MouseEvent event){
-        System.out.println("i Controller");
         differentDetailPane.getChildren().clear();
         Label tmp = (Label) event.getSource();
         String s = tmp.getText();
+        //TODO skapas nya FruitsAndGreensControllers hela tiden. Borde ha ett visst antal och sedan byta mellan
         FruitsAndGreensController c = new FruitsAndGreensController(this, s);
         differentDetailPane.getChildren().add(c);
   /*

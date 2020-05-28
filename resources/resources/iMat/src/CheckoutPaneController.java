@@ -12,28 +12,14 @@ import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
 
-public class Wizard1Controller implements Initializable {
-    @FXML private Button continueAsGuestButton;
-    @FXML private FlowPane checkoutItemFlowPane;
+public class CheckoutPaneController implements Initializable {
+    //@FXML private Button continueAsGuestButton;
+    //@FXML private FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Wizard1Controller skapades");
-        for (ShoppingItem si : dh.getShoppingCart().getItems()){
-            CheckoutItems tmp = new CheckoutItems(si);
-            checkoutItemFlowPane.getChildren().add(tmp);
-        }
-    }
-    @FXML
-    public void toWizard2(ActionEvent event) throws IOException {
-        Parent tmp = FXMLLoader.load(getClass().getResource("wizard.2.fxml"));
-        Scene tmpScene = new Scene(tmp);
 
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tmpScene);
-        window.show();
-        System.out.println("till Wizard2");
     }
 
     @FXML

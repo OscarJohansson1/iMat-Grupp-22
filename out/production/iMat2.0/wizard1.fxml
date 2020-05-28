@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard1Controller">
    <children>
-      <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="128.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="128.0" layoutY="3.0" onMouseClicked="#testMethod" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@sceneImages/Wizard-1.png" />
          </image>
@@ -42,11 +42,11 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="76.0" layoutY="200.0" prefHeight="200.0" prefWidth="727.0" style="-fx-border-color: #000000;">
+      <AnchorPane layoutX="76.0" layoutY="200.0" prefHeight="234.0" prefWidth="743.0" style="-fx-border-color: #000000;">
          <children>
             <ScrollPane layoutX="100.0" layoutY="17.0" prefHeight="200.0" prefWidth="629.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <content>
-                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="200.0" prefWidth="723.0" />
+                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="231.0" prefWidth="724.0" />
                </content>
             </ScrollPane>
          </children>
@@ -91,7 +91,7 @@
             <Font size="35.0" />
          </font>
       </Button>
-      <Button layoutX="680.0" layoutY="550.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="423.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Fortsätt som gäst">
+      <Button fx:id="continueAsGuestButton" layoutX="680.0" layoutY="550.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="124.0" prefWidth="423.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Fortsätt som gäst">
          <font>
             <Font size="35.0" />
          </font>

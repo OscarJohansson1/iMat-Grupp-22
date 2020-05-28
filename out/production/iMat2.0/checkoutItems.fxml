@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="checkoutsItemsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="724.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="checkoutsItemsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="724.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="checkoutItemImage" fitHeight="46.0" fitWidth="51.0" layoutX="6.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="checkoutItemLabel" layoutX="76.0" layoutY="12.0" prefHeight="26.0" prefWidth="102.0" text="Label">
@@ -21,7 +20,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label fx:id="checkoutItemTotalCost" layoutX="607.0" layoutY="12.0" prefHeight="26.0" prefWidth="59.0" text="Label">
+      <Label fx:id="checkoutItemTotalCost" layoutX="587.0" layoutY="12.0" prefHeight="26.0" prefWidth="72.0" text="Label">
          <font>
             <Font size="17.0" />
          </font>
@@ -53,4 +52,4 @@
       </AnchorPane>
       <AnchorPane layoutX="300.0" prefHeight="46.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" />
    </children>
-</AnchorPane>
+</fx:root>

@@ -109,7 +109,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" onMouseClicked="#testMethodMouseEvent2" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0">
+                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0">
                      <font>
                         <Font size="24.0" />
                      </font>

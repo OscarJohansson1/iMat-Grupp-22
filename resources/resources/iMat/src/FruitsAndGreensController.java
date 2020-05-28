@@ -40,6 +40,8 @@ public class FruitsAndGreensController extends AnchorPane {
     //Strängen är kategorin som användaren klickat på.
     public FruitsAndGreensController(Controller c, String s){
 
+        //TODO Pilar längst ner saknas
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fruitsAndGreens.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);

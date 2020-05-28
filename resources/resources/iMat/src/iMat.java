@@ -42,10 +42,11 @@ public class iMat extends Application {
             //controller.newWindowMethod(stage);
             stage.setScene(scene);
             controller.showHomePageDetail();
-            controller.initialize();
             stage.show();
             controller.createBigItemViewMap();
             controller.addShoppingCartListener();
+            //TODO skapa Wizard1Controller om det behövs
+            //Wizard1Controller wiz = new Wizard1Controller();
             //controller.newWindow();
 
         } catch(Exception e) {
