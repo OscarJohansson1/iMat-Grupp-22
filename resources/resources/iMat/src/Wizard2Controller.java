@@ -18,7 +18,7 @@ public class Wizard2Controller implements Initializable {
 @FXML Button backButton4;@FXML Button nextButton4;
 
 @FXML AnchorPane wizardPane3;
-@FXML CheckBox mastercard3;@FXML CheckBox visaCheckbox3;
+@FXML RadioButton mastercard3;@FXML RadioButton visaRadioButton3;
 @FXML TextField cardnumber3;@FXML TextField cardLasting3;@FXML TextField cvcCode3;
 @FXML Button backButton3;@FXML Button nextButton3;
 
