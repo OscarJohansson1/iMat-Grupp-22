@@ -27,11 +27,12 @@ public class Wizard2Controller implements Initializable {
 @FXML TextField postcode2;@FXML TextField postCity2;@FXML Button backButton2;@FXML Button nextButton2;
 
     private IMatDataHandler dh = IMatDataHandler.getInstance();
-
+    private Controller controller;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("Wizard2Controller skapades");
         wizardPane2.toFront();
+
     }
     @FXML
     public void toWizard1(ActionEvent event) throws IOException {
@@ -54,19 +55,33 @@ public class Wizard2Controller implements Initializable {
     public void toWizard4(ActionEvent event){
         wizardPane4.toFront();
     }
-    /*
+
     @FXML
     public void toCheckoutComplete(ActionEvent event) throws IOException {
+        FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
+        Parent root = tmp.load();
+        controller = tmp.getController();
+        Scene scene = new Scene(root, 1200, 700);
+        controller.setDatahandler(dh);
+        controller.showHomePageDetail();
+        controller.createBigItemViewMap();
+        controller.addShoppingCartListener();
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+/*
         Parent tmp = FXMLLoader.load(getClass().getResource("homePage.fxml"));
         Scene tmpScene = new Scene(tmp);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
 
+ */
+
         //TODO skriv klart denna
     }
 
-     */
+
 
 
 
