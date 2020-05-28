@@ -58,6 +58,7 @@ public class Wizard2Controller implements Initializable {
 
     @FXML
     public void toCheckoutComplete(ActionEvent event) throws IOException {
+        System.out.println("toCheckoutComplete användes");
         FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
         Parent root = tmp.load();
         controller = tmp.getController();
