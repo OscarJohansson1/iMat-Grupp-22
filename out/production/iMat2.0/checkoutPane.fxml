@@ -17,11 +17,6 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1200.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogoCheckout" layoutX="25.0" layoutY="32.0" text="iMAT" textFill="WHITE" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="18.0">
-                     <font>
-                        <Font name="Britannic Bold" size="70.0" />
-                     </font>
-                  </Label>
                   <Label fx:id="helpButton" layoutX="973.0" layoutY="38.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
                      <font>
                         <Font name="Calibri" size="39.0" />
@@ -56,6 +51,21 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Label fx:id="iMatLogo" layoutX="5.0" layoutY="18.0" onMouseClicked="#showHomePageDetail" prefHeight="84.0" prefWidth="230.0" text="iMAT" textFill="WHITE">
+                     <font>
+                        <Font name="Elephant" size="55.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fx:id="iMatLogoCheckout" fitHeight="67.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sceneImages/icon_Loggan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">

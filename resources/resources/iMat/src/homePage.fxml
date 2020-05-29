@@ -19,13 +19,20 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1198.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogo" layoutX="23.0" layoutY="18.0" onMouseClicked="#showHomePageDetail" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="18.0">
+                  <Label fx:id="iMatLogo" layoutX="5.0" layoutY="18.0" onMouseClicked="#showHomePageDetail" prefHeight="84.0" prefWidth="230.0" text="iMAT" textFill="WHITE">
                      <font>
-                        <Font name="Britannic Bold" size="70.0" />
+                        <Font name="Elephant" size="55.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
+                     <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sceneImages/icon_Loggan.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Label>
                   <Label fx:id="helpButton" layoutX="981.0" layoutY="29.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
                      <font>
@@ -45,7 +52,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="39.0">
+                  <TextField fx:id="searchBar" layoutX="255.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.topAnchor="39.0">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -53,7 +60,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <Button layoutX="795.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE" AnchorPane.leftAnchor="798.0">
+                  <Button layoutX="807.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="18.0" />
                      </font>
