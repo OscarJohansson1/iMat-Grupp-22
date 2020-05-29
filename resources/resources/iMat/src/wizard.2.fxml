@@ -10,350 +10,36 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard2Controller">
+<javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard2Controller">
    <children>
-      <AnchorPane fx:id="wizardPane2" prefHeight="582.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="wizardPane3" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField fx:id="surname2" layoutX="77.0" layoutY="273.0" prefHeight="42.0" prefWidth="252.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="220.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="85.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn " AnchorPane.leftAnchor="77.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="lastname2" layoutX="387.0" layoutY="273.0" prefHeight="42.0" prefWidth="252.0" AnchorPane.leftAnchor="387.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Text layoutX="445.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn" AnchorPane.leftAnchor="387.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="emailField2" layoutX="98.0" layoutY="353.0" prefHeight="42.0" prefWidth="561.0" AnchorPane.leftAnchor="77.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Text layoutX="81.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" AnchorPane.leftAnchor="77.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="addressField2" layoutX="77.0" layoutY="433.0" prefHeight="42.0" prefWidth="561.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="postcode2" layoutX="77.0" layoutY="513.0" prefHeight="42.0" prefWidth="252.0" AnchorPane.leftAnchor="77.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="postCity2" layoutX="387.0" layoutY="513.0" prefHeight="42.0" prefWidth="252.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Text layoutX="77.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gatuadress">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text layoutX="387.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postort">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Button fx:id="backButton2" layoutX="740.0" layoutY="495.0" mnemonicParsing="false" onAction="#toWizard1" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="nextButton2" layoutX="920.0" layoutY="495.0" mnemonicParsing="false" onAction="#toWizard3" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="733.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_navigate_before_black_48dp.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="1111.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
-               </image>
-            </ImageView>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress" underline="true" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="154.0">
+            <Text layoutX="77.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala" underline="true" AnchorPane.topAnchor="68.626953125">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text layoutX="77.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen ange ditt namn och vilken adress vi ska leverera varorna till " AnchorPane.leftAnchor="77.0">
-               <font>
-                  <Font size="21.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="138.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-1.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="699.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-3.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="419.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="979.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-4.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="500.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="780.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="974.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
+            <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen ange informationen om kortet du vill använda vid köpet">
                <font>
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text layoutX="718.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="387.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="131.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="wizardPane4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text layoutX="974.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="718.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="500.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="138.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-1.1.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="131.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="419.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-2.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="700.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-3.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="981.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-4.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="220.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="780.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="387.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp" underline="true" AnchorPane.leftAnchor="77.0" AnchorPane.topAnchor="154.0">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj när varorna ska levereras till din dörr. ">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <DatePicker fx:id="pickADate4" layoutX="77.0" layoutY="261.0" prefHeight="38.0" prefWidth="271.0" />
-            <Text layoutX="77.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransdag">
+            <Text layoutX="77.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Korttyp:">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text layoutX="77.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om informationen nedan inte stämmer kan du gå tillbaka till tidigare steg och ändra med hjälp av tillbaka-knappen nedanför">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köpta varor kommer att lämnas på följande adress:">
+            <Text layoutX="77.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer:">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="addressDelivery4" layoutX="77.0" layoutY="407.0" prefHeight="38.0" prefWidth="421.0">
+            <TextField fx:id="cardnumber3" layoutX="124.0" layoutY="280.0" prefHeight="34.0" prefWidth="303.0" promptText="1234-1234-1234-1234-1234" style="-fx-border-color: #000000;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Text layoutX="77.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Följande kort kommer att användas:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="cardForDelivery4" layoutX="77.0" layoutY="487.0" prefHeight="38.0" prefWidth="421.0">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button fx:id="backButton4" layoutX="740.0" layoutY="495.0" mnemonicParsing="false" onAction="#toWizard3" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <Button fx:id="nextButton4" layoutX="920.0" layoutY="495.0" mnemonicParsing="false" onAction="#toCheckoutComplete" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="wizardPane3" prefHeight="581.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text layoutX="974.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="138.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-1.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="700.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="419.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-2.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="979.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/Wizard-4.1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="220.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="500.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="780.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/streck.png" />
-               </image>
-            </ImageView>
-            <Text layoutX="77.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala" underline="true" AnchorPane.topAnchor="154.0">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Text layoutX="131.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="718.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="387.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen ange informationen om kortet du vill använda vid köpet">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Korttyp:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="cardnumber3" layoutX="120.0" layoutY="360.0" prefHeight="34.0" prefWidth="303.0" promptText="1234-1234-1234-1234-1234" style="-fx-border-color: #000000;">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button layoutX="77.0" layoutY="360.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+            <Button layoutX="77.0" layoutY="280.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -362,17 +48,17 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Text layoutX="77.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giltighetstid:">
+            <Text layoutX="77.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giltighetstid:">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="cardLasting3" layoutX="120.0" layoutY="450.0" prefHeight="34.0" prefWidth="115.0" promptText="MM/ÅÅ" style="-fx-border-color: #000000;">
+            <TextField fx:id="cardLasting3" layoutX="124.0" layoutY="370.0" prefHeight="34.0" prefWidth="115.0" promptText="MM/ÅÅ" style="-fx-border-color: #000000;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Button layoutX="77.0" layoutY="450.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+            <Button layoutX="77.0" layoutY="370.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -381,17 +67,17 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Text layoutX="300.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC:">
+            <Text layoutX="302.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC:">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="cvcCode3" layoutX="349.0" layoutY="450.0" prefHeight="34.0" prefWidth="75.0" promptText="123" style="-fx-border-color: #000000;">
+            <TextField fx:id="cvcCode3" layoutX="351.0" layoutY="370.0" prefHeight="34.0" prefWidth="75.0" promptText="123" style="-fx-border-color: #000000;">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <Button layoutX="300.0" layoutY="450.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+            <Button layoutX="302.0" layoutY="370.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                <graphic>
                   <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -400,36 +86,185 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="backButton3" layoutX="740.0" layoutY="495.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
+            <Button fx:id="backButton3" layoutX="745.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="733.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="738.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@sceneImages/baseline_navigate_before_black_48dp.png" />
                </image>
             </ImageView>
-            <Button fx:id="nextButton3" layoutX="920.0" layoutY="495.0" mnemonicParsing="false" onAction="#toWizard4" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
+            <Button fx:id="nextButton3" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard4" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="1110.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="1115.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
                </image>
             </ImageView>
-            <RadioButton fx:id="mastercard3" layoutX="77.0" layoutY="280.0" mnemonicParsing="false" text="Mastercard">
+            <RadioButton fx:id="mastercard3" layoutX="77.0" layoutY="185.0" mnemonicParsing="false" text="Mastercard">
                <font>
                   <Font size="16.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="visaRadioButton3" layoutX="220.0" layoutY="280.0" mnemonicParsing="false" text="Visa">
+            <RadioButton fx:id="visaRadioButton3" layoutX="228.0" layoutY="185.0" mnemonicParsing="false" text="Visa">
                <font>
                   <Font size="16.0" />
                </font>
             </RadioButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="wizardPane4" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Text layoutX="77.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp" underline="true" AnchorPane.leftAnchor="77.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj när varorna ska levereras till din dörr. ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="pickADate4" layoutX="77.0" layoutY="186.0" prefHeight="38.0" prefWidth="271.0" />
+            <Text layoutX="77.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransdag">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Om informationen nedan inte stämmer kan du gå tillbaka till tidigare steg och ändra med hjälp av tillbaka-knappen nedanför">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köpta varor kommer att lämnas på följande adress:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="addressDelivery4" layoutX="77.0" layoutY="317.0" prefHeight="38.0" prefWidth="421.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="77.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Följande kort kommer att användas:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cardForDelivery4" layoutX="77.0" layoutY="397.0" prefHeight="38.0" prefWidth="421.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="backButton4" layoutX="745.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard3" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="nextButton4" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toCheckoutComplete" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="wizardPane2" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="surname2" layoutX="77.0" layoutY="179.0" prefHeight="42.0" prefWidth="252.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="77.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Förnamn ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="lastname2" layoutX="387.0" layoutY="179.0" prefHeight="42.0" prefWidth="252.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="387.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailField2" layoutX="77.0" layoutY="259.0" prefHeight="42.0" prefWidth="561.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="77.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="addressField2" layoutX="77.0" layoutY="339.0" prefHeight="42.0" prefWidth="561.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="postcode2" layoutX="77.0" layoutY="419.0" prefHeight="42.0" prefWidth="252.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="postCity2" layoutX="387.0" layoutY="419.0" prefHeight="42.0" prefWidth="252.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Text layoutX="77.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gatuadress">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="387.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postort">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="backButton2" layoutX="745.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard1" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="nextButton2" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard3" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="738.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_navigate_before_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="1111.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="77.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress" underline="true" AnchorPane.leftAnchor="77.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen ange ditt namn och vilken adress vi ska leverera varorna till " AnchorPane.leftAnchor="77.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>

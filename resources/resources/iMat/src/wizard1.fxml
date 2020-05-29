@@ -3,112 +3,30 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard1Controller">
+<javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Wizard1Controller">
    <children>
-      <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="128.0" layoutY="3.0" onMouseClicked="#testMethod" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/Wizard-1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="409.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/Wizard-2.1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="689.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/Wizard-3.1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="114.0" fitWidth="90.0" layoutX="969.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/Wizard-4.1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="208.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/streck.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="77.0" layoutY="135.0" prefHeight="54.0" prefWidth="229.0" text="Varukorgen" underline="true">
+      <Label layoutX="86.0" layoutY="19.0" prefHeight="54.0" prefWidth="229.0" text="Varukorgen" underline="true">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="76.0" layoutY="200.0" prefHeight="234.0" prefWidth="743.0" style="-fx-border-color: #000000;">
+      <AnchorPane layoutX="85.0" layoutY="84.0" prefHeight="376.0" prefWidth="743.0" style="-fx-border-color: #000000;">
          <children>
             <ScrollPane layoutX="100.0" layoutY="17.0" prefHeight="200.0" prefWidth="629.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <content>
-                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="231.0" prefWidth="724.0" />
+                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="360.0" prefWidth="742.0" />
                </content>
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Text layoutX="126.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="378.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="709.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <Text layoutX="967.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="489.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/streck.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="65.0" fitWidth="210.0" layoutX="770.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/streck.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="71.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Skapa en användare för att göra dina framtida köp snabbare, eller fortsätt som gäst för att genomför ditt köp direkt     " x="6.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Button layoutX="78.0" layoutY="550.0" mnemonicParsing="false" prefHeight="124.0" prefWidth="423.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Skapa användare ">
+      <Button fx:id="continueAsGuestButton" layoutX="901.0" layoutY="338.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="124.0" prefWidth="259.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa">
          <font>
             <Font size="35.0" />
          </font>
       </Button>
-      <Button fx:id="continueAsGuestButton" layoutX="680.0" layoutY="550.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="124.0" prefWidth="423.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Fortsätt som gäst">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Button>
-      <ImageView fitHeight="228.0" fitWidth="77.0" layoutX="572.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/streck_2.png" />
-         </image>
-      </ImageView>
-      <AnchorPane layoutX="556.0" layoutY="587.0" prefHeight="49.0" prefWidth="89.0" style="-fx-background-color: #ffffff;">
-         <children>
-            <Text layoutX="15.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eller">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
    </children>
 </javafx.scene.layout.AnchorPane>

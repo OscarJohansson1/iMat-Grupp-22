@@ -14,76 +14,12 @@
 
 <AnchorPane fx:id="homePagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="665.0" prefWidth="959.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane fx:id="LogInPopUp" layoutX="372.0" layoutY="52.0" prefHeight="574.0" prefWidth="427.0" style="-fx-background-color: #2ba23a;">
-               <children>
-                  <Label layoutX="109.0" layoutY="17.0" prefHeight="99.0" prefWidth="222.0" text="iMAT Logga in" underline="true">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldEmail" layoutX="106.0" layoutY="128.0" prefHeight="39.0" prefWidth="224.0" style="-fx-background-color: #FFFFFF;">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="textFieldPassword" layoutX="106.0" layoutY="201.0" prefHeight="39.0" prefWidth="224.0" style="-fx-background-color: #FFFFFF;">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </TextField>
-                  <Label layoutX="50.0" layoutY="132.0" text="Email:" textAlignment="RIGHT">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="15.0" layoutY="205.0" text="Lösenord:" textAlignment="RIGHT">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="loginButton" layoutX="154.0" layoutY="265.0" minWidth="30.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="123.0" style="-fx-background-color: #ffffff;" text="Logga in">
-                     <font>
-                        <Font name="System Bold" size="20.0" />
-                     </font>
-                  </Button>
-                  <Label layoutX="81.0" layoutY="372.0" text="Har du glömt lösenordet?" underline="true">
-                     <graphic>
-                        <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@sceneImages/baseline_help_outline_black_18dp.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="85.0" layoutY="390.0" prefHeight="123.0" prefWidth="248.0" text="Har du inget konto än? Registerara dig här" textAlignment="CENTER" wrapText="true">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="createAccountButton" layoutX="128.0" layoutY="499.0" mnemonicParsing="false" style="-fx-background-color: #ffffff;" text="Skapa nytt konto">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Button>
-                  <ImageView fx:id="loginCloseButton" fitHeight="38.0" fitWidth="37.0" layoutX="380.0" layoutY="7.0" onMouseClicked="#closeLogInPopUp" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@sceneImages/baseline_cancel_presentation_black_18dp.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
+      <AnchorPane fx:id="loginPane" layoutX="244.0" layoutY="40.0" prefHeight="665.0" prefWidth="959.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="595.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1198.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogo" layoutX="23.0" layoutY="18.0" onMouseClicked="#showHomePageDetail" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogo" layoutX="23.0" layoutY="18.0" onMouseClicked="#showHomePageDetail" prefHeight="76.0" prefWidth="164.0" text="iMAT" textFill="WHITE" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="18.0">
                      <font>
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
@@ -91,14 +27,14 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <Label fx:id="userButton" layoutX="981.0" layoutY="29.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Logga in" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0">
+                  <Label fx:id="helpButton" layoutX="981.0" layoutY="29.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
                      <font>
-                        <Font name="Arial Black" size="20.0" />
+                        <Font name="Calibri" size="39.0" />
                      </font>
                      <graphic>
                         <ImageView fitHeight="52.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@sceneImages/interface (1).png" />
+                              <Image url="@sceneImages/outline_help_outline_white_48dp.png" />
                            </image>
                            <cursor>
                               <Cursor fx:constant="MOVE" />
@@ -109,7 +45,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0">
+                  <TextField fx:id="searchBar" layoutX="245.0" layoutY="39.0" onAction="#searchBarUpdateOnEnter" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="399.0" AnchorPane.topAnchor="39.0">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -141,9 +77,9 @@
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
                               </ImageView>
-                              <AnchorPane layoutX="13.0" layoutY="75.0" prefHeight="200.0" prefWidth="175.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+                              <AnchorPane layoutX="13.0" layoutY="75.0" prefHeight="230.0" prefWidth="175.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                                  <children>
-                                    <Label fx:id="fruitsAndGreens" layoutX="4.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Frukt och grönt">
+                                    <Label fx:id="fruitsAndGreens" layoutX="4.0" layoutY="3.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Frukter och bär">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -151,7 +87,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="dairyItems" layoutX="4.0" layoutY="30.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Mejeriprodukter">
+                                    <Label fx:id="dairyItems" layoutX="4.0" layoutY="60.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Mejeriprodukter">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -159,7 +95,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="breadItems" layoutX="4.0" layoutY="60.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Bröd">
+                                    <Label fx:id="breadItems" layoutX="4.0" layoutY="90.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Bröd">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -167,7 +103,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="fishItems" layoutX="4.0" layoutY="90.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Fisk">
+                                    <Label fx:id="fishItems" layoutX="4.0" layoutY="120.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Fisk">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -175,7 +111,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="meatItems" layoutX="4.0" layoutY="120.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Kött">
+                                    <Label fx:id="meatItems" layoutX="4.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Kött">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -183,7 +119,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="pantryItems" layoutX="4.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Skafferi">
+                                    <Label fx:id="pantryItems" layoutX="4.0" layoutY="180.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Skafferi">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -191,13 +127,66 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="drinkItems" layoutX="4.0" layoutY="180.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Drycker">
+                                    <Label fx:id="drinkItems" layoutX="4.0" layoutY="210.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Drycker">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
                                        <cursor>
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
+                                    </Label>
+                                    <Label fx:id="vegetables" layoutX="4.0" layoutY="31.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Grönsaker">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="myPagesPane" layoutX="13.0" layoutY="350.0" prefHeight="140.0" prefWidth="175.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+                                 <children>
+                                    <Label fx:id="myPages" layoutX="4.0" layoutY="14.0" text="Mina sidor" underline="true">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="myFavorites" layoutX="4.0" layoutY="50.0" prefHeight="26.0" prefWidth="164.0" text="Mina favoriter">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@sceneImages/outline_grade_black_18dp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <Label fx:id="myDetailsLabel" layoutX="4.0" layoutY="75.0" prefHeight="26.0" prefWidth="164.0" text="Mina uppgifter">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@sceneImages/baseline_perm_identity_black_18dp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <Label fx:id="purchaseHistory" layoutX="4.0" layoutY="100.0" prefHeight="26.0" prefWidth="164.0" text="Köphistorik">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@sceneImages/outline_assignment_black_18dp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
                                     </Label>
                                  </children>
                               </AnchorPane>
@@ -208,7 +197,7 @@
                            <children>
                               <AnchorPane layoutX="4.0" layoutY="43.0" maxHeight="1.7976931348623157E308" prefHeight="436.0" prefWidth="240.0" AnchorPane.topAnchor="43.0">
                                  <children>
-                                    <SplitPane dividerPositions="0.16820276497695852, 0.7926267281105991" layoutY="-1.0" orientation="VERTICAL" prefHeight="436.0" prefWidth="240.0" style="-fx-background-color: #ffffff;">
+                                    <SplitPane dividerPositions="0.16820276497695852, 0.7926267281105991" layoutY="-1.0" orientation="VERTICAL" prefHeight="436.0" prefWidth="240.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                                       <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                              <children>
@@ -230,13 +219,13 @@
                                              <children>
                                                 <ScrollPane layoutX="19.0" layoutY="25.0" prefHeight="250.0" prefWidth="238.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <content>
-                                                      <FlowPane fx:id="cartItemPane" prefHeight="250.0" prefWidth="238.0" style="-fx-background-color: #ffffff;" />
+                                                      <FlowPane fx:id="cartItemPane" prefHeight="248.0" prefWidth="234.0" style="-fx-background-color: #ffffff;" />
                                                    </content>
                                                 </ScrollPane>
                                              </children></AnchorPane>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="98.0" prefWidth="238.0">
                                              <children>
-                                                <Button fx:id="checkoutButton" alignment="CENTER" cache="true" layoutX="53.0" layoutY="38.0" mnemonicParsing="false" onAction="#toCheckout" prefHeight="34.0" prefWidth="131.0" text="Till kassan" textAlignment="CENTER">
+                                                <Button fx:id="checkoutButton" alignment="CENTER" cache="true" layoutX="53.0" layoutY="34.0" mnemonicParsing="false" onAction="#toCheckout" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: #ADF26F; -fx-border-color: #000000;" text="Till kassan" textAlignment="CENTER">
                                                    <cursor>
                                                       <Cursor fx:constant="HAND" />
                                                    </cursor>
@@ -263,51 +252,6 @@
                         </AnchorPane>
                     </items>
                   </SplitPane>
-                  <AnchorPane fx:id="myPagesPane" layoutX="13.0" layoutY="300.0" prefHeight="140.0" prefWidth="175.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
-                     <children>
-                        <Label fx:id="myPages" layoutX="4.0" layoutY="14.0" text="Mina sidor" underline="true">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="myFavorites" layoutX="4.0" layoutY="50.0" prefHeight="26.0" prefWidth="164.0" text="Mina favoriter">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@sceneImages/outline_grade_black_18dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                        <Label fx:id="myDetailsLabel" layoutX="4.0" layoutY="75.0" prefHeight="26.0" prefWidth="164.0" text="Mina uppgifter">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@sceneImages/baseline_perm_identity_black_18dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                        <Label fx:id="purchaseHistory" layoutX="4.0" layoutY="100.0" prefHeight="26.0" prefWidth="164.0" text="Köphistorik">
-                           <font>
-                              <Font size="17.0" />
-                           </font>
-                           <graphic>
-                              <ImageView fitHeight="22.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@sceneImages/outline_assignment_black_18dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                     </children>
-                  </AnchorPane>
                </children></AnchorPane>
         </items>
       </SplitPane>

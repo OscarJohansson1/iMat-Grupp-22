@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
@@ -8,52 +9,123 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <javafx.scene.layout.AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckoutPaneController">
    <children>
       <SplitPane dividerPositions="0.5" layoutX="251.0" layoutY="96.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="140.0" prefWidth="1200.0" style="-fx-background-color: #2ba23a;">
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1200.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="iMatLogoCheckout" layoutX="25.0" layoutY="32.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogoCheckout" layoutX="25.0" layoutY="32.0" text="iMAT" textFill="WHITE" AnchorPane.leftAnchor="23.0" AnchorPane.topAnchor="18.0">
                      <font>
                         <Font name="Britannic Bold" size="70.0" />
                      </font>
                   </Label>
-                  <Label fx:id="userButtonCheckout" layoutX="536.0" layoutY="42.0" prefHeight="50.0" prefWidth="175.0" text="Logga in" textFill="WHITE" AnchorPane.rightAnchor="13.0">
+                  <Label fx:id="helpButton" layoutX="973.0" layoutY="38.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
+                     <font>
+                        <Font name="Calibri" size="39.0" />
+                     </font>
                      <graphic>
-                        <ImageView fitHeight="56.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="52.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@sceneImages/icons8-male-user-48.png" />
+                              <Image url="@sceneImages/outline_help_outline_white_48dp.png" />
                            </image>
+                           <cursor>
+                              <Cursor fx:constant="MOVE" />
+                           </cursor>
                         </ImageView>
                      </graphic>
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="19.0" />
-                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Label>
-                  <TextField fx:id="searchBarCheckout" layoutX="245.0" layoutY="57.0" prefHeight="26.0" prefWidth="302.0" style="-fx-background-color: #FFFFFF;" text="Sök" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="300.0" />
-                  <Button fx:id="searchButtonCheckout" layoutX="482.0" layoutY="58.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="18.0" style="-fx-background-color: #ffffff;" />
-                  <ImageView fitHeight="20.0" fitWidth="16.0" layoutX="874.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@sceneImages/baseline_search_black_36dp.png" />
-                     </image>
-                  </ImageView>
+                  <TextField fx:id="searchBarCheckout" layoutX="380.0" layoutY="29.0" onAction="#searchBarUpdateOnEnter" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="245.0" AnchorPane.topAnchor="39.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </TextField>
+                  <Button fx:id="searchBarButtonCheckout" layoutX="777.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE" AnchorPane.leftAnchor="798.0" AnchorPane.topAnchor="39.0">
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
                   <Label layoutX="33.0" layoutY="24.0" text="Kassa" underline="true">
                      <font>
-                        <Font name="Arial Rounded MT Bold" size="34.0" />
+                        <Font name="Arial" size="39.0" />
                      </font>
                   </Label>
-                  <Button fx:id="toTheHomepageButton" layoutX="868.0" layoutY="24.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="286.0" style="-fx-background-color: #97CE72;" text="Tillbaka till startsidan " AnchorPane.rightAnchor="56.0">
+                  <Button fx:id="toTheHomepageButton" layoutX="871.0" layoutY="25.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #97CE72;" text="Tillbaka till startsidan " AnchorPane.rightAnchor="30.0">
                      <font>
-                        <Font name="System Bold" size="21.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font>
                   </Button>
-                  <AnchorPane fx:id="checkoutPane" layoutX="199.0" layoutY="197.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+                  <AnchorPane fx:id="checkoutPane" layoutX="199.0" layoutY="99.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="99.0" />
+                  <Text layoutX="355.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="580.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="737.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="198.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="210.0" layoutY="11.0" onMouseClicked="#testMethod" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/Wizard-1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="124.0" layoutX="273.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/streck.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="124.0" layoutX="453.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/streck.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="40.0" fitWidth="124.0" layoutX="634.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/streck.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="750.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/Wizard-4.1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="570.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/Wizard-3.1.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="390.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/Wizard-2.1.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
         </items>
