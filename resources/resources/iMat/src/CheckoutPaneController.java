@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
 
-public class CheckoutPaneController implements Initializable {
+public class CheckoutPaneController extends Controller implements Initializable {
     //@FXML private Button continueAsGuestButton;
     //@FXML private FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();

@@ -52,7 +52,7 @@ public class Controller {
     @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
-    @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane;
+    @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
 
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
@@ -115,13 +115,19 @@ public class Controller {
         //TODO checkoutPane är inte klar ännu
         //Parent tmp = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
 
-        Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-        Scene tmpScene = new Scene(tmp);
+        //Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+        //Scene tmpScene = new Scene(tmp);
 
-
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tmpScene);
-        window.show();
+        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        //window.setScene(tmpScene);
+        //window.show();
+        Parent panel;
+        panel = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
+        Scene scene = new Scene(panel);
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+        checkoutPane.getChildren().add((Node)FXMLLoader.load(getClass().getResource("wizard1.fxml")));
     }
        /*
        @FXML

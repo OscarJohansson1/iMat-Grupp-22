@@ -17,7 +17,7 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1200.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="helpButton" layoutX="973.0" layoutY="38.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
+                  <Label fx:id="helpButton" layoutX="973.0" layoutY="38.0" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
                      <font>
                         <Font name="Calibri" size="39.0" />
                      </font>
