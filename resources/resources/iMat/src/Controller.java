@@ -113,21 +113,15 @@ public class Controller {
     @FXML
     public void toCheckout(ActionEvent event) throws IOException {
         //TODO checkoutPane är inte klar ännu
-        //Parent tmp = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
+        Parent tmp = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
 
         //Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-        //Scene tmpScene = new Scene(tmp);
+        Scene tmpScene = new Scene(tmp);
 
-        //Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        //window.setScene(tmpScene);
-        //window.show();
-        Parent panel;
-        panel = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
-        Scene scene = new Scene(panel);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
-        checkoutPane.getChildren().add((Node)FXMLLoader.load(getClass().getResource("wizard1.fxml")));
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(tmpScene);
+        window.show();
+
     }
        /*
        @FXML
