@@ -120,7 +120,7 @@
             </AnchorPane>
             <AnchorPane prefHeight="63.0" prefWidth="733.0">
                <children>
-                  <Button fx:id="backCatecoryButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextCategory" prefHeight="50.0" prefWidth="280.0" style="-fx-border-color: #000000; -fx-background-color: #C9CCC7;" text="Till Fisk">
+                  <Button fx:id="backCatecoryButton" layoutX="20.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextCategory" prefHeight="50.0" prefWidth="280.0" styleClass="grey_button" stylesheets="@plaincy.css" text="Till Fisk">
                      <font>
                         <Font size="19.0" />
                      </font>
@@ -128,7 +128,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="nextCategoryButton" layoutX="325.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextCategory" prefHeight="50.0" prefWidth="390.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Till Skafferi">
+                  <Button fx:id="nextCategoryButton" layoutX="325.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextCategory" prefHeight="50.0" prefWidth="390.0" styleClass="green_button" stylesheets="@plaincy.css" text="Till Skafferi">
                      <font>
                         <Font size="22.0" />
                      </font>

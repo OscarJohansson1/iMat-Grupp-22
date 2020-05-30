@@ -1,0 +1,26 @@
+.green_button {
+    -fx-background-color:  #2ba23a;
+    -fx-border-color: #000000;
+}
+
+.green_button:hover {
+    -fx-background-color: #48B656;
+}
+
+.grey_button {
+    -fx-background-color: #C9CCC7;
+    -fx-border-color: #000000;
+}
+
+.grey_button:hover {
+    -fx-background-color: #E9EAE8;
+}
+
+.orange_button {
+    -fx-background-color:  #F1C154;
+    -fx-border-color: #000000;
+}
+
+.orange_button:hover {
+    -fx-background-color:  #FFD77C;
+}

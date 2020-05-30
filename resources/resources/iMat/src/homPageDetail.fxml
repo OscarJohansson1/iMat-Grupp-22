@@ -21,7 +21,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="startShoppingButton" layoutX="107.0" layoutY="372.0" mnemonicParsing="false" onAction="#startShopping" prefHeight="134.0" prefWidth="498.0" style="-fx-background-color: #F1C154; -fx-border-color: #000000;" text="Börja handla">
+      <Button fx:id="startShoppingButton" layoutX="107.0" layoutY="372.0" mnemonicParsing="false" onAction="#startShopping" prefHeight="134.0" prefWidth="498.0" styleClass="orange_button" stylesheets="@plaincy.css" text="Börja handla">
          <font>
             <Font name="Arial" size="50.0" />
          </font>
