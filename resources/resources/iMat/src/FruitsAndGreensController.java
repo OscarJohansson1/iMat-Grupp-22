@@ -10,9 +10,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -36,6 +39,7 @@ public class FruitsAndGreensController extends AnchorPane {
 
     private Controller controller;
     private IMatDataHandler dh;
+    private Categories categories;
 
     //Strängen är kategorin som användaren klickat på.
     public FruitsAndGreensController(Controller c, String s){
@@ -57,52 +61,69 @@ public class FruitsAndGreensController extends AnchorPane {
         categoryTitleLabel.setText(s);
         this.dh = IMatDataHandler.getInstance();
 
+        showProducts(s);
+    }
+
+    public void showProducts(String s){
         switch(s){
-            case "Frukt och grönt":
+            case "Frukter och bär":
                 setFruitsAndGreens();
                 splitPane.setDividerPosition(0, 0.38);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
+                        ProductCategory.EXOTIC_FRUIT, ProductCategory.FRUIT, ProductCategory.MELONS)));
+                break;
+            case "Grönsaker":
+                setFruitsAndGreens();
+                splitPane.setDividerPosition(0, 0.38);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.POD, ProductCategory.ROOT_VEGETABLE,
+                        ProductCategory.VEGETABLE_FRUIT)));
                 break;
             case "Mejeriprodukter":
                 setMejeriprodukter();
                 splitPane.setDividerPosition(0, 0.23);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.DAIRIES)));
                 break;
             case "Bröd":
                 setBröd();
                 splitPane.setDividerPosition(0, 0.23);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.BREAD)));
                 break;
             case "Fisk":
                 setFisk();
                 splitPane.setDividerPosition(0, 0.23);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.FISH)));
                 break;
             case "Kött":
                 setKött();
                 splitPane.setDividerPosition(0, 0.23);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.MEAT)));
                 break;
             case "Skafferi":
                 setSkafferi();
                 splitPane.setDividerPosition(0, 0.30);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.FLOUR_SUGAR_SALT,
+                        ProductCategory.NUTS_AND_SEEDS, ProductCategory.PASTA, ProductCategory.POTATO_RICE, ProductCategory.SWEET,
+                        ProductCategory.HERB)));
                 break;
             case "Drycker":
                 setDrycker();
                 splitPane.setDividerPosition(0, 0.23);
-                updateItemList2(dh, this.controller);
+                updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.COLD_DRINKS,
+                        ProductCategory.HOT_DRINKS)));
                 break;
             default:
                 splitPane.setDividerPosition(0, 0.15);
                 categoryTitleLabel.setText("Sökresultat för \"" +  s + "\":");
         }
-
     }
-    public void updateItemList2(IMatDataHandler dh, Controller c){
+
+    public void updateItemList2(IMatDataHandler dh, Controller c, ArrayList<ProductCategory> pc){
 
         int count = 0;
-        List<Product> productList = dh.getProducts();
+        List<Product> productList = new ArrayList<>();
+        for( ProductCategory p : pc) {
+            productList.addAll(dh.getProducts(p));
+        }
         BigItemView tmpItem;
 
         for (Product p : productList){
