@@ -47,6 +47,7 @@
     -fx-text-fill: #000000;
 }
 
+
 .cattext:hover {
     -fx-text-fill: #414141;
     -fx-font-weight: bold;
