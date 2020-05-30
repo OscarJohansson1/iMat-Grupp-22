@@ -154,12 +154,15 @@
                               </AnchorPane>
                               <AnchorPane fx:id="myPagesPane" layoutX="13.0" layoutY="350.0" prefHeight="140.0" prefWidth="175.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                                  <children>
-                                    <Label fx:id="myPages" layoutX="4.0" layoutY="14.0" onMouseClicked="#myPagesLabelPressed" text="Mina sidor" underline="true">
+                                    <Label fx:id="myPages" layoutX="4.0" layoutY="14.0" onMouseClicked="#myPagesLabelPressed" styleClass="cattext" stylesheets="@plaincy.css" text="Mina sidor" underline="true">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
-                                    <Label fx:id="myFavorites" layoutX="4.0" layoutY="50.0" onMouseClicked="#myFavoriteLabelPressed" prefHeight="26.0" prefWidth="164.0" text="Mina favoriter">
+                                    <Label fx:id="myFavorites" layoutX="4.0" layoutY="50.0" onMouseClicked="#myFavoriteLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Mina favoriter">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
@@ -170,8 +173,11 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
-                                    <Label fx:id="myDetailsLabel" layoutX="4.0" layoutY="75.0" onMouseClicked="#myDetailsLabelPressed" prefHeight="26.0" prefWidth="164.0" text="Mina uppgifter">
+                                    <Label fx:id="myDetailsLabel" layoutX="4.0" layoutY="75.0" onMouseClicked="#myDetailsLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Mina uppgifter">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
@@ -182,8 +188,11 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
-                                    <Label fx:id="purchaseHistory" layoutX="4.0" layoutY="100.0" onMouseClicked="#myHistoryLabelPressed" prefHeight="26.0" prefWidth="164.0" text="Köphistorik">
+                                    <Label fx:id="purchaseHistory" layoutX="4.0" layoutY="100.0" onMouseClicked="#myHistoryLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Köphistorik">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
@@ -194,6 +203,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                  </children>
                               </AnchorPane>
