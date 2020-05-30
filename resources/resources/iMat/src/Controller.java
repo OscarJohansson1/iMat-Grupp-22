@@ -177,7 +177,7 @@ public class Controller {
         });
     }
 
-    private void updateCart(){
+    public void updateCart(){
         cartItemPane.getChildren().clear();
         for (ShoppingItem shoppingItem : datahandler.getShoppingCart().getItems()){
             CartItemView cartItemView = new CartItemView(shoppingItem);

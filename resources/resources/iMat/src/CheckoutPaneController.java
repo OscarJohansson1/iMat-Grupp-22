@@ -16,7 +16,7 @@ import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.proj
 public class CheckoutPaneController implements Initializable{
     //@FXML private Button continueAsGuestButton;
     //@FXML private FlowPane checkoutItemFlowPane;
-    @FXML AnchorPane checkoutPane;
+    @FXML AnchorPane checkoutPane;@FXML ImageView Step1Image; @FXML ImageView Step2Image; @FXML ImageView Step3Image;@FXML ImageView Step4Image;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     public Controller controller;
 
@@ -40,12 +40,27 @@ public class CheckoutPaneController implements Initializable{
     @FXML
     public void toHomePage (ActionEvent event) throws IOException {
         System.out.println("to HomePage");
+        /*
         Parent tmp = FXMLLoader.load(getClass().getResource("homePage.fxml"));
         //kan man hitta controllern från denna?
         Scene tmpScene = new Scene(tmp);
 
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
+        window.show();
+
+         */
+        FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
+        Parent root = tmp.load();
+        controller = tmp.getController();
+        Scene scene = new Scene(root);
+        controller.setDatahandler(dh);
+        controller.showHomePageDetail();
+        controller.createBigItemViewMap();
+        controller.addShoppingCartListener();
+        controller.updateCart();
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
         window.show();
     }
 

@@ -101,7 +101,7 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="210.0" layoutY="11.0" onMouseClicked="#testMethod" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step1Image" fitHeight="71.0" fitWidth="82.0" layoutX="210.0" layoutY="11.0" onMouseClicked="#testMethod" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-1.png" />
                      </image>
@@ -121,17 +121,17 @@
                         <Image url="@sceneImages/streck.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="750.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step4Image" fitHeight="71.0" fitWidth="82.0" layoutX="750.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-4.1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="570.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step3Image" fitHeight="71.0" fitWidth="82.0" layoutX="570.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-3.1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="71.0" fitWidth="82.0" layoutX="390.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step2Image" fitHeight="71.0" fitWidth="82.0" layoutX="390.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-2.1.png" />
                      </image>
