@@ -12,20 +12,24 @@ import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
 
-public class CheckoutPaneController extends Controller implements Initializable {
+
+public class CheckoutPaneController implements Initializable{
     //@FXML private Button continueAsGuestButton;
     //@FXML private FlowPane checkoutItemFlowPane;
+    @FXML AnchorPane checkoutPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
 
     @FXML
     public void testMethod(MouseEvent event){
         System.out.println("hejsvehs");
     }
 
-
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("något");
+        checkoutPane.getChildren().clear();
+        Wizard1Controller tmp = new Wizard1Controller();
+        checkoutPane.getChildren().add(tmp);
+    }
 }

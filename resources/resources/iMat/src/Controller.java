@@ -117,11 +117,9 @@ public class Controller {
 
         //Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
         Scene tmpScene = new Scene(tmp);
-
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
-
     }
        /*
        @FXML

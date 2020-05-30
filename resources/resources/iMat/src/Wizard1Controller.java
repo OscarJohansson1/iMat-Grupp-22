@@ -12,11 +12,24 @@ import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
 
-public class Wizard1Controller implements Initializable {
+public class Wizard1Controller extends AnchorPane{
     @FXML private Button continueAsGuestButton;
     @FXML private FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
+    private Controller controller;
 
+    public Wizard1Controller(){
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizard1.fxml"));
+            fxmlLoader.setRoot(this);
+            fxmlLoader.setController(this);
+
+            try {
+                fxmlLoader.load();
+            } catch (IOException exception) {
+                throw new RuntimeException(exception);
+            }
+    }
+/*
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("Wizard1Controller skapades");
@@ -25,6 +38,9 @@ public class Wizard1Controller implements Initializable {
             checkoutItemFlowPane.getChildren().add(tmp);
         }
     }
+
+ */
+
     @FXML
     public void toWizard2(ActionEvent event) throws IOException {
         Parent tmp = FXMLLoader.load(getClass().getResource("wizard.2.fxml"));
