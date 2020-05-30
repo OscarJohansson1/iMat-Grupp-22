@@ -86,12 +86,12 @@
             </AnchorPane>
             <AnchorPane prefHeight="63.0" prefWidth="733.0">
                <children>
-                  <Button fx:id="backCatecoryButton" layoutX="111.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-background-color: #C9CCC7;" text="Till Fisk">
+                  <Button fx:id="backCatecoryButton" layoutX="111.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextCategory" prefHeight="50.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-background-color: #C9CCC7;" text="Till Fisk">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="nextCategoryButton" layoutX="342.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="279.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Till Skafferi">
+                  <Button fx:id="nextCategoryButton" layoutX="342.0" layoutY="10.0" mnemonicParsing="false" onAction="#nextCategory" prefHeight="50.0" prefWidth="279.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Till Skafferi">
                      <font>
                         <Font size="22.0" />
                      </font>
