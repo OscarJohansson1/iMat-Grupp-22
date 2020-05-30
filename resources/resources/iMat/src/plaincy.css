@@ -24,3 +24,21 @@
 .orange_button:hover {
     -fx-background-color:  #FFD77C;
 }
+
+.search_button {
+    -fx-background-color: #036A10;
+    -fx-border-color: #ffffff;
+}
+
+.search_button:hover {
+    -fx-background-color: #158323;
+}
+
+.text {
+    -fx-text-fill: #000000;
+}
+
+.text:hover {
+    -fx-text-fill: #414141;
+    -fx-font-weight: bold;
+}

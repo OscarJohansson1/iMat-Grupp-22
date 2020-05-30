@@ -60,7 +60,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <Button layoutX="815.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE">
+                  <Button layoutX="815.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" styleClass="search_button" stylesheets="@plaincy.css" text="Sök" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="18.0" />
                      </font>
@@ -86,7 +86,7 @@
                               </ImageView>
                               <AnchorPane layoutX="13.0" layoutY="75.0" prefHeight="230.0" prefWidth="175.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
                                  <children>
-                                    <Label fx:id="fruitsAndGreens" layoutX="4.0" layoutY="3.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Frukter och bär">
+                                    <Label fx:id="fruitsAndGreens" layoutX="4.0" layoutY="3.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Frukter och bär">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -94,7 +94,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="dairyItems" layoutX="4.0" layoutY="60.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Mejeriprodukter">
+                                    <Label fx:id="dairyItems" layoutX="4.0" layoutY="60.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Mejeriprodukter">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -102,7 +102,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="breadItems" layoutX="4.0" layoutY="90.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Bröd">
+                                    <Label fx:id="breadItems" layoutX="4.0" layoutY="90.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Bröd">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -110,7 +110,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="fishItems" layoutX="4.0" layoutY="120.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Fisk">
+                                    <Label fx:id="fishItems" layoutX="4.0" layoutY="120.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Fisk">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -118,7 +118,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="meatItems" layoutX="4.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Kött">
+                                    <Label fx:id="meatItems" layoutX="4.0" layoutY="150.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Kött">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -126,7 +126,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="pantryItems" layoutX="4.0" layoutY="180.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Skafferi">
+                                    <Label fx:id="pantryItems" layoutX="4.0" layoutY="180.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Skafferi">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -134,7 +134,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="drinkItems" layoutX="4.0" layoutY="210.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Drycker">
+                                    <Label fx:id="drinkItems" layoutX="4.0" layoutY="210.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Drycker">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -142,7 +142,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </Label>
-                                    <Label fx:id="vegetables" layoutX="4.0" layoutY="31.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" text="Grönsaker">
+                                    <Label fx:id="vegetables" layoutX="4.0" layoutY="31.0" onMouseClicked="#showFruitsAndGreens" prefHeight="30.0" prefWidth="164.0" styleClass="text" stylesheets="@plaincy.css" text="Grönsaker">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
