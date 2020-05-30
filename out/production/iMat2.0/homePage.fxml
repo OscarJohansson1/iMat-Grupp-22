@@ -158,6 +158,9 @@
                                        <font>
                                           <Font size="22.0" />
                                        </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                     <Label fx:id="myFavorites" layoutX="4.0" layoutY="50.0" onMouseClicked="#myFavoriteLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Mina favoriter">
                                        <font>
@@ -170,6 +173,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                     <Label fx:id="myDetailsLabel" layoutX="4.0" layoutY="75.0" onMouseClicked="#myDetailsLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Mina uppgifter">
                                        <font>
@@ -182,6 +188,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                     <Label fx:id="purchaseHistory" layoutX="4.0" layoutY="100.0" onMouseClicked="#myHistoryLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Köphistorik">
                                        <font>
@@ -194,6 +203,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                  </children>
                               </AnchorPane>
