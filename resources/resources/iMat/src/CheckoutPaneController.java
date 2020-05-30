@@ -18,18 +18,35 @@ public class CheckoutPaneController implements Initializable{
     //@FXML private FlowPane checkoutItemFlowPane;
     @FXML AnchorPane checkoutPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
+    public Controller controller;
 
 
-    @FXML
-    public void testMethod(MouseEvent event){
-        System.out.println("hejsvehs");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println("något");
-        checkoutPane.getChildren().clear();
-        Wizard1Controller tmp = new Wizard1Controller();
-        checkoutPane.getChildren().add(tmp);
+        //checkoutPane.getChildren().clear();
+        Wizard1Controller tmp = new Wizard1Controller(controller, this);
+        //checkoutPane.getChildren().add(tmp);
     }
+    public void setController(Controller c){
+        this.controller = c;
+        System.out.println("setController i CheckoutPaneController");
+    }
+    @FXML
+    public void testMethod(MouseEvent event){
+        System.out.println("hejsvehs");
+    }
+    @FXML
+    public void toHomePage (ActionEvent event) throws IOException {
+        System.out.println("to HomePage");
+        Parent tmp = FXMLLoader.load(getClass().getResource("homePage.fxml"));
+        //kan man hitta controllern från denna?
+        Scene tmpScene = new Scene(tmp);
+
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(tmpScene);
+        window.show();
+    }
+
 }

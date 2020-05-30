@@ -12,13 +12,14 @@ import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
 
-public class Wizard1Controller extends AnchorPane{
+public class Wizard1Controller extends AnchorPane implements Initializable{
     @FXML private Button continueAsGuestButton;
     @FXML private FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     private Controller controller;
+    private CheckoutPaneController checkoutPaneController;
 
-    public Wizard1Controller(){
+    public Wizard1Controller(Controller c, CheckoutPaneController cpc) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizard1.fxml"));
             fxmlLoader.setRoot(this);
             fxmlLoader.setController(this);
@@ -28,21 +29,33 @@ public class Wizard1Controller extends AnchorPane{
             } catch (IOException exception) {
                 throw new RuntimeException(exception);
             }
+            this.controller = c;
+            this.checkoutPaneController = cpc;
+            this.checkoutPaneController.checkoutPane.getChildren().clear();
+            this.checkoutPaneController.checkoutPane.getChildren().add(this);
+
     }
-/*
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Wizard1Controller skapades");
+        System.out.println("Wizard1Controller initialize");
         for (ShoppingItem si : dh.getShoppingCart().getItems()){
             CheckoutItems tmp = new CheckoutItems(si);
             checkoutItemFlowPane.getChildren().add(tmp);
         }
     }
 
- */
 
     @FXML
     public void toWizard2(ActionEvent event) throws IOException {
+        Wizard2Controller wizard2Controller = new Wizard2Controller(checkoutPaneController);
+        /*
+        checkoutPaneController.checkoutPane.getChildren().clear();
+        checkoutPaneController.checkoutPane.getChildren().add(new Wizard2Controller());
+
+         */
+
+        /*
         Parent tmp = FXMLLoader.load(getClass().getResource("wizard.2.fxml"));
         Scene tmpScene = new Scene(tmp);
 
@@ -50,7 +63,10 @@ public class Wizard1Controller extends AnchorPane{
         window.setScene(tmpScene);
         window.show();
         System.out.println("till Wizard2");
+
+         */
     }
+
 
     @FXML
     public void testMethod(MouseEvent event){

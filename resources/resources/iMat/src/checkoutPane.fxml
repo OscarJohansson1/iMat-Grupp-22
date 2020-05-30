@@ -75,7 +75,7 @@
                         <Font name="Arial" size="39.0" />
                      </font>
                   </Label>
-                  <Button fx:id="toTheHomepageButton" layoutX="871.0" layoutY="25.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #97CE72;" text="Tillbaka till startsidan " AnchorPane.rightAnchor="30.0">
+                  <Button fx:id="toTheHomepageButton" layoutX="871.0" layoutY="25.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #97CE72;" text="Tillbaka till startsidan " AnchorPane.rightAnchor="30.0">
                      <font>
                         <Font name="Arial Bold" size="20.0" />
                      </font>
