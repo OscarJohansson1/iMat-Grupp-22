@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -41,6 +42,8 @@ public class FruitsAndGreensController extends AnchorPane {
     @FXML private SplitPane splitPane;
     @FXML public FlowPane itemViewPane;
     @FXML private ImageView categoryFoodImage;
+    @FXML private Button backCatecoryButton;
+    @FXML private Button nextCategoryButton;
 
     private Controller controller;
     private IMatDataHandler dh;
@@ -65,10 +68,11 @@ public class FruitsAndGreensController extends AnchorPane {
 
         categoryShowAllLabel.setSelected(true);
         categoryTitleLabel.setText(s);
-        this.dh = IMatDataHandler.getInstance();
-
         currentString = s;
         customList = new ArrayList<>();
+        changeTextOnButtons();
+
+        this.dh = IMatDataHandler.getInstance();
 
         categoryShowAllLabel.selectedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -206,7 +210,7 @@ public class FruitsAndGreensController extends AnchorPane {
             case "Mejeriprodukter":
                 setMejeriprodukter();
                 splitPane.setDividerPosition(0, 0.23);
-                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/pantry.png").toString()));
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/milk.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.DAIRIES);
                 break;
             case "Bröd":
@@ -345,11 +349,11 @@ public class FruitsAndGreensController extends AnchorPane {
         categoryTenLabel.setVisible(false);
     }
     private void setSkafferi(){
-        categoryOneLabel.setText("FLOUR_SUGAR_SALT");
-        categoryTwoLabel.setText("NUTS_AND_SEEDS");
-        categoryThreeLabel.setText("PASTA");
-        categoryFourLabel.setText("POTATO_RICE");
-        categoryFiveLabel.setText("SWEET");
+        categoryOneLabel.setText("Mjöl, socker och salt");
+        categoryTwoLabel.setText("Nötter och frön");
+        categoryThreeLabel.setText("Pasta");
+        categoryFourLabel.setText("Potatis och ris");
+        categoryFiveLabel.setText("Sötsaker");
         categorySixLabel.setVisible(false);
         categorySevenLabel.setVisible(false);
         categoryEightLabel.setVisible(false);
@@ -357,8 +361,8 @@ public class FruitsAndGreensController extends AnchorPane {
         categoryTenLabel.setVisible(false);
     }
     private void setDrycker(){
-        categoryOneLabel.setText("HOT_DRINKS");
-        categoryTwoLabel.setText("COLD_DRINKS");
+        categoryOneLabel.setText("Varma drycker");
+        categoryTwoLabel.setText("Kalla drycker");
         categoryThreeLabel.setVisible(false);
         categoryFourLabel.setVisible(false);
         categoryFiveLabel.setVisible(false);
@@ -621,5 +625,63 @@ public class FruitsAndGreensController extends AnchorPane {
                 categorySevenLabel.isSelected() || categoryEightLabel.isSelected() || categoryNineLabel.isSelected() ||
                 categoryTenLabel.isSelected());
     }
+
+    @FXML
+    protected void nextCategory(ActionEvent event) {
+        controller.differentDetailPane.getChildren().clear();
+        Button tmp = (Button) event.getSource();
+        String s = tmp.getText().substring(5);
+        if(s.equals("Startsida")){
+            controller.differentDetailPane.getChildren().clear();
+            homPageDetailController c = new homPageDetailController(controller);
+            controller.differentDetailPane.getChildren().add(c);
+        } else if (s.equals("Kassa")) {
+            // kassa
+        } else {
+            FruitsAndGreensController c = new FruitsAndGreensController(controller, s);
+            controller.differentDetailPane.getChildren().add(c);
+        }
+    }
+
+    private void changeTextOnButtons(){
+        switch(currentString){
+            case "Frukter och bär":
+                nextCategoryButton.setText("Till Grönsaker");
+                backCatecoryButton.setText("Till Startsida");
+                break;
+            case "Grönsaker":
+                nextCategoryButton.setText("Till Mejeriprodukter");
+                backCatecoryButton.setText("Till Frukter och bär");
+                break;
+            case "Mejeriprodukter":
+                nextCategoryButton.setText("Till Bröd");
+                backCatecoryButton.setText("Till Grönsaker");
+                break;
+            case "Bröd":
+                nextCategoryButton.setText("Till Fisk");
+                backCatecoryButton.setText("Till Mejeriprodukter");
+                break;
+            case "Fisk":
+                nextCategoryButton.setText("Till Kött");
+                backCatecoryButton.setText("Till Bröd");
+                break;
+            case "Kött":
+                nextCategoryButton.setText("Till Skafferi");
+                backCatecoryButton.setText("Till Fisk");
+                break;
+            case "Skafferi":
+                nextCategoryButton.setText("Till Drycker");
+                backCatecoryButton.setText("Till Kött");
+                break;
+            case "Drycker":
+                nextCategoryButton.setText("Till Kassa");
+                backCatecoryButton.setText("Till Skafferi");
+                break;
+            default:
+                nextCategoryButton.setText("");
+                backCatecoryButton.setText("");
+        }
+    }
+
 }
 

@@ -33,7 +33,7 @@ public class homPageDetailController extends AnchorPane {
 
         controller.differentDetailPane.getChildren().clear();
         //TODO skapas nya FruitsAndGreensControllers hela tiden. Borde ha ett visst antal och sedan byta mellan
-        FruitsAndGreensController c = new FruitsAndGreensController(controller, "Frukt och grönt");
+        FruitsAndGreensController c = new FruitsAndGreensController(controller, "Frukter och bär");
         controller.differentDetailPane.getChildren().add(c);
     }
 
