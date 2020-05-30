@@ -34,11 +34,11 @@
     -fx-background-color: #158323;
 }
 
-.text {
+.cattext {
     -fx-text-fill: #000000;
 }
 
-.text:hover {
+.cattext:hover {
     -fx-text-fill: #414141;
     -fx-font-weight: bold;
 }
