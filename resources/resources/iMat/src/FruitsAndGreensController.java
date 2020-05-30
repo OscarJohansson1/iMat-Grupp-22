@@ -9,6 +9,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
@@ -39,6 +40,7 @@ public class FruitsAndGreensController extends AnchorPane {
     @FXML private CheckBox categoryTenLabel;
     @FXML private SplitPane splitPane;
     @FXML public FlowPane itemViewPane;
+    @FXML private ImageView categoryFoodImage;
 
     private Controller controller;
     private IMatDataHandler dh;
@@ -190,44 +192,52 @@ public class FruitsAndGreensController extends AnchorPane {
             case "Frukter och bär":
                 setFruits();
                 splitPane.setDividerPosition(0, 0.30);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-apple-96.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
                         ProductCategory.EXOTIC_FRUIT, ProductCategory.MELONS, ProductCategory.FRUIT)));
                 break;
             case "Grönsaker":
                 setGreens();
                 splitPane.setDividerPosition(0, 0.30);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-natural-food-96.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.POD, ProductCategory.CABBAGE,
                         ProductCategory.VEGETABLE_FRUIT, ProductCategory.HERB, ProductCategory.ROOT_VEGETABLE)));
                 break;
             case "Mejeriprodukter":
                 setMejeriprodukter();
                 splitPane.setDividerPosition(0, 0.23);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/pantry.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.DAIRIES);
                 break;
             case "Bröd":
                 setBröd();
                 splitPane.setDividerPosition(0, 0.23);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-bread-96.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.BREAD);
                 break;
             case "Fisk":
                 setFisk();
                 splitPane.setDividerPosition(0, 0.23);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-whole-fish-100.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.FISH);
                 break;
             case "Kött":
                 setKött();
                 splitPane.setDividerPosition(0, 0.23);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-meat-on-bone-96.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.MEAT);
                 break;
             case "Skafferi":
                 setSkafferi();
                 splitPane.setDividerPosition(0, 0.30);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/pantry.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.FLOUR_SUGAR_SALT,
                         ProductCategory.NUTS_AND_SEEDS, ProductCategory.PASTA, ProductCategory.POTATO_RICE, ProductCategory.SWEET)));
                 break;
             case "Drycker":
                 setDrycker();
                 splitPane.setDividerPosition(0, 0.23);
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-tea-cup-200.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.COLD_DRINKS,
                         ProductCategory.HOT_DRINKS)));
                 break;
