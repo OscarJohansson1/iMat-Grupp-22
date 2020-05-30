@@ -32,7 +32,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <ImageView fx:id="plusItemImage" fitHeight="40.0" fitWidth="48.0" layoutX="140.0" layoutY="213.0" onMouseClicked="#plusButtonActionPerformed" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="plusItemImage" fitHeight="40.0" fitWidth="48.0" layoutX="140.0" layoutY="213.0" onMouseClicked="#plusButtonActionPerformed" pickOnBounds="true" preserveRatio="true" styleClass="plus">
          <image>
             <Image url="@sceneImages/baseline_add_circle_outline_black_18dp.png" />
          </image>

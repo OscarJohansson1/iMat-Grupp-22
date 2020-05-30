@@ -1,6 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.event.Event; import javafx.fxml.FXML; import javafx.fxml.FXMLLoader; import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -41,6 +42,19 @@ public class BigItemView extends AnchorPane {
         this.quantityItemsTextField.setText(String.valueOf(quantity));
         this.product=product;
         this.datahandler=datahandler;
+
+        plusItemImage.setOnMouseMoved(m->{
+            plusItemImage.setImage(new Image(getClass().getResource("/sceneImages/greenplus.png").toString()));
+        });
+        plusItemImage.setOnMouseExited(m->{
+            plusItemImage.setImage(new Image(getClass().getResource("/sceneImages/baseline_add_circle_outline_black_18dp.png").toString()));
+        });
+        minusItemImage.setOnMouseMoved(m->{
+            minusItemImage.setImage(new Image(getClass().getResource("/sceneImages/redminus.png").toString()));
+        });
+        minusItemImage.setOnMouseExited(m->{
+            minusItemImage.setImage(new Image(getClass().getResource("/sceneImages/baseline_remove_circle_outline_black_18dp.png").toString()));
+        });
     }
 
     /**
