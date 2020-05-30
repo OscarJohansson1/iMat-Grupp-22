@@ -35,7 +35,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Label>
-                  <TextField fx:id="searchBarCheckout" layoutX="263.0" layoutY="29.0" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.topAnchor="39.0">
+                  <TextField fx:id="searchBarCheckout" layoutX="263.0" layoutY="29.0" onAction="#searchBarUpdateInCheckout" prefHeight="51.0" prefWidth="554.0" promptText="Sök produkt" style="-fx-background-color: #FFFFFF;" AnchorPane.topAnchor="39.0">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -51,7 +51,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Label fx:id="iMatLogo" layoutX="5.0" layoutY="18.0" prefHeight="84.0" prefWidth="230.0" text="iMAT" textFill="WHITE">
+                  <Label fx:id="iMatLogo" layoutX="5.0" layoutY="18.0" onMouseClicked="#toHomePageMouseEvent" prefHeight="84.0" prefWidth="230.0" text="iMAT" textFill="WHITE">
                      <font>
                         <Font name="Elephant" size="55.0" />
                      </font>

@@ -678,8 +678,8 @@ public class FruitsAndGreensController extends AnchorPane {
                 backCatecoryButton.setText("Till Skafferi");
                 break;
             default:
-                nextCategoryButton.setText("");
-                backCatecoryButton.setText("");
+                nextCategoryButton.setText("Till Frukter och bär");
+                backCatecoryButton.setText("Till Startsida");
         }
     }
 

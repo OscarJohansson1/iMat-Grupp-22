@@ -46,7 +46,7 @@ public class Controller {
     @FXML private AnchorPane loginPane; @FXML AnchorPane LogInPopUp; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
     @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
     @FXML private Button createAccountButton; @FXML private Label iMatLogo; @FXML private Label userButton;
-    @FXML private TextField searchBar; @FXML private AnchorPane myPagesPane; @FXML private Label myPages;
+    @FXML public TextField searchBar; @FXML private AnchorPane myPagesPane; @FXML private Label myPages;
     @FXML private Label myFavorites; @FXML private Label myDetailsLabel; @FXML private Label purchaseHistory;
     @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
     @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
@@ -54,13 +54,15 @@ public class Controller {
     @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
 
-
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 
         BigDecimal bd = BigDecimal.valueOf(value);
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
+    }
+    public Controller(){
+        System.out.println("controller skapades");
     }
 
     @FXML
@@ -86,29 +88,29 @@ public class Controller {
 
     @FXML
     protected void newWindow (MouseEvent event) throws IOException {
-           /*
-           AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-           Scene homePageScene = new Scene(homePageDetail);
+          /*
+          AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+          Scene homePageScene = new Scene(homePageDetail);
 
-           //homPageDetailController hej = new homPageDetailController();
-           /*
-           FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
-           homePageDetail.setRoot(this);
-           homePageDetail.setController(this);
+          //homPageDetailController hej = new homPageDetailController();
+          /*
+          FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
+          homePageDetail.setRoot(this);
+          homePageDetail.setController(this);
 
-           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
+          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
 
-           fxmlLoader.setRoot(this);
-           fxmlLoader.setController(this);
-           */
+          fxmlLoader.setRoot(this);
+          fxmlLoader.setController(this);
+          */
         //Stage window = (Stage) homePageScene.getWindow();
-       /*
-           Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                   //(Stage)((Node)event.getSource()).getScene().getWindow();
-           window.setScene(homePageScene);
-           window.show();
+      /*
+          Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                  //(Stage)((Node)event.getSource()).getScene().getWindow();
+          window.setScene(homePageScene);
+          window.show();
 
-        */
+       */
     }
 
     @FXML
@@ -123,22 +125,22 @@ public class Controller {
         window.show();
         System.out.println("till kassan");
     }
-       /*
-       @FXML
-       public void toCheckout (Stage stage) throws IOException {
-           newWindowMethod(stage);
-       }
+      /*
+      @FXML
+      public void toCheckout (Stage stage) throws IOException {
+          newWindowMethod(stage);
+      }
 
 
 
-       protected void newWindowMethod (Stage stage) throws IOException {
-           AnchorPane wizard1 = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-           Scene wizard1Scene = new Scene(wizard1);
+      protected void newWindowMethod (Stage stage) throws IOException {
+          AnchorPane wizard1 = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
+          Scene wizard1Scene = new Scene(wizard1);
 
-           stage.setScene(wizard1Scene);
-       }
+          stage.setScene(wizard1Scene);
+      }
 
-        */
+       */
 
     @FXML
     protected void testMethodActionEvent(ActionEvent event){
@@ -177,6 +179,20 @@ public class Controller {
             }
         });
     }
+    public void updateSearchBar(){
+        differentDetailPane.getChildren().clear();
+        FruitsAndGreensController fgc = new FruitsAndGreensController(this, searchBar.getText());
+        fgc.itemViewPane.getChildren().clear();
+        for (Product p : datahandler.findProducts(searchBar.getText())){
+            BigItemView tmpItem = bigItemViewMap.get(p.getName());
+            fgc.itemViewPane.getChildren().add(tmpItem);
+        }
+        fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
+        fgc.itemViewPane.setVgap(20);
+        fgc.itemViewPane.setHgap(20);
+        System.out.println("används");
+        differentDetailPane.getChildren().add(fgc);
+    }
 
     public void updateCart(){
         cartItemPane.getChildren().clear();
@@ -200,10 +216,10 @@ public class Controller {
         //TODO skapas nya FruitsAndGreensControllers hela tiden. Borde ha ett visst antal och sedan byta mellan
         FruitsAndGreensController c = new FruitsAndGreensController(this, s);
         differentDetailPane.getChildren().add(c);
-  /*
-  Lägg till metod som sätter in alla BigItemViews under vald kategori
+ /*
+ Lägg till metod som sätter in alla BigItemViews under vald kategori
 
-   */
+  */
         //BigItemView b = new BigItemView(this);
         //differentDetailPane.getChildren().add(b);
     }
@@ -288,4 +304,3 @@ public class Controller {
     }
 
 }
-
