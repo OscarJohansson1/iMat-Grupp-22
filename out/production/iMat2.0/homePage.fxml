@@ -226,7 +226,7 @@
                                              <children>
                                                 <ScrollPane layoutX="19.0" layoutY="25.0" prefHeight="250.0" prefWidth="238.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <content>
-                                                      <FlowPane fx:id="cartItemPane" prefHeight="248.0" prefWidth="234.0" style="-fx-background-color: #ffffff;" />
+                                                      <FlowPane fx:id="cartItemPane" prefHeight="266.0" prefWidth="220.0" style="-fx-background-color: #ffffff;" />
                                                    </content>
                                                 </ScrollPane>
                                              </children></AnchorPane>

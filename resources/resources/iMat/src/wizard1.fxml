@@ -18,7 +18,7 @@
          <children>
             <ScrollPane layoutX="100.0" layoutY="17.0" prefHeight="200.0" prefWidth="629.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <content>
-                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="360.0" prefWidth="742.0" />
+                  <FlowPane fx:id="checkoutItemFlowPane" prefHeight="374.0" prefWidth="725.0" />
                </content>
             </ScrollPane>
          </children>

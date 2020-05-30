@@ -15,16 +15,16 @@
    <children>
       <SplitPane fx:id="splitPane" dividerPositions="0.4027777777777778, 0.8732638888888888" layoutY="-8.0" orientation="VERTICAL" prefHeight="550.0" prefWidth="725.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane fx:id="categoryViewPane" minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="614.0">
+          <AnchorPane fx:id="categoryViewPane" minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="614.0" style="-fx-background-color: #ffffff;">
                <children>
-                  <Label fx:id="categoryTitleLabel" layoutX="35.0" layoutY="30.0" text="Frukt och grönt">
+                  <Label fx:id="categoryTitleLabel" layoutX="34.0" layoutY="14.0" text="Frukt och grönt">
                      <font>
                         <Font name="Calibri Bold" size="35.0" />
                      </font>
                      <graphic>
                         <ImageView fx:id="categoryFoodImage" fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@sceneImages/icons8-apple-96.png" />
+                              <Image url="@sceneImages/icons8-meat-on-bone-96.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -86,16 +86,26 @@
             </AnchorPane>
             <AnchorPane prefHeight="63.0" prefWidth="733.0">
                <children>
-                  <Button fx:id="backCatecoryButton" layoutX="160.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="94.0" style="-fx-border-color: #000000; -fx-background-color: #C9CCC7;" text="Tillbaka">
+                  <Button fx:id="backCatecoryButton" layoutX="111.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="193.0" style="-fx-border-color: #000000; -fx-background-color: #C9CCC7;" text="Till Fisk">
                      <font>
                         <Font size="19.0" />
                      </font>
                   </Button>
-                  <Button fx:id="nextCategoryButton" layoutX="293.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="279.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Till Grönsaker ">
+                  <Button fx:id="nextCategoryButton" layoutX="342.0" layoutY="10.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="279.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Till Skafferi">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Button>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="557.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="122.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/baseline_navigate_before_black_48dp.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
         </items>
