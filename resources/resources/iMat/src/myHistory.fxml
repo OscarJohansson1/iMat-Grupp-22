@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="734.0" style="-fx-background-color: #DCDFDA;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="734.0" style="-fx-background-color: #DCDFDA;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
    <children>
       <Label layoutX="65.0" layoutY="43.0" text="Köphistorik" underline="true">
          <font>
@@ -48,4 +48,4 @@
          </children>
       </AnchorPane>
    </children>
-</AnchorPane>
+</fx:root>

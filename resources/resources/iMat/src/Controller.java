@@ -54,6 +54,7 @@ public class Controller {
     @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
 
+
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 
@@ -260,9 +261,31 @@ public class Controller {
             bigItemViewMap.put(p.getName(), item);
         }
     }
-
-
-
+    @FXML
+    public void myDetailsLabelPressed(){
+        differentDetailPane.getChildren().clear();
+        myDetailsController temp = new myDetailsController(this);
+        differentDetailPane.getChildren().add(temp);
+        System.out.println("funkar");
+    }
+    @FXML
+    public void myFavoriteLabelPressed(){
+        differentDetailPane.getChildren().clear();
+        myFavoriteController temp = new myFavoriteController(this);
+        differentDetailPane.getChildren().add(temp);
+    }
+    @FXML
+    public void myHistoryLabelPressed(){
+        differentDetailPane.getChildren().clear();
+        myHistoryController temp = new myHistoryController(this);
+        differentDetailPane.getChildren().add(temp);
+    }
+    @FXML
+    public void myPagesLabelPressed(){
+        differentDetailPane.getChildren().clear();
+        myPagesController temp = new myPagesController(this);
+        differentDetailPane.getChildren().add(temp);
+    }
 
 }
 
