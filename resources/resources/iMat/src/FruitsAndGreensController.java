@@ -210,7 +210,7 @@ public class FruitsAndGreensController extends AnchorPane {
             case "Mejeriprodukter":
                 setMejeriprodukter();
                 splitPane.setDividerPosition(0, 0.23);
-                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/pantry.png").toString()));
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/milk.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.DAIRIES);
                 break;
             case "Bröd":
@@ -349,11 +349,11 @@ public class FruitsAndGreensController extends AnchorPane {
         categoryTenLabel.setVisible(false);
     }
     private void setSkafferi(){
-        categoryOneLabel.setText("FLOUR_SUGAR_SALT");
-        categoryTwoLabel.setText("NUTS_AND_SEEDS");
-        categoryThreeLabel.setText("PASTA");
-        categoryFourLabel.setText("POTATO_RICE");
-        categoryFiveLabel.setText("SWEET");
+        categoryOneLabel.setText("Mjöl, socker och salt");
+        categoryTwoLabel.setText("Nötter och frön");
+        categoryThreeLabel.setText("Pasta");
+        categoryFourLabel.setText("Potatis och ris");
+        categoryFiveLabel.setText("Sötsaker");
         categorySixLabel.setVisible(false);
         categorySevenLabel.setVisible(false);
         categoryEightLabel.setVisible(false);
@@ -361,8 +361,8 @@ public class FruitsAndGreensController extends AnchorPane {
         categoryTenLabel.setVisible(false);
     }
     private void setDrycker(){
-        categoryOneLabel.setText("HOT_DRINKS");
-        categoryTwoLabel.setText("COLD_DRINKS");
+        categoryOneLabel.setText("Varma drycker");
+        categoryTwoLabel.setText("Kalla drycker");
         categoryThreeLabel.setVisible(false);
         categoryFourLabel.setVisible(false);
         categoryFiveLabel.setVisible(false);
