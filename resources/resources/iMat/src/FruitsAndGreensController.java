@@ -42,7 +42,6 @@ public class FruitsAndGreensController extends AnchorPane {
 
     private Controller controller;
     private IMatDataHandler dh;
-    private Categories categories;
     private String currentString;
     private ArrayList<ProductCategory> customList;
 
