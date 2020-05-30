@@ -25,6 +25,15 @@
     -fx-background-color:  #FFD77C;
 }
 
+.checkout_button {
+    -fx-background-color:  #ADF26F;
+    -fx-border-color: #000000;
+}
+
+.checkout_button:hover {
+    -fx-background-color:  #C5F898;
+}
+
 .search_button {
     -fx-background-color: #036A10;
     -fx-border-color: #ffffff;
@@ -41,4 +50,12 @@
 .cattext:hover {
     -fx-text-fill: #414141;
     -fx-font-weight: bold;
+}
+
+.helptext {
+    -fx-text-fill: #ffffff;
+}
+
+.helptext:hover {
+    -fx-underline: true;
 }

@@ -34,7 +34,7 @@
                         </ImageView>
                      </graphic>
                   </Label>
-                  <Label fx:id="helpButton" layoutX="981.0" layoutY="29.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
+                  <Label fx:id="helpButton" layoutX="981.0" layoutY="29.0" onMouseClicked="#loginPressed" prefHeight="64.0" prefWidth="194.0" styleClass="helptext" stylesheets="@plaincy.css" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
                      <font>
                         <Font name="Calibri" size="39.0" />
                      </font>
@@ -60,7 +60,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextField>
-                  <Button layoutX="815.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" style="-fx-background-color: #036a10; -fx-border-color: #ffffff;" text="Sök" textFill="WHITE">
+                  <Button layoutX="815.0" layoutY="39.0" mnemonicParsing="false" onAction="#searchBarUpdateOnEnter" opacity="0.82" prefHeight="51.0" prefWidth="66.0" styleClass="search_button" stylesheets="@plaincy.css" text="Sök" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="18.0" />
                      </font>
@@ -158,6 +158,9 @@
                                        <font>
                                           <Font size="22.0" />
                                        </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                     <Label fx:id="myFavorites" layoutX="4.0" layoutY="50.0" onMouseClicked="#myFavoriteLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Mina favoriter">
                                        <font>
@@ -170,6 +173,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                     <Label fx:id="myDetailsLabel" layoutX="4.0" layoutY="75.0" onMouseClicked="#myDetailsLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Mina uppgifter">
                                        <font>
@@ -182,6 +188,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                     <Label fx:id="purchaseHistory" layoutX="4.0" layoutY="100.0" onMouseClicked="#myHistoryLabelPressed" prefHeight="26.0" prefWidth="164.0" styleClass="cattext" stylesheets="@plaincy.css" text="Köphistorik">
                                        <font>
@@ -194,6 +203,9 @@
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
                                     </Label>
                                  </children>
                               </AnchorPane>
@@ -232,7 +244,7 @@
                                              </children></AnchorPane>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="98.0" prefWidth="238.0">
                                              <children>
-                                                <Button fx:id="checkoutButton" alignment="CENTER" cache="true" layoutX="53.0" layoutY="34.0" mnemonicParsing="false" onAction="#toCheckout" prefHeight="38.0" prefWidth="131.0" style="-fx-background-color: #ADF26F; -fx-border-color: #000000;" text="Till kassan" textAlignment="CENTER">
+                                                <Button fx:id="checkoutButton" alignment="CENTER" cache="true" layoutX="53.0" layoutY="34.0" mnemonicParsing="false" onAction="#toCheckout" prefHeight="38.0" prefWidth="131.0" styleClass="checkout_button" stylesheets="@plaincy.css" text="Till kassan" textAlignment="CENTER">
                                                    <cursor>
                                                       <Cursor fx:constant="HAND" />
                                                    </cursor>
