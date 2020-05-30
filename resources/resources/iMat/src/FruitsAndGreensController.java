@@ -248,6 +248,7 @@ public class FruitsAndGreensController extends AnchorPane {
             default:
                 splitPane.setDividerPosition(0, 0.15);
                 categoryTitleLabel.setText("Sökresultat för \"" +  s + "\":");
+                categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/baseline_search_black_48dp.png").toString()));
         }
     }
 
