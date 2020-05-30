@@ -1,3 +1,4 @@
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
@@ -19,5 +20,17 @@ public class myPagesController extends AnchorPane {
 
         this.controller = c;
 
+    }
+    @FXML
+    public void myDetailsPress(){
+        controller.myDetailsLabelPressedFunction();
+    }
+    @FXML
+    public void myFavoritesPress(){
+        controller.myFavoriteLabelPressedFunction();
+    }
+    @FXML
+    public void myHistoryPress(){
+        controller.myHistoryLabelPressedFunction();
     }
 }

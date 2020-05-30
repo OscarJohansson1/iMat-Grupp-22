@@ -279,27 +279,38 @@ public class Controller {
     }
     @FXML
     public void myDetailsLabelPressed(){
-        differentDetailPane.getChildren().clear();
-        myDetailsController temp = new myDetailsController(this);
-        differentDetailPane.getChildren().add(temp);
-        System.out.println("funkar");
+        myDetailsLabelPressedFunction();
     }
     @FXML
     public void myFavoriteLabelPressed(){
-        differentDetailPane.getChildren().clear();
-        myFavoriteController temp = new myFavoriteController(this);
-        differentDetailPane.getChildren().add(temp);
+        myFavoriteLabelPressedFunction();
     }
     @FXML
     public void myHistoryLabelPressed(){
+        myHistoryLabelPressedFunction();
+    }
+    @FXML
+    public void myPagesLabelPressed(){
+        myPagesLabelPressedFunction();
+    }
+    public void myPagesLabelPressedFunction(){
+        differentDetailPane.getChildren().clear();
+        myPagesController temp = new myPagesController(this);
+        differentDetailPane.getChildren().add(temp);
+    }
+    public void myHistoryLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myHistoryController temp = new myHistoryController(this);
         differentDetailPane.getChildren().add(temp);
     }
-    @FXML
-    public void myPagesLabelPressed(){
+    public void myFavoriteLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
-        myPagesController temp = new myPagesController(this);
+        myFavoriteController temp = new myFavoriteController(this);
+        differentDetailPane.getChildren().add(temp);
+    }
+    public void myDetailsLabelPressedFunction(){
+        differentDetailPane.getChildren().clear();
+        myDetailsController temp = new myDetailsController(this);
         differentDetailPane.getChildren().add(temp);
     }
 
