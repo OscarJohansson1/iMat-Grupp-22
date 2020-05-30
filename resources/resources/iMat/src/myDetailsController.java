@@ -16,8 +16,6 @@ public class myDetailsController extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
         this.controller = c;
-
     }
 }

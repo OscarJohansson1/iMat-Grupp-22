@@ -17,7 +17,7 @@
         <items>
           <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="112.0" prefWidth="1200.0" style="-fx-background-color: #2ba23a;">
                <children>
-                  <Label fx:id="helpButton" layoutX="973.0" layoutY="38.0" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
+                  <Label fx:id="helpButton" layoutX="973.0" layoutY="38.0" onMouseClicked="#toHelpPaneMouseEvent" prefHeight="64.0" prefWidth="194.0" text="Hjälp" textFill="WHITE" textOverrun="CLIP" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="29.0">
                      <font>
                         <Font name="Calibri" size="39.0" />
                      </font>
@@ -101,7 +101,7 @@
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <ImageView fx:id="Step1Image" fitHeight="71.0" fitWidth="82.0" layoutX="210.0" layoutY="11.0" onMouseClicked="#testMethod" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step1Image" fitHeight="71.0" fitWidth="82.0" layoutX="210.0" layoutY="11.0" onMouseClicked="#toWizard1" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-1.png" />
                      </image>
@@ -121,17 +121,17 @@
                         <Image url="@sceneImages/streck.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Step4Image" fitHeight="71.0" fitWidth="82.0" layoutX="750.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step4Image" fitHeight="71.0" fitWidth="82.0" layoutX="750.0" layoutY="11.0" onMouseClicked="#toWizard4" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-4.1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Step3Image" fitHeight="71.0" fitWidth="82.0" layoutX="570.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step3Image" fitHeight="71.0" fitWidth="82.0" layoutX="570.0" layoutY="11.0" onMouseClicked="#toWizard3" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-3.1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="Step2Image" fitHeight="71.0" fitWidth="82.0" layoutX="390.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Step2Image" fitHeight="71.0" fitWidth="82.0" layoutX="390.0" layoutY="11.0" onMouseClicked="#toWizard2" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/Wizard-2.1.png" />
                      </image>

@@ -1,7 +1,10 @@
+import javafx.event.Event;
 import javafx.fxml.Initializable;import javafx.event.ActionEvent;import javafx.fxml.FXML;import javafx.geometry.Insets;import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;import javafx.scene.control.TextField;import javafx.scene.image.ImageView;import javafx.scene.input.KeyEvent;
+import javafx.scene.control.Label;import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;import javafx.scene.layout.AnchorPane;import javafx.scene.layout.FlowPane;
 import javafx.stage.WindowEvent;
 import org.w3c.dom.Text;
@@ -36,31 +39,40 @@ public class CheckoutPaneController implements Initializable{
     }
     @FXML
     public void toHomePageMouseEvent(MouseEvent event) throws IOException {
-        if (controller == null){
-            System.out.println("controller e null");
-        }
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(prepReturnToHomePage());
         window.show();
     }
-    /*
     @FXML
-    protected void searchBarUpdateOnEnter(ActionEvent event){
-        differentDetailPane.getChildren().clear();
-        FruitsAndGreensController fgc = new FruitsAndGreensController(this, searchBar.getText());
-        fgc.itemViewPane.getChildren().clear();
-        for (Product p : datahandler.findProducts(searchBar.getText())){
-            BigItemView tmpItem = bigItemViewMap.get(p.getName());
-            fgc.itemViewPane.getChildren().add(tmpItem);
-        }
-        fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
-        fgc.itemViewPane.setVgap(20);
-        fgc.itemViewPane.setHgap(20);
-        System.out.println("används");
-        differentDetailPane.getChildren().add(fgc);
+    public void toHelpPaneMouseEvent(MouseEvent event) throws IOException {
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(prepReturnToHomePage());
+        window.show();
+        controller.loginPane.toFront();
     }
 
-     */
+    @FXML
+    public void toWizard1(Event event) throws IOException {
+        Wizard2Controller w2c = new Wizard2Controller(this);
+        w2c.toWizard1(event);
+    }
+    @FXML
+    public void toWizard2(Event event) {
+        Wizard2Controller w2c = new Wizard2Controller(this);
+        w2c.toWizard2(event);
+    }
+    @FXML
+    public void toWizard3(Event event) {
+        Wizard2Controller w2c = new Wizard2Controller(this);
+        w2c.toWizard3(event);
+    }
+    @FXML
+    public void toWizard4(Event event) {
+        Wizard2Controller w2c = new Wizard2Controller(this);
+        w2c.toWizard4(event);
+    }
+
+
     @FXML
     public void searchBarUpdateInCheckout(ActionEvent event) throws IOException {
 
@@ -70,7 +82,6 @@ public class CheckoutPaneController implements Initializable{
         controller.searchBar.setText(this.searchBarCheckout.getText());
         controller.updateSearchBar();
     }
-
 
     @FXML
     public void testMethod(MouseEvent event){

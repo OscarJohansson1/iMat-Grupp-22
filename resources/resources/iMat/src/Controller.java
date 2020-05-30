@@ -37,13 +37,13 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
-public class Controller {
+public class Controller implements Initializable{
     private IMatDataHandler datahandler;
     //Product p finns endast för att slippa errors (ska egentligen vara det man trycker på)
     private Product p;
     protected Map<String, BigItemView> bigItemViewMap = new HashMap<>();
 
-    @FXML private AnchorPane loginPane; @FXML AnchorPane LogInPopUp; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
+    @FXML public AnchorPane loginPane; @FXML AnchorPane LogInPopUp; @FXML private TextField textFieldEmail; @FXML private TextField textFieldPassword;
     @FXML private ImageView loginCloseButton; @FXML private Button loginButton; @FXML private CheckBox rememberMeCheckbox;
     @FXML private Button createAccountButton; @FXML private Label iMatLogo; @FXML private Label userButton;
     @FXML public TextField searchBar; @FXML private AnchorPane myPagesPane; @FXML private Label myPages;
@@ -53,6 +53,13 @@ public class Controller {
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
+    @FXML private Button backToHomePageButton;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("controller initialiserades");
+        loginPane.toBack();
+    }
 
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
@@ -63,6 +70,7 @@ public class Controller {
     }
     public Controller(){
         System.out.println("controller skapades");
+
     }
 
     @FXML
@@ -125,6 +133,7 @@ public class Controller {
         window.show();
         System.out.println("till kassan");
     }
+
       /*
       @FXML
       public void toCheckout (Stage stage) throws IOException {
@@ -192,6 +201,7 @@ public class Controller {
         fgc.itemViewPane.setHgap(20);
         System.out.println("används");
         differentDetailPane.getChildren().add(fgc);
+        loginPane.toBack();
     }
 
     public void updateCart(){
@@ -203,10 +213,12 @@ public class Controller {
     }
 
 
-    @FXML protected void showHomePageDetail(){
+    @FXML
+    protected void showHomePageDetail(){
         differentDetailPane.getChildren().clear();
         homPageDetailController c = new homPageDetailController(this);
         differentDetailPane.getChildren().add(c);
+        loginPane.toBack();
     }
     @FXML
     protected void showFruitsAndGreens(MouseEvent event){
@@ -216,6 +228,7 @@ public class Controller {
         //TODO skapas nya FruitsAndGreensControllers hela tiden. Borde ha ett visst antal och sedan byta mellan
         FruitsAndGreensController c = new FruitsAndGreensController(this, s);
         differentDetailPane.getChildren().add(c);
+        loginPane.toBack();
  /*
  Lägg till metod som sätter in alla BigItemViews under vald kategori
 
@@ -237,6 +250,7 @@ public class Controller {
         fgc.itemViewPane.setHgap(20);
         System.out.println("används");
         differentDetailPane.getChildren().add(fgc);
+        loginPane.toBack();
     }
 
 
@@ -260,14 +274,14 @@ public class Controller {
         //user.setUserName();
         //user.setPassword();
         loginPane.toBack();
-        LogInPopUp.toBack();
+        //LogInPopUp.toBack();
         textFieldEmail.clear();
         textFieldPassword.clear();
     }
     @FXML
     public void loginPressed(MouseEvent event){
         loginPane.toFront();
-        LogInPopUp.toFront();
+        //LogInPopUp.toFront();
     }
 
 
@@ -277,6 +291,7 @@ public class Controller {
             bigItemViewMap.put(p.getName(), item);
         }
     }
+
     @FXML
     public void myDetailsLabelPressed(){
         myDetailsLabelPressedFunction();
@@ -297,21 +312,25 @@ public class Controller {
         differentDetailPane.getChildren().clear();
         myPagesController temp = new myPagesController(this);
         differentDetailPane.getChildren().add(temp);
+        loginPane.toBack();
     }
     public void myHistoryLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myHistoryController temp = new myHistoryController(this);
         differentDetailPane.getChildren().add(temp);
+        loginPane.toBack();
     }
     public void myFavoriteLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myFavoriteController temp = new myFavoriteController(this);
         differentDetailPane.getChildren().add(temp);
+        loginPane.toBack();
     }
     public void myDetailsLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myDetailsController temp = new myDetailsController(this);
         differentDetailPane.getChildren().add(temp);
+        loginPane.toBack();
     }
 
 }

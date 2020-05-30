@@ -1,3 +1,4 @@
+import javafx.event.Event;
 import javafx.fxml.Initializable;import javafx.event.ActionEvent;import javafx.fxml.FXML;import javafx.geometry.Insets;import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;import javafx.scene.control.CheckBox;
@@ -60,27 +61,16 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
 
     }
     @FXML
-    public void toWizard1(ActionEvent event) throws IOException {
+    public void toWizard1(Event event) throws IOException {
         System.out.println("till Wizard1");
-        //checkoutPaneController.checkoutPane.getChildren().clear();
         Wizard1Controller tmp = new Wizard1Controller(controller, checkoutPaneController);
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
         checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
-        //checkoutPaneController.checkoutPane.getChildren().add(tmp);
-
-        /*
-        Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-        Scene tmpScene = new Scene(tmp);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tmpScene);
-        window.show();
-         */
-
     }
     @FXML
-    public void toWizard2(ActionEvent event) {
+    public void toWizard2(Event event) {
         wizardPane2.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.png").toString()));
@@ -88,7 +78,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
     }
     @FXML
-    public void toWizard3(ActionEvent event) {
+    public void toWizard3(Event event) {
         wizardPane3.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
@@ -96,7 +86,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
     }
     @FXML
-    public void toWizard4(ActionEvent event){
+    public void toWizard4(Event event){
         wizardPane4.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
