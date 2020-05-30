@@ -12,7 +12,7 @@ import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
 
-public class Wizard2Controller implements Initializable {
+public class Wizard2Controller extends AnchorPane implements Initializable {
 @FXML AnchorPane wizardPane4;@FXML DatePicker pickADate4;
 @FXML TextField addressDelivery4;@FXML TextField cardForDelivery4;
 @FXML Button backButton4;@FXML Button nextButton4;
@@ -28,20 +28,44 @@ public class Wizard2Controller implements Initializable {
 
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     private Controller controller;
+    private CheckoutPaneController checkoutPaneController;
+    public Wizard2Controller(CheckoutPaneController cpc){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizard.2.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+
+        this.checkoutPaneController=cpc;
+        System.out.println("wizard2Controller konstruktor");
+        checkoutPaneController.checkoutPane.getChildren().clear();
+        checkoutPaneController.checkoutPane.getChildren().add(this);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Wizard2Controller skapades");
+        System.out.println("Wizard2Controller initialize");
         wizardPane2.toFront();
-
     }
     @FXML
     public void toWizard1(ActionEvent event) throws IOException {
+        System.out.println("till Wizard1");
+        //checkoutPaneController.checkoutPane.getChildren().clear();
+        Wizard1Controller tmp = new Wizard1Controller(controller, checkoutPaneController);
+        //checkoutPaneController.checkoutPane.getChildren().add(tmp);
+
+        /*
         Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
         Scene tmpScene = new Scene(tmp);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
-        System.out.println("till Wizard1");
+         */
+
     }
     @FXML
     public void toWizard2(ActionEvent event) {

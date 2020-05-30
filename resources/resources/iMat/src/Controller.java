@@ -120,6 +120,7 @@ public class Controller {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
+        System.out.println("till kassan");
     }
        /*
        @FXML
