@@ -57,7 +57,11 @@ public class Wizard1Controller extends AnchorPane implements Initializable{
 
     @FXML
     public void toWizard2(ActionEvent event) throws IOException {
-        Wizard2Controller wizard2Controller = new Wizard2Controller(checkoutPaneController);
+        if(!dh.getShoppingCart().getItems().isEmpty()) {
+            Wizard2Controller wizard2Controller = new Wizard2Controller(checkoutPaneController);
+        } else {
+            checkoutItemFlowPane.setStyle("-fx-border-color: RED");
+        }
         /*
         checkoutPaneController.checkoutPane.getChildren().clear();
         checkoutPaneController.checkoutPane.getChildren().add(new Wizard2Controller());

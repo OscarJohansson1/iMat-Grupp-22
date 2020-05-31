@@ -232,7 +232,7 @@
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj när varorna ska levereras till din dörr. ">
+            <Text layoutX="75.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Välj vilken dag varorna ska levereras. Varorna lämnas vid din dörr 18.00 den valda dagen." wrappingWidth="846.1945190429688">
                <font>
                   <Font size="20.0" />
                </font>

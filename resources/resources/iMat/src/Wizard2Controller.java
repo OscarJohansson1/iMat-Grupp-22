@@ -230,9 +230,13 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
             }
         });
 
+        addressDelivery4.setEditable(false);
+        addressDelivery4.setStyle(" -fx-text-fill: grey");
         addressDelivery4.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setAddress(addressDelivery4.getText());
         });
+        cardForDelivery4.setEditable(false);
+        cardForDelivery4.setStyle(" -fx-text-fill: grey");
         cardForDelivery4.textProperty().addListener((observable, oldValue, newValue) -> {
             creditCard.setCardNumber(cardForDelivery4.getText());
         });
@@ -410,11 +414,15 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();*/
-        dh.placeOrder(true);
-        checkoutPaneController.checkoutPane.getChildren().clear();
-        loggInCheckoutCompleteController temp = new loggInCheckoutCompleteController(checkoutPaneController);
-        checkoutPaneController.checkoutPane.getChildren().add(temp);
-        checkoutPaneController.setVisibleFalse();
+        if(pickADate4.getValue() != null) {
+            dh.placeOrder(true);
+            checkoutPaneController.checkoutPane.getChildren().clear();
+            loggInCheckoutCompleteController temp = new loggInCheckoutCompleteController(checkoutPaneController);
+            checkoutPaneController.checkoutPane.getChildren().add(temp);
+            checkoutPaneController.setVisibleFalse();
+        } else {
+            pickADate4.setStyle(" -fx-border-color: RED;");
+        }
 
 /*
         Parent tmp = FXMLLoader.load(getClass().getResource("homePage.fxml"));
