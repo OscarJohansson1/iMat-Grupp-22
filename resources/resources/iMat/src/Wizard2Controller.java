@@ -1,22 +1,21 @@
 import javafx.event.Event;
-import javafx.fxml.Initializable;import javafx.event.ActionEvent;import javafx.fxml.FXML;import javafx.geometry.Insets;import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;import javafx.scene.layout.AnchorPane;import javafx.scene.layout.FlowPane;
-import javafx.stage.WindowEvent;import se.chalmers.cse.dat216.project.*;import java.io.IOException;import java.math.BigDecimal;import java.math.RoundingMode;
+import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.*;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.*;import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;import javafx.event.ActionEvent;
-import javafx.fxml.FXML;import javafx.fxml.FXMLLoader;import javafx.fxml.Initializable;import javafx.scene.Parent;
-import javafx.scene.control.*;import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
-import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
-import java.util.function.UnaryOperator;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.*;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
+import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
 public class Wizard2Controller extends AnchorPane implements Initializable {
@@ -67,39 +66,6 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         setKnownInfo();
         addListeners();
 
-        /*
-        1.      Lägg till en ny ToggleGroup med metoden:
-
-        difficultyToggleGroup = new ToggleGroup();
-
-        2.     Sätt denna togglegroup på varje radioButton med metoden:
-
-        radioButton.setToggleGroup(difficultyToggleGroup);
-
-        Detta gör att endast en av radioknapparna kan vara valda åt gången och gör att vi kan läsa av vilken av knapparna
-        som är vald i gruppen.
-
-        3.      Välj vilken radiobutton som ska vara vald som default med hjälp av metoden:
-
-        radioButton.setSelected(true);
-
-        4.     Lägg till en lyssnare till selectedToggleProperty på Togglegroup som uppdaterar backend och träfflistan när
-        användaren har ändrat i comboboxen:
-
-        difficultyToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
-
-            @Override
-            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
-
-                if (difficultyToggleGroup.getSelectedToggle() != null) {
-                    RadioButton selected = (RadioButton) difficultyToggleGroup.getSelectedToggle();
-                    backendController.setDifficulty(selected.getText());
-                    updateRecipeList();
-                }
-            }
-        });
-
-         */
         ToggleGroup difficultyToggleGroup = new ToggleGroup();
     }
 
