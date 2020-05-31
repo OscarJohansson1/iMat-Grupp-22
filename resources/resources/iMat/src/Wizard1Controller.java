@@ -14,6 +14,7 @@ import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.proj
 
 public class Wizard1Controller extends AnchorPane implements Initializable{
     @FXML private Button continueAsGuestButton;
+    @FXML private Label totalCost;
     @FXML public FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     private Controller controller;
@@ -33,6 +34,7 @@ public class Wizard1Controller extends AnchorPane implements Initializable{
             this.checkoutPaneController = cpc;
             this.checkoutPaneController.checkoutPane.getChildren().clear();
             this.checkoutPaneController.checkoutPane.getChildren().add(this);
+            updateTotal();
 
     }
 
@@ -46,6 +48,10 @@ public class Wizard1Controller extends AnchorPane implements Initializable{
             CheckoutItems tmp = new CheckoutItems(si, this);
             checkoutItemFlowPane.getChildren().add(tmp);
         }
+    }
+
+    public void updateTotal() {
+        totalCost.setText(dh.getShoppingCart().getTotal() + "kr");
     }
 
 

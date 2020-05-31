@@ -79,6 +79,7 @@ public class CheckoutItems extends AnchorPane {
             shoppingItem.setAmount(shoppingItem.getAmount() + 1);
             this.checkoutItemAmount.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
             this.checkoutItemTotalCost.setText(Controller.round(shoppingItem.getTotal(), 2) + " kr");
+            wizard1.updateTotal();
         });
 
         checkoutItemPlusImage.setOnMouseMoved(m -> {
@@ -97,6 +98,7 @@ public class CheckoutItems extends AnchorPane {
             }
             this.checkoutItemAmount.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
             this.checkoutItemTotalCost.setText(Controller.round(shoppingItem.getTotal(), 2) + " kr");
+            wizard1.updateTotal();
         });
 
         checkoutItemMinusImage.setOnMouseMoved(m -> {
@@ -110,6 +112,7 @@ public class CheckoutItems extends AnchorPane {
         checkoutItemTrashcan.setOnMouseClicked(m -> {
             datahandler.getShoppingCart().removeItem(shoppingItem);
             wizard1.checkoutItemFlowPane.getChildren().remove(this);
+            wizard1.updateTotal();
         });
 
         checkoutItemTrashcan.setOnMouseMoved(m -> {

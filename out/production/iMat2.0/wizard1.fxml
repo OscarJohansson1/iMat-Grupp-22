@@ -39,5 +39,15 @@
             <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
          </image>
       </ImageView>
+      <Label layoutX="901.0" layoutY="272.0" prefHeight="54.0" prefWidth="89.0" text="Totalt:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCost" layoutX="1004.0" layoutY="272.0" prefHeight="54.0" prefWidth="186.0" text="3">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
    </children>
 </fx:root>
