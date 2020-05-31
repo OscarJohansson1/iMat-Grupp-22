@@ -11,6 +11,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Font;
 import javafx.stage.WindowEvent;
 import se.chalmers.cse.dat216.project.*;
 
@@ -53,7 +54,7 @@ public class Controller implements Initializable{
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML public Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
-    @FXML private Button backToHomePageButton;
+    @FXML private Button backToHomePageButton; @FXML private Label vegetables;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -125,6 +126,7 @@ public class Controller implements Initializable{
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
+        resetCategoryLabels();
     }
 
       /*
@@ -208,6 +210,7 @@ public class Controller implements Initializable{
         homPageDetailController c = new homPageDetailController(this);
         differentDetailPane.getChildren().add(c);
         loginPane.toBack();
+        resetCategoryLabels();
     }
     @FXML
     protected void showFruitsAndGreens(MouseEvent event){
@@ -239,6 +242,7 @@ public class Controller implements Initializable{
         fgc.itemViewPane.setHgap(20);
         differentDetailPane.getChildren().add(fgc);
         loginPane.toBack();
+        resetCategoryLabels();
     }
 
 
@@ -269,6 +273,7 @@ public class Controller implements Initializable{
     @FXML
     public void loginPressed(MouseEvent event){
         loginPane.toFront();
+        resetCategoryLabels();
         //LogInPopUp.toFront();
     }
 
@@ -301,26 +306,84 @@ public class Controller implements Initializable{
         myPagesController temp = new myPagesController(this);
         differentDetailPane.getChildren().add(temp);
         loginPane.toBack();
+        resetCategoryLabels();
+        myPages.setStyle("-fx-font-weight: bold; -fx-font-size: 22;");
     }
     public void myHistoryLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myHistoryController temp = new myHistoryController(this);
         differentDetailPane.getChildren().add(temp);
         loginPane.toBack();
+        resetCategoryLabels();
+        purchaseHistory.setStyle("-fx-font-weight: bold; -fx-font-size: 17;");
     }
     public void myFavoriteLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myFavoriteController temp = new myFavoriteController(this);
         differentDetailPane.getChildren().add(temp);
         loginPane.toBack();
+        resetCategoryLabels();
+        myFavorites.setStyle("-fx-font-weight: bold; -fx-font-size: 17;");
     }
     public void myDetailsLabelPressedFunction(){
         differentDetailPane.getChildren().clear();
         myDetailsController temp = new myDetailsController(this);
         differentDetailPane.getChildren().add(temp);
         loginPane.toBack();
-    }
+        resetCategoryLabels();
+        myDetailsLabel.setStyle("-fx-font-weight: bold; -fx-font-size: 17;");
 
+    }
+    public void resetCategoryLabels(){
+        myPages.setStyle("-fx-font-weight: regular; -fx-font-size: 22;");
+        myFavorites.setStyle("-fx-font-weight: regular; -fx-font-size: 17;");
+        purchaseHistory.setStyle("-fx-font-weight: regular; -fx-font-size: 17;");
+        myDetailsLabel.setStyle("-fx-font-weight: regular; -fx-font-size: 17;");
+        fruitsAndGreens.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        vegetables.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        dairyItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        breadItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        fishItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        meatItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        pantryItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        drinkItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+    }
+    public void setShoppingCategoryLabels(String s){
+        switch (s){
+            case "Frukter och bär":
+                resetCategoryLabels();
+                fruitsAndGreens.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Grönsaker":
+                resetCategoryLabels();
+                vegetables.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Mejeriprodukter":
+                resetCategoryLabels();
+                dairyItems.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Bröd":
+                resetCategoryLabels();
+                breadItems.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Fisk":
+                resetCategoryLabels();
+                fishItems.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Kött":
+                resetCategoryLabels();
+                meatItems.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Skafferi":
+                resetCategoryLabels();
+                pantryItems.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+            case "Drycker":
+                resetCategoryLabels();
+                drinkItems.setStyle("-fx-font-weight: bold; -fx-font-size: 20;");
+                break;
+        }
+    }
     @FXML
     public void closeRecipeView(){
         loginPane.toBack();

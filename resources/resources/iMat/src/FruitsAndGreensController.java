@@ -49,6 +49,7 @@ public class FruitsAndGreensController extends AnchorPane {
     @FXML private Button backCatecoryButton;
     @FXML private Button nextCategoryButton;
 
+
     private Controller controller;
     private IMatDataHandler dh;
     private String currentString;
@@ -203,6 +204,8 @@ public class FruitsAndGreensController extends AnchorPane {
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-apple-96.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.BERRY, ProductCategory.CITRUS_FRUIT,
                         ProductCategory.EXOTIC_FRUIT, ProductCategory.MELONS, ProductCategory.FRUIT)));
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Grönsaker":
                 setGreens();
@@ -210,30 +213,40 @@ public class FruitsAndGreensController extends AnchorPane {
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-natural-food-96.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.POD, ProductCategory.CABBAGE,
                         ProductCategory.VEGETABLE_FRUIT, ProductCategory.HERB, ProductCategory.ROOT_VEGETABLE)));
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Mejeriprodukter":
                 setMejeriprodukter();
                 splitPane.setDividerPosition(0, 0.23);
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/milk.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.DAIRIES);
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Bröd":
                 setBröd();
                 splitPane.setDividerPosition(0, 0.23);
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-bread-96.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.BREAD);
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Fisk":
                 setFisk();
                 splitPane.setDividerPosition(0, 0.23);
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-whole-fish-100.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.FISH);
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Kött":
                 setKött();
                 splitPane.setDividerPosition(0, 0.23);
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-meat-on-bone-96.png").toString()));
                 updateItemList2(dh, this.controller, ProductCategory.MEAT);
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Skafferi":
                 setSkafferi();
@@ -241,6 +254,8 @@ public class FruitsAndGreensController extends AnchorPane {
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/pantry.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.FLOUR_SUGAR_SALT,
                         ProductCategory.NUTS_AND_SEEDS, ProductCategory.PASTA, ProductCategory.POTATO_RICE, ProductCategory.SWEET)));
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             case "Drycker":
                 setDrycker();
@@ -248,6 +263,8 @@ public class FruitsAndGreensController extends AnchorPane {
                 categoryFoodImage.setImage(new Image(getClass().getResource("/sceneImages/icons8-tea-cup-200.png").toString()));
                 updateItemList2(dh, this.controller, new ArrayList<>(Arrays.asList(ProductCategory.COLD_DRINKS,
                         ProductCategory.HOT_DRINKS)));
+                controller.resetCategoryLabels();
+                controller.setShoppingCategoryLabels(s);
                 break;
             default:
                 splitPane.setDividerPosition(0, 0.15);
