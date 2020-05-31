@@ -86,6 +86,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         customer.setEmail(emailField2.getText());
         customer.setFirstName(surname2.getText());
         customer.setLastName(lastname2.getText());
+
         //dh.getCustomer().setMobilePhoneNumber();
         //dh.getCustomer().setPhoneNumber();
         customer.setPostAddress(postCity2.getText());
