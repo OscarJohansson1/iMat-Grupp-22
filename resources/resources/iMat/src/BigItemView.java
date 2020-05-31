@@ -112,7 +112,7 @@ public class BigItemView extends AnchorPane {
         }
     }
 
-    private void updateQuantity(boolean b){
+    protected void updateQuantity(boolean b){
         if (b){
             quantity++;
             quantityItemsTextField.setText(String.valueOf(quantity));

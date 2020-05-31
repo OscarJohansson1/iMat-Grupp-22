@@ -26,21 +26,19 @@ public class CartItemView extends AnchorPane {
     ImageView cartEditPen;
     @FXML
     AnchorPane cartItemsPane;
+    @FXML ImageView plus;
+    @FXML ImageView minus;
+    @FXML ImageView delete;
+    @FXML Label amount;
+
+
     BigItemView biv;
 
     //private final Product product;
     private final ShoppingItem shoppingItem;
     private final IMatDataHandler datahandler;
 
-    ImageView plus = new ImageView(new Image(getClass().getResource("/sceneImages/baseline_add_circle_outline_black_18dp.png").toString()));
-    ImageView minus = new ImageView(new Image(getClass().getResource("/sceneImages/baseline_remove_circle_outline_black_18dp.png").toString()));
-    ImageView delete = new ImageView(new Image(getClass().getResource("/sceneImages/baseline_delete_black_24dp.png").toString()));
-    Label amount;
-
-
     boolean open = false;
-
-
 
     //private Controller controller;
     public CartItemView(ShoppingItem shoppingItem) {
@@ -61,38 +59,34 @@ public class CartItemView extends AnchorPane {
         this.cartItemLabel.setText(shoppingItem.getProduct().getName());
         this.cartItemPerKilo.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
 
-        amount = new Label(Integer.toString((int) shoppingItem.getAmount()));
         biv = new BigItemView(datahandler, shoppingItem.getProduct());
+        amount.setText(Integer.toString((int) shoppingItem.getAmount()));
+        plus.setVisible(false);
+        minus.setVisible(false);
+        delete.setVisible(false);
+        amount.setVisible(false);
 
         addListeners();
     }
 
-    private void setUp() {
-        cartItemsPane.getChildren().add(plus);
-        cartItemsPane.getChildren().add(minus);
-        cartItemsPane.getChildren().add(delete);
-        cartItemsPane.getChildren().add(amount);
-        minus.setX(10);
-        minus.setY(55);
-        plus.setX(100);
-        plus.setY(55);
-        amount.relocate(70, 65);
-        delete.setX(170);
-        delete.setY(50);
+    public void setUp() {
+        plus.setVisible(true);
+        minus.setVisible(true);
+        delete.setVisible(true);
+        amount.setVisible(true);
         cartItemsPane.setPrefHeight(100);
     }
 
     private void setDown() {
-        cartItemsPane.getChildren().remove(plus);
-        cartItemsPane.getChildren().remove(minus);
-        cartItemsPane.getChildren().remove(delete);
-        cartItemsPane.getChildren().remove(amount);
+        plus.setVisible(false);
+        minus.setVisible(false);
+        delete.setVisible(false);
+        amount.setVisible(false);
         cartItemsPane.setPrefHeight(50);
     }
 
     private void addListeners() {
         cartEditPen.setOnMouseClicked(m->{
-            //minusItemImage.setImage(new Image(getClass().getResource("/sceneImages/baseline_remove_circle_outline_black_18dp.png").toString()));
             if(!open){
                 setUp();
                 open = true;
@@ -103,13 +97,20 @@ public class CartItemView extends AnchorPane {
         });
 
         plus.setOnMouseClicked(m->{
-            biv.plusButtonActionPerformed(m);
+            shoppingItem.setAmount(shoppingItem.getAmount() + 1);
             amount.setText(Integer.toString((int) shoppingItem.getAmount()));
+            this.cartItemPerKilo.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
         });
+
         minus.setOnMouseClicked(m->{
-            biv.minusButtonActionPerformed(m);
+            shoppingItem.setAmount(shoppingItem.getAmount() - 1);
+            if(shoppingItem.getAmount() == 0){
+                datahandler.getShoppingCart().removeItem(shoppingItem);
+            }
             amount.setText(Integer.toString((int) shoppingItem.getAmount()));
+            this.cartItemPerKilo.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
         });
+
         delete.setOnMouseClicked(m->{
             datahandler.getShoppingCart().removeItem(shoppingItem);
         });

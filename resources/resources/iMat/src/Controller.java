@@ -338,18 +338,18 @@ public class Controller implements Initializable{
 
     }
     public void resetCategoryLabels(){
-        myPages.setStyle("-fx-font-weight: regular; -fx-font-size: 22;");
-        myFavorites.setStyle("-fx-font-weight: regular; -fx-font-size: 17;");
-        purchaseHistory.setStyle("-fx-font-weight: regular; -fx-font-size: 17;");
-        myDetailsLabel.setStyle("-fx-font-weight: regular; -fx-font-size: 17;");
-        fruitsAndGreens.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        vegetables.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        dairyItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        breadItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        fishItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        meatItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        pantryItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
-        drinkItems.setStyle("-fx-font-weight: regular; -fx-font-size: 20;");
+        myPages.setStyle(" -fx-font-size: 22;");
+        myFavorites.setStyle(" -fx-font-size: 17;");
+        purchaseHistory.setStyle(" -fx-font-size: 17;");
+        myDetailsLabel.setStyle(" -fx-font-size: 17;");
+        fruitsAndGreens.setStyle(" -fx-font-size: 20;");
+        vegetables.setStyle(" -fx-font-size: 20;");
+        dairyItems.setStyle(" -fx-font-size: 20;");
+        breadItems.setStyle(" -fx-font-size: 20;");
+        fishItems.setStyle(" -fx-font-size: 20;");
+        meatItems.setStyle(" -fx-font-size: 20;");
+        pantryItems.setStyle(" -fx-font-size: 20;");
+        drinkItems.setStyle(" -fx-font-size: 20;");
     }
     public void setShoppingCategoryLabels(String s){
         switch (s){
