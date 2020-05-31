@@ -434,7 +434,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
             public void updateItem(LocalDate date, boolean empty) {
                 super.updateItem(date, empty);
                 LocalDate today = LocalDate.now();
-                setDisable(empty || date.compareTo(today) < 0 );
+                setDisable(empty || date.compareTo(today) <= 0 );
             }
         });
     }
