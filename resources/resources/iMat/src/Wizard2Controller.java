@@ -7,7 +7,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;import javafx.scene.layout.AnchorPane;import javafx.scene.layout.FlowPane;
 import javafx.stage.WindowEvent;import se.chalmers.cse.dat216.project.*;import java.io.IOException;import java.math.BigDecimal;import java.math.RoundingMode;
-import java.net.URL;import java.util.*;import javafx.beans.value.ChangeListener;
+import java.net.URL;
+import java.time.LocalDate;
+import java.util.*;import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;import javafx.event.ActionEvent;
 import javafx.fxml.FXML;import javafx.fxml.FXMLLoader;import javafx.fxml.Initializable;import javafx.scene.Parent;
 import javafx.scene.control.*;import javafx.scene.image.ImageView;
@@ -419,6 +421,17 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
  */
 
         //TODO skriv klart denna
+    }
+    @FXML
+    public void datePickerValid(){
+        DatePicker dp = pickADate4;
+        dp.setDayCellFactory(picker -> new DateCell() {
+            public void updateItem(LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+                LocalDate today = LocalDate.now();
+                setDisable(empty || date.compareTo(today) < 0 );
+            }
+        });
     }
 }
 
