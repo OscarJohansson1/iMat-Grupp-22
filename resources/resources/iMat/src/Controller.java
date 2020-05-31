@@ -8,12 +8,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.text.Font;
-import javafx.stage.WindowEvent;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
@@ -22,18 +19,11 @@ import java.math.RoundingMode;
 import java.net.URL;
 import java.util.*;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
@@ -91,32 +81,6 @@ public class Controller implements Initializable{
         else datahandler.addFavorite(p);
     }
 
-    @FXML
-    protected void newWindow (MouseEvent event) throws IOException {
-          /*
-          AnchorPane homePageDetail = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-          Scene homePageScene = new Scene(homePageDetail);
-
-          //homPageDetailController hej = new homPageDetailController();
-          /*
-          FXMLLoader homePageDetail = new FXMLLoader(getClass().getResource("homPageDetail.fxml"));
-          homePageDetail.setRoot(this);
-          homePageDetail.setController(this);
-
-          FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recipe_listitem.fxml"));
-
-          fxmlLoader.setRoot(this);
-          fxmlLoader.setController(this);
-          */
-        //Stage window = (Stage) homePageScene.getWindow();
-      /*
-          Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-                  //(Stage)((Node)event.getSource()).getScene().getWindow();
-          window.setScene(homePageScene);
-          window.show();
-
-       */
-    }
 
     @FXML
     public void toCheckout(ActionEvent event) throws IOException {
@@ -130,43 +94,8 @@ public class Controller implements Initializable{
         resetCategoryLabels();
     }
 
-      /*
-      @FXML
-      public void toCheckout (Stage stage) throws IOException {
-          newWindowMethod(stage);
-      }
 
 
-
-      protected void newWindowMethod (Stage stage) throws IOException {
-          AnchorPane wizard1 = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
-          Scene wizard1Scene = new Scene(wizard1);
-
-          stage.setScene(wizard1Scene);
-      }
-
-       */
-
-    @FXML
-    protected void testMethodActionEvent(ActionEvent event){
-        System.out.println("hej");
-    }
-    @FXML
-    protected void testMethodMouseEvent(MouseEvent event){
-        System.out.println("hi");
-    }
-    @FXML
-    protected void testMethodMouseEvent2(MouseEvent event){
-        searchBar.clear();
-    }
-    @FXML
-    protected void testMethodKeyEvent(KeyEvent event){
-        System.out.println("hello");
-    }
-    @FXML
-    protected void testMethodWindowEvent(WindowEvent event){
-        System.out.println("hola");
-    }
 
     public void setDatahandler(IMatDataHandler dh){
         this.datahandler = dh;
@@ -225,13 +154,8 @@ public class Controller implements Initializable{
         FruitsAndGreensController c = new FruitsAndGreensController(this, s);
         differentDetailPane.getChildren().add(c);
         loginPane.toBack();
- /*
- Lägg till metod som sätter in alla BigItemViews under vald kategori
-
-  */
-        //BigItemView b = new BigItemView(this);
-        //differentDetailPane.getChildren().add(b);
     }
+
     @FXML
     protected void searchBarUpdateOnEnter(ActionEvent event){
         differentDetailPane.getChildren().clear();

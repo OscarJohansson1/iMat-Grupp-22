@@ -1,22 +1,12 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.ShoppingCartListener;
-
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class iMat extends Application {
 
-    /**
-     * hade det varit bättre om datahandler skapades i controller?
-     */
     private static IMatDataHandler datahandler;
    private static Controller controller;
 
@@ -51,11 +41,6 @@ public class iMat extends Application {
             c.controller.createBigItemViewMap();
             Thread printingHook = new Thread(() -> datahandler.shutDown());
             Runtime.getRuntime().addShutdownHook(printingHook);
-
-
-            //TODO skapa Wizard1Controller om det behövs
-            //Wizard1Controller wiz = new Wizard1Controller();
-            //controller.newWindow();
 
         } catch(Exception e) {
             e.printStackTrace();

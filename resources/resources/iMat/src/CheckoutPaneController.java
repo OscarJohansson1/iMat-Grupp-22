@@ -1,26 +1,27 @@
 import javafx.event.Event;
-import javafx.fxml.Initializable;import javafx.event.ActionEvent;import javafx.fxml.FXML;import javafx.geometry.Insets;import javafx.scene.Node;
+import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;import javafx.scene.layout.AnchorPane;import javafx.scene.layout.FlowPane;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
-import javafx.stage.WindowEvent;
-import se.chalmers.cse.dat216.project.*;import java.io.IOException;import java.math.BigDecimal;import java.math.RoundingMode;
-import java.net.URL;import java.util.*;import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;import javafx.event.ActionEvent;
-import javafx.fxml.FXML;import javafx.fxml.FXMLLoader;import javafx.fxml.Initializable;import javafx.scene.Parent;
-import javafx.scene.control.*;import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
-import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
+import java.io.IOException;
+import java.net.URL;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
+import java.util.ResourceBundle;
 
 
 public class CheckoutPaneController implements Initializable{
-    //@FXML private Button continueAsGuestButton;
-    //@FXML private FlowPane checkoutItemFlowPane;
+
     @FXML AnchorPane checkoutPane;@FXML ImageView Step1Image; @FXML ImageView Step2Image; @FXML ImageView Step3Image;@FXML ImageView Step4Image;
     @FXML TextField searchBarCheckout; @FXML Button searchBarButtonCheckout; @FXML Label iMatLogo; @FXML private ImageView line1;
     @FXML private ImageView line2; @FXML private ImageView line3; @FXML private Text step1Label; @FXML private Text step2Label;
@@ -82,10 +83,6 @@ public class CheckoutPaneController implements Initializable{
         controller.updateSearchBar();
     }
 
-    @FXML
-    public void testMethod(MouseEvent event){
-        System.out.println("hejsvehs");
-    }
     @FXML
     public void toHomePage (ActionEvent event) throws IOException {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
