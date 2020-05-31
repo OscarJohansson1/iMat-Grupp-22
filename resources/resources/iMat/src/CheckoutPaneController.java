@@ -33,6 +33,7 @@ public class CheckoutPaneController implements Initializable{
     public void setController(Controller c){
         this.controller = c;
     }
+
     @FXML
     public void toHomePageMouseEvent(MouseEvent event) throws IOException {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

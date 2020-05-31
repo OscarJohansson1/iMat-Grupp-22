@@ -14,6 +14,7 @@ import javafx.scene.control.*;import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class Wizard2Controller extends AnchorPane implements Initializable {
 @FXML AnchorPane wizardPane4;@FXML DatePicker pickADate4;
@@ -60,8 +61,101 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         wizardPane2.toFront();
         setKnownInfo();
+        addListeners();
+
+        /*
+        1.      Lägg till en ny ToggleGroup med metoden:
+
+        difficultyToggleGroup = new ToggleGroup();
+
+        2.     Sätt denna togglegroup på varje radioButton med metoden:
+
+        radioButton.setToggleGroup(difficultyToggleGroup);
+
+        Detta gör att endast en av radioknapparna kan vara valda åt gången och gör att vi kan läsa av vilken av knapparna
+        som är vald i gruppen.
+
+        3.      Välj vilken radiobutton som ska vara vald som default med hjälp av metoden:
+
+        radioButton.setSelected(true);
+
+        4.     Lägg till en lyssnare till selectedToggleProperty på Togglegroup som uppdaterar backend och träfflistan när
+        användaren har ändrat i comboboxen:
+
+        difficultyToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+
+                if (difficultyToggleGroup.getSelectedToggle() != null) {
+                    RadioButton selected = (RadioButton) difficultyToggleGroup.getSelectedToggle();
+                    backendController.setDifficulty(selected.getText());
+                    updateRecipeList();
+                }
+            }
+        });
+
+         */
+        ToggleGroup difficultyToggleGroup = new ToggleGroup();
+
 
     }
+
+    private void addListeners(){
+        addressField2.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setAddress(newValue);
+        });
+        emailField2.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setEmail(newValue);
+        });
+        surname2.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setFirstName(newValue);
+        });
+        lastname2.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setLastName(newValue);
+        });
+        postCity2.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setPostAddress(newValue);
+        });
+        postcode2.textProperty().addListener((observable, oldValue, newValue) -> {
+            String onlyDigits = newValue.replaceAll("[^0-9]+", "");
+            if (onlyDigits.length() == 5){
+                customer.setPostCode(onlyDigits);
+            }
+        });
+        cardnumber3.textProperty().addListener((observable, oldValue, newValue) -> {
+            creditCard.setCardNumber(newValue);
+        });
+        cardLasting3.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue.length()>1){
+                String month = newValue.substring(0,2);
+                System.out.println(month);
+                if (Pattern.matches("^[0-9]+$", month)) {
+                    creditCard.setValidMonth(Integer.parseInt(month));
+                }
+            }
+            if (newValue.length()>4){
+                String year = newValue.substring(3,5);
+                System.out.println(year);
+                if (Pattern.matches("^[0-9]+$", year)) {
+                    creditCard.setValidYear(Integer.parseInt(year));
+                }
+            }
+        });
+        /* ska ej sparas
+        cvcCode3.textProperty().addListener((observable, oldValue, newValue) -> {
+            creditCard.setVerificationCode(Integer.parseInt(cvcCode3.getText()));
+        });
+
+         */
+        addressDelivery4.textProperty().addListener((observable, oldValue, newValue) -> {
+            customer.setAddress(addressDelivery4.getText());
+        });
+        cardForDelivery4.textProperty().addListener((observable, oldValue, newValue) -> {
+            creditCard.setCardNumber(cardForDelivery4.getText());
+        });
+    }
+
 
     private void setKnownInfo(){
         addressField2.setText(customer.getAddress());
@@ -77,7 +171,6 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         cvcCode3.setText(String.valueOf(creditCard.getVerificationCode()));
         addressDelivery4.setText(customer.getPostAddress());
         cardForDelivery4.setText(creditCard.getCardNumber());
-
     }
 
 

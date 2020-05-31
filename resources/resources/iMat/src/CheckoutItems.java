@@ -22,10 +22,12 @@ public class CheckoutItems extends AnchorPane {
     @FXML ImageView checkoutItemMinusImage;
     @FXML ImageView checkoutItemPlusImage;
     @FXML TextField checkoutItemTextField;
+    @FXML AnchorPane paneForPen;
 
     //private final Product product;
     private final ShoppingItem shoppingItem;
     private final IMatDataHandler datahandler;
+    private int count = 0;
 
     //private Controller controller;
     public CheckoutItems(ShoppingItem shoppingItem) {
@@ -47,6 +49,21 @@ public class CheckoutItems extends AnchorPane {
         this.checkoutItemLabel.setText(shoppingItem.getProduct().getName());
         this.checkoutItemAmount.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
         this.checkoutItemTotalCost.setText(Controller.round(shoppingItem.getTotal(), 2) + " kr");
+
+    }
+
+    @FXML
+    public void editPaneToFront(MouseEvent event){
+        if ((count & 1) == 0){
+            paneForPen.toFront();
+            checkoutItemEditPane.toFront();
+
+        }
+        else {
+            paneForPen.toBack();
+            checkoutItemEditPane.toBack();
+        }
+        count++;
 
     }
 }
