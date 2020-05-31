@@ -18,8 +18,14 @@
                <image>
                   <Image url="@sceneImages/videon.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
          </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button fx:id="startShoppingButton" layoutX="107.0" layoutY="372.0" mnemonicParsing="false" onAction="#startShopping" prefHeight="134.0" prefWidth="498.0" styleClass="orange_button" stylesheets="@plaincy.css" text="Börja handla">
          <font>

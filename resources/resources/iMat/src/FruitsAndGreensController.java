@@ -383,8 +383,8 @@ public class FruitsAndGreensController extends AnchorPane {
         categoryTenLabel.setVisible(false);
     }
     private void setDrycker(){
-        categoryOneLabel.setText("Varma drycker");
-        categoryTwoLabel.setText("Kalla drycker");
+        categoryOneLabel.setText("Kalla drycker");
+        categoryTwoLabel.setText("Varma drycker");
         categoryThreeLabel.setVisible(false);
         categoryFourLabel.setVisible(false);
         categoryFiveLabel.setVisible(false);
