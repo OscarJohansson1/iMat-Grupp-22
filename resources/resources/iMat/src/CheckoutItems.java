@@ -57,7 +57,6 @@ public class CheckoutItems extends AnchorPane {
         if ((count & 1) == 0){
             paneForPen.toFront();
             checkoutItemEditPane.toFront();
-
         }
         else {
             paneForPen.toBack();

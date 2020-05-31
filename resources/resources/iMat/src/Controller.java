@@ -1,3 +1,4 @@
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -54,7 +55,7 @@ public class Controller implements Initializable{
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML public Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
-    @FXML private Button backToHomePageButton; @FXML private Label vegetables;
+    @FXML private Button backToHomePageButton; @FXML private Label vegetables; @FXML private ScrollPane scrollPane;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -177,6 +178,8 @@ public class Controller implements Initializable{
             public void shoppingCartChanged(CartEvent cartEvent) {
                 totalPrizeLabel.setText(round(datahandler.getShoppingCart().getTotal(), 2) + " kr");
                 updateCart();
+                Platform.runLater( () -> scrollPane.setVvalue(1.0));
+                        //.scrollTo(c.getList().size()-1) );
             }
         });
     }
