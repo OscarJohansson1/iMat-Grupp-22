@@ -238,6 +238,11 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         ToggleGroup cardToggleGroup = new ToggleGroup();
         mastercard3.setToggleGroup(cardToggleGroup);
         visaRadioButton3.setToggleGroup(cardToggleGroup);
+        if(creditCard.getCardType() == "Visa") {
+            visaRadioButton3.setSelected(true);
+        } else {
+            mastercard3.setSelected(true);
+        }
         cardToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
 
             @Override
