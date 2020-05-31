@@ -54,7 +54,7 @@ public class Controller implements Initializable{
     @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
     @FXML private FlowPane cartItemPane; @FXML public Button checkoutButton; @FXML private Label totalLabel;
-    @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
+    @FXML public Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
     @FXML private Button backToHomePageButton; @FXML private Label vegetables; @FXML private ScrollPane scrollPane;
 
     @Override
@@ -201,7 +201,7 @@ public class Controller implements Initializable{
     public void updateCart(){
         cartItemPane.getChildren().clear();
         for (ShoppingItem shoppingItem : datahandler.getShoppingCart().getItems()){
-            CartItemView cartItemView = new CartItemView(shoppingItem);
+            CartItemView cartItemView = new CartItemView(shoppingItem, this);
             cartItemPane.getChildren().add(cartItemView);
         }
     }
