@@ -321,4 +321,9 @@ public class Controller implements Initializable{
         loginPane.toBack();
     }
 
+    @FXML
+    public void closeRecipeView(){
+        loginPane.toBack();
+    }
+
 }
