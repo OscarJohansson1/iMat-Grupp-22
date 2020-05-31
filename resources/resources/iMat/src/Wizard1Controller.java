@@ -17,7 +17,7 @@ public class Wizard1Controller extends AnchorPane implements Initializable{
     @FXML private FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     private Controller controller;
-    private CheckoutPaneController checkoutPaneController;
+    public CheckoutPaneController checkoutPaneController;
 
     public Wizard1Controller(Controller c, CheckoutPaneController cpc) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizard1.fxml"));
@@ -38,8 +38,12 @@ public class Wizard1Controller extends AnchorPane implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        updateItems();
+    }
+
+    public void updateItems() {
         for (ShoppingItem si : dh.getShoppingCart().getItems()){
-            CheckoutItems tmp = new CheckoutItems(si);
+            CheckoutItems tmp = new CheckoutItems(si, this);
             checkoutItemFlowPane.getChildren().add(tmp);
         }
     }

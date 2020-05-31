@@ -41,6 +41,7 @@ public class iMat extends Application {
             stage.setTitle("iMat");
             //controller.newWindowMethod(stage);
             stage.setScene(scene);
+            stage.setResizable(false);
             controller.showHomePageDetail();
             stage.show();
             controller.createBigItemViewMap();
@@ -48,6 +49,7 @@ public class iMat extends Application {
             CheckoutPaneController c = new CheckoutPaneController();
             c.setController(controller);
             c.controller.createBigItemViewMap();
+
 
             //TODO skapa Wizard1Controller om det behövs
             //Wizard1Controller wiz = new Wizard1Controller();
