@@ -75,10 +75,13 @@
                         <Font name="Arial" size="39.0" />
                      </font>
                   </Label>
-                  <Button fx:id="toTheHomepageButton" layoutX="871.0" layoutY="25.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #97CE72;" text="Tillbaka till startsidan " AnchorPane.rightAnchor="30.0">
+                  <Button fx:id="toTheHomepageButton" layoutX="871.0" layoutY="25.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="48.0" prefWidth="268.0" styleClass="checkout_button" stylesheets="@plaincy.css" text="Tillbaka till startsidan " AnchorPane.rightAnchor="30.0">
                      <font>
                         <Font name="Arial Bold" size="20.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                   <AnchorPane fx:id="checkoutPane" layoutX="199.0" layoutY="99.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="99.0" />
                   <Text layoutX="355.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">

@@ -60,7 +60,6 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         wizardPane2.toFront();
         setKnownInfo();
-
     }
 
     private void setKnownInfo(){
