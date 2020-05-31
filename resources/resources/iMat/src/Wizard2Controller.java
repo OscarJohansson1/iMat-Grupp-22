@@ -234,6 +234,24 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         cardForDelivery4.textProperty().addListener((observable, oldValue, newValue) -> {
             creditCard.setCardNumber(cardForDelivery4.getText());
         });
+
+        ToggleGroup cardToggleGroup = new ToggleGroup();
+        mastercard3.setToggleGroup(cardToggleGroup);
+        visaRadioButton3.setToggleGroup(cardToggleGroup);
+        cardToggleGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
+
+            @Override
+            public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
+
+                if (cardToggleGroup.getSelectedToggle() != null) {
+                    if (cardToggleGroup.getSelectedToggle() == mastercard3) {
+                        creditCard.setCardType("Mastercard");
+                     } else {
+                        creditCard.setCardType("Visa");
+                    }
+                }
+            }
+        });
     }
 
 
@@ -385,7 +403,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();*/
-        dh.placeOrder();
+        dh.placeOrder(true);
         checkoutPaneController.checkoutPane.getChildren().clear();
         loggInCheckoutCompleteController temp = new loggInCheckoutCompleteController(checkoutPaneController);
         checkoutPaneController.checkoutPane.getChildren().add(temp);
