@@ -122,7 +122,7 @@ public class BigItemView extends AnchorPane {
             quantityItemsTextField.setText(String.valueOf(quantity));
         }
         else {
-            quantity += i;
+            quantity -= i;
             quantityItemsTextField.setText(String.valueOf(quantity));
         }
     }
