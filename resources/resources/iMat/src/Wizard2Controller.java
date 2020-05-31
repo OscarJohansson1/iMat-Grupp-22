@@ -385,6 +385,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();*/
+        dh.placeOrder();
         checkoutPaneController.checkoutPane.getChildren().clear();
         loggInCheckoutCompleteController temp = new loggInCheckoutCompleteController(checkoutPaneController);
         checkoutPaneController.checkoutPane.getChildren().add(temp);

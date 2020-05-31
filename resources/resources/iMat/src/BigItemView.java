@@ -113,15 +113,37 @@ public class BigItemView extends AnchorPane {
     }
 
     protected void updateQuantity(boolean b){
+        updateQuantity(b, 1);
+    }
+
+    protected void updateQuantity(boolean b, int i){
         if (b){
-            quantity++;
+            quantity += i;
             quantityItemsTextField.setText(String.valueOf(quantity));
         }
         else {
-            quantity--;
+            quantity += i;
             quantityItemsTextField.setText(String.valueOf(quantity));
         }
     }
+    /*
+    @FXML
+    protected void InputActionPerformed (ActionEvent event){
+        for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
+            if (si.getProduct() == product){
+                si.setAmount(String.valueOf(quantityItemsTextField.getText()));
+                updateQuantity(true);
+                datahandler.getShoppingCart().fireShoppingCartChanged(si, true);
+                return;
+            }
+        }
+        datahandler.getShoppingCart().addProduct(product);
+        updateQuantity(true);
+    }
+
+     */
+
+
 
 
 }
