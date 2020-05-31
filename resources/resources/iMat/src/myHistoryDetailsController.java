@@ -33,7 +33,13 @@ public class myHistoryDetailsController extends AnchorPane {
         int first = s.indexOf(" ");
         int second = s.indexOf(" ", first + 1);
         int third = s.indexOf(" ", second + 1);
-        dateLabel.setText((s.substring(first + 1, third)));
+        if(s.substring(first + 1, second).equals("May")) {
+            dateLabel.setText((s.substring(second + 1, third) + " Maj"));
+        } else if (s.substring(first + 1, second).equals("June")) {
+            dateLabel.setText((s.substring(second + 1, third) + " Juni"));
+        } else {
+            dateLabel.setText((s.substring(first + 1, third)));
+        }
         StringBuilder sb = new StringBuilder();
         for(ShoppingItem si : order.getItems()) {
             sb.append(si.getProduct().getName()).append(", ");

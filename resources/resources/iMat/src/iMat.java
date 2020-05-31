@@ -49,6 +49,8 @@ public class iMat extends Application {
             CheckoutPaneController c = new CheckoutPaneController();
             c.setController(controller);
             c.controller.createBigItemViewMap();
+            Thread printingHook = new Thread(() -> datahandler.shutDown());
+            Runtime.getRuntime().addShutdownHook(printingHook);
 
 
             //TODO skapa Wizard1Controller om det behövs
