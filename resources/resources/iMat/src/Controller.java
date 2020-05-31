@@ -144,6 +144,8 @@ public class Controller implements Initializable{
         loginPane.toBack();
         resetCategoryLabels();
         updateCart();
+        totalPrizeLabel.setText(round(datahandler.getShoppingCart().getTotal(), 2) + " kr");
+
     }
     @FXML
     protected void showFruitsAndGreens(MouseEvent event){
