@@ -36,7 +36,7 @@ public class myHistoryDetailsDetails extends AnchorPane {
         this.si = si;
 
         name.setText(si.getProduct().getName());
-        amount.setText(si.getProduct().getPrice() + " kr");
+        amount.setText((si.getProduct().getPrice() * si.getAmount()) + " kr");
         cost.setText(si.getAmount() + si.getProduct().getUnitSuffix());
         add.setOnMouseClicked(m->{
             for (ShoppingItem s : datahandler.getShoppingCart().getItems()){
