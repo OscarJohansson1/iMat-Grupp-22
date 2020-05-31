@@ -14,7 +14,7 @@ import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.proj
 
 public class Wizard1Controller extends AnchorPane implements Initializable{
     @FXML private Button continueAsGuestButton;
-    @FXML private FlowPane checkoutItemFlowPane;
+    @FXML public FlowPane checkoutItemFlowPane;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     private Controller controller;
     public CheckoutPaneController checkoutPaneController;
