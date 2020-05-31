@@ -126,6 +126,7 @@ public class Controller implements Initializable{
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
+        resetCategoryLabels();
     }
 
       /*
@@ -209,6 +210,7 @@ public class Controller implements Initializable{
         homPageDetailController c = new homPageDetailController(this);
         differentDetailPane.getChildren().add(c);
         loginPane.toBack();
+        resetCategoryLabels();
     }
     @FXML
     protected void showFruitsAndGreens(MouseEvent event){
@@ -240,6 +242,7 @@ public class Controller implements Initializable{
         fgc.itemViewPane.setHgap(20);
         differentDetailPane.getChildren().add(fgc);
         loginPane.toBack();
+        resetCategoryLabels();
     }
 
 
@@ -270,6 +273,7 @@ public class Controller implements Initializable{
     @FXML
     public void loginPressed(MouseEvent event){
         loginPane.toFront();
+        resetCategoryLabels();
         //LogInPopUp.toFront();
     }
 
