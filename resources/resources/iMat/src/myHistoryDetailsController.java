@@ -41,10 +41,14 @@ public class myHistoryDetailsController extends AnchorPane {
             dateLabel.setText((s.substring(first + 1, third)));
         }
         StringBuilder sb = new StringBuilder();
-        for(ShoppingItem si : order.getItems()) {
-            sb.append(si.getProduct().getName()).append(", ");
+        if(!order.getItems().isEmpty()) {
+            for (ShoppingItem si : order.getItems()) {
+                sb.append(si.getProduct().getName()).append(", ");
+            }
+            sb.delete(sb.lastIndexOf(", "), sb.lastIndexOf(", ") + 1);
+        } else {
+            sb.append("Empty");
         }
-        sb.delete(sb.lastIndexOf(", "), sb.lastIndexOf(", ") + 1);
         allProductsLabel.setText(sb.toString());
 
         showMoreLabel.setOnMouseClicked(m->{

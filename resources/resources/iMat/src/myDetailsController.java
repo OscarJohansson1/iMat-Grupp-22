@@ -3,6 +3,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
@@ -15,6 +16,12 @@ public class myDetailsController extends AnchorPane {
     private IMatDataHandler datahandler;
     @FXML private RadioButton myDetailsVisa;
     @FXML private RadioButton myDetailsMastercard;
+    @FXML private TextField myDetailsName;
+    @FXML private TextField myDetalisEmail;
+    @FXML private TextField myDetalisAddress;
+    @FXML private TextField myDetailsCard;
+    @FXML private TextField myDetailsDate;
+    @FXML private TextField myDetailsCVC;
 
     public myDetailsController(Controller c){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("myDetails.fxml"));
