@@ -12,89 +12,6 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="734.0" style="-fx-background-color: #DCDFDA;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="secondPane" prefHeight="578.0" prefWidth="734.0" style="-fx-background-color: #DCDFDA;">
-         <children>
-            <Button fx:id="backButtonMyHistory" layoutX="577.0" layoutY="33.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="128.0" style="-fx-background-color: #036a10; -fx-border-color: #000000;" text="Tillbaka " textFill="WHITE">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Label fx:id="myHistoryDate" layoutX="73.0" layoutY="111.0" prefHeight="32.0" prefWidth="250.0" text="Datum:">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Label>
-            <Label fx:id="myHistoryTime" layoutX="73.0" layoutY="143.0" prefHeight="32.0" prefWidth="167.0" text="Tid:">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="75.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="352.0" style="-fx-border-color: #000000;">
-               <children>
-                  <AnchorPane prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
-                     <children>
-                        <Label layoutX="58.0" layoutY="10.0" text="Varor">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="163.0" prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
-                     <children>
-                        <Label layoutX="23.0" layoutY="10.0" text="Mängd">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="272.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
-                     <children>
-                        <Label layoutX="24.0" layoutY="10.0" text="Pris">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="75.0" layoutY="270.0" prefHeight="200.0" prefWidth="561.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
-               <children>
-                  <ScrollPane layoutX="2.0" layoutY="2.0" prefHeight="198.0" prefWidth="562.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
-                     <content>
-                        <FlowPane fx:id="flowPane2" prefHeight="200.0" prefWidth="542.0" />
-                     </content>
-                  </ScrollPane>
-               </children>
-            </AnchorPane>
-            <Label layoutX="65.0" layoutY="43.0" text="Köphistorik" underline="true">
-               <font>
-                  <Font size="32.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="47.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@sceneImages/outline_assignment_black_48dp.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <AnchorPane layoutX="75.0" layoutY="469.0" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
-               <children>
-                  <Label fx:id="myHistoryTotalPrize" layoutX="14.0" layoutY="10.0" prefHeight="30.0" prefWidth="142.0" text="Totalt:">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="fristPane" layoutX="65.0" layoutY="43.0" style="-fx-background-color: #DCDFDA;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label layoutX="63.0" layoutY="45.0" text="Köphistorik" underline="true">
@@ -129,6 +46,89 @@
                   <Label layoutX="22.0" layoutY="8.0" text="Datum">
                      <font>
                         <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="secondPane" prefHeight="578.0" prefWidth="734.0" style="-fx-background-color: #DCDFDA;">
+         <children>
+            <Button fx:id="backButtonMyHistory" layoutX="577.0" layoutY="33.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="128.0" style="-fx-background-color: #036a10; -fx-border-color: #000000;" text="Tillbaka " textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="myHistoryDate" layoutX="73.0" layoutY="111.0" prefHeight="32.0" prefWidth="250.0" text="Datum:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="myHistoryTime" layoutX="73.0" layoutY="143.0" prefHeight="32.0" prefWidth="167.0" text="Tid:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="75.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="352.0" style="-fx-border-color: #000000;">
+               <children>
+                  <AnchorPane layoutX="274.0" prefHeight="50.0" prefWidth="85.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
+                     <children>
+                        <Label layoutX="27.0" layoutY="10.0" text="Pris">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="165.0" prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
+                     <children>
+                        <Label layoutX="23.0" layoutY="10.0" text="Mängd">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="50.0" prefWidth="166.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
+                     <children>
+                        <Label layoutX="59.0" layoutY="10.0" text="Varor">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="75.0" layoutY="270.0" prefHeight="200.0" prefWidth="561.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+               <children>
+                  <ScrollPane layoutX="2.0" layoutY="2.0" prefHeight="198.0" prefWidth="562.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <content>
+                        <FlowPane fx:id="flowPane2" prefHeight="200.0" prefWidth="542.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="65.0" layoutY="43.0" text="Köphistorik" underline="true">
+               <font>
+                  <Font size="32.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/outline_assignment_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <AnchorPane layoutX="75.0" layoutY="469.0" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #AAAAAA; -fx-border-color: #000000;">
+               <children>
+                  <Label fx:id="myHistoryTotalPrize" layoutX="14.0" layoutY="10.0" prefHeight="30.0" prefWidth="142.0" text="Totalt:">
+                     <font>
+                        <Font size="20.0" />
                      </font>
                   </Label>
                </children>

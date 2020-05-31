@@ -40,21 +40,6 @@
                   <Font size="22.0" />
                </font>
             </TextField>
-            <ImageView fx:id="myDetalisNamePen" fitHeight="37.0" fitWidth="38.0" layoutX="533.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_create_black_48dp.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="myDetalisEmailPen" fitHeight="37.0" fitWidth="38.0" layoutX="533.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_create_black_48dp.png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="myDetalisAddressPen" fitHeight="37.0" fitWidth="38.0" layoutX="533.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_create_black_48dp.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="71.0" layoutY="360.0" prefHeight="125.0" prefWidth="260.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
@@ -118,10 +103,5 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ImageView fx:id="myDetailsCardPen" fitHeight="30.0" fitWidth="37.0" layoutX="301.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@sceneImages/baseline_create_black_48dp.png" />
-         </image>
-      </ImageView>
    </children>
 </fx:root>
