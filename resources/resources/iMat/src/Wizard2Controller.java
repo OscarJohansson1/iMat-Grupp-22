@@ -14,6 +14,7 @@ import javafx.scene.control.*;import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;import javafx.stage.Modality;
 import javafx.stage.Stage;import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;import se.chalmers.cse.dat216.project.ShoppingItem;import java.util.ResourceBundle;
+import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
 
 public class Wizard2Controller extends AnchorPane implements Initializable {
@@ -35,6 +36,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
     private CheckoutPaneController checkoutPaneController;
     public Customer customer = dh.getCustomer();
     public CreditCard creditCard = dh.getCreditCard();
+    private TextFormatter<String> textFormatter;
 
 
     public Wizard2Controller(CheckoutPaneController cpc){
@@ -97,16 +99,85 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
 
          */
         ToggleGroup difficultyToggleGroup = new ToggleGroup();
-
-
     }
 
+    private boolean isValidEmail(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
+    }
+    private boolean isValidPostCode(String postcode){
+        String onlyDigits = postcode.replaceAll("[^0-9]+", "");
+        if (onlyDigits.length()==5){
+            customer.setPostCode(onlyDigits);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    private boolean isValidAddress(String address){
+        if (address.length()>0){
+            customer.setAddress(address);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    private boolean isValidCardNumber(String cardnumber){
+        String onlyDigits = cardnumber.replaceAll("[^0-9]+", "");
+        if (onlyDigits.length()==16){
+            creditCard.setCardNumber(onlyDigits);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    private boolean isValidCardLasting3(String str){
+        if (str.length()==5){
+            if ((Pattern.matches("^[0-9]+$", str.substring(0,2))) & (Pattern.matches("^[0-9]+$", str.substring(3,5))) & str.contains("/")){
+                return true;
+            }
+        }
+        if (str.length()==4){
+            if ((Pattern.matches("^[0-9]+$", str.substring(0,1))) & (Pattern.matches("^[0-9]+$", str.substring(2,4))) & str.contains("/") & (str.charAt(0)!=0)){
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean isValidCvcCode3(String str){
+        String onlyDigits = str.replaceAll("[^0-9]+", "");
+        if (onlyDigits.length()==3){
+            creditCard.setVerificationCode(Integer.parseInt(onlyDigits));
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     private void addListeners(){
         addressField2.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setAddress(newValue);
+            if (isValidAddress(addressField2.getText())){
+                addressField2.setStyle(null);
+            }
         });
         emailField2.textProperty().addListener((observable, oldValue, newValue) -> {
-            customer.setEmail(newValue);
+                customer.setEmail(newValue);
+                if (isValidEmail(emailField2.getText())){
+                    emailField2.setStyle(null);
+                }
         });
         surname2.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setFirstName(newValue);
@@ -118,13 +189,16 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
             customer.setPostAddress(newValue);
         });
         postcode2.textProperty().addListener((observable, oldValue, newValue) -> {
-            String onlyDigits = newValue.replaceAll("[^0-9]+", "");
-            if (onlyDigits.length() == 5){
-                customer.setPostCode(onlyDigits);
+            customer.setPostCode(newValue);
+            if (isValidPostCode(postcode2.getText())){
+                postcode2.setStyle(null);
             }
         });
         cardnumber3.textProperty().addListener((observable, oldValue, newValue) -> {
             creditCard.setCardNumber(newValue);
+            if (isValidCardNumber(cardnumber3.getText())){
+                cardnumber3.setStyle(null);
+            }
         });
         cardLasting3.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue.length()>1){
@@ -141,13 +215,19 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
                     creditCard.setValidYear(Integer.parseInt(year));
                 }
             }
-        });
-        /* ska ej sparas
-        cvcCode3.textProperty().addListener((observable, oldValue, newValue) -> {
-            creditCard.setVerificationCode(Integer.parseInt(cvcCode3.getText()));
+            if (isValidCardLasting3(cardLasting3.getText())){
+                cardLasting3.setStyle(null);
+            }
         });
 
-         */
+
+        cvcCode3.textProperty().addListener((observable, oldValue, newValue) -> {
+            //creditCard.setVerificationCode(Integer.parseInt(cvcCode3.getText()));
+            if(isValidCvcCode3(cvcCode3.getText())){
+                cvcCode3.setStyle(null);
+            }
+        });
+
         addressDelivery4.textProperty().addListener((observable, oldValue, newValue) -> {
             customer.setAddress(addressDelivery4.getText());
         });
@@ -155,6 +235,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
             creditCard.setCardNumber(cardForDelivery4.getText());
         });
     }
+
 
 
     private void setKnownInfo(){
@@ -169,10 +250,18 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         cardnumber3.setText(creditCard.getCardNumber());
         cardLasting3.setText(creditCard.getValidMonth() + "/" + creditCard.getValidYear());
         cvcCode3.setText(String.valueOf(creditCard.getVerificationCode()));
-        addressDelivery4.setText(customer.getPostAddress());
+        addressDelivery4.setText(customer.getAddress());
         cardForDelivery4.setText(creditCard.getCardNumber());
     }
 
+    private void isValidMonth(){
+        if (cardLasting3.getText().length()>1){
+            String month = cardLasting3.getText().substring(0,2);
+            if (Pattern.matches("^[0-9]+$", month)) {
+                creditCard.setValidMonth(Integer.parseInt(month));
+            }
+        }
+    }
 
     private void saveInfo(){
         customer.setAddress(addressField2.getText());
@@ -185,6 +274,14 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         customer.setPostAddress(postCity2.getText());
         customer.setPostCode(postcode2.getText());
         creditCard.setCardNumber(cardnumber3.getText());
+
+        //cardLasting3.getText().substring(0,2);
+        //creditCard.setValidMonth();
+        //creditCard.setValidYear();
+        creditCard.setVerificationCode(Integer.parseInt(cvcCode3.getText()));
+
+        customer.setAddress(addressDelivery4.getText());
+        creditCard.setCardNumber(cardForDelivery4.getText());
 
         /*
         if (cardLasting3.getText().length()>1){
@@ -200,28 +297,10 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
          */
 
     }
-    /*
-    @FXML RadioButton mastercard3;@FXML RadioButton visaRadioButton3;
-    @FXML TextField cardnumber3;@FXML TextField cardLasting3;@FXML TextField cvcCode3;
-    private void addListenerCardType(){
-
-    }
-    private void addListenerCardnumber3(){
-
-    }
-    private void addListenerCardLasting3(){
-
-    }
-    private void addListenercvcCode3(){
-
-    }
-
-     */
-
 
     @FXML
     public void toWizard1(Event event) throws IOException {
-        saveInfo();
+        //saveInfo();
         setKnownInfo();
         Wizard1Controller tmp = new Wizard1Controller(controller, checkoutPaneController);
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.png").toString()));
@@ -232,7 +311,7 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
     }
     @FXML
     public void toWizard2(Event event) {
-        saveInfo();
+        //saveInfo();
         setKnownInfo();
         wizardPane2.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
@@ -240,28 +319,54 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
 
+
     }
     @FXML
     public void toWizard3(Event event) {
-        saveInfo();
-        setKnownInfo();
-        wizardPane3.toFront();
-        checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
-        checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
-        checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.png").toString()));
-        checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
+
+        if (isValidEmail(emailField2.getText()) & isValidPostCode(postcode2.getText()) & isValidAddress(addressField2.getText())){
+            setKnownInfo();
+            wizardPane3.toFront();
+            checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
+            checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
+            checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.png").toString()));
+            checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
+        }
+        else{
+            if (!isValidEmail(emailField2.getText())){
+                emailField2.setStyle(" -fx-border-color: RED;");
+            }
+            if (!isValidPostCode(postcode2.getText())){
+                postcode2.setStyle(" -fx-border-color: RED;");
+            }
+            if (!isValidAddress(addressField2.getText())){
+                addressField2.setStyle(" -fx-border-color: RED;");
+            }
+        }
 
     }
     @FXML
-    public void toWizard4(Event event){
-        saveInfo();
-        setKnownInfo();
-        wizardPane4.toFront();
-        checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
-        checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
-        checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
-        checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.png").toString()));
+    public void toWizard4(Event event) {
+        //saveInfo();
+        if (isValidCardNumber(cardnumber3.getText()) & isValidCardLasting3(cardLasting3.getText()) & isValidCvcCode3(cvcCode3.getText())) {
+            setKnownInfo();
+            wizardPane4.toFront();
+            checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
+            checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
+            checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
+            checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.png").toString()));
+        } else {
+            if (!isValidCardNumber(cardnumber3.getText())) {
+                cardnumber3.setStyle(" -fx-border-color: RED;");
+            }
+            if (!isValidCardLasting3(cardLasting3.getText())) {
+                cardLasting3.setStyle(" -fx-border-color: RED;");
+            }
+            if (!isValidCvcCode3(cvcCode3.getText())) {
+                cvcCode3.setStyle(" -fx-border-color: RED;");
+            }
 
+        }
     }
 
     @FXML
@@ -296,12 +401,5 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
 
         //TODO skriv klart denna
     }
-
-
-
-
-
-
-
 }
 

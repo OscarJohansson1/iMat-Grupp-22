@@ -54,7 +54,6 @@ public class CheckoutPaneController implements Initializable{
     public void toWizard1(Event event) throws IOException {
         Wizard2Controller w2c = new Wizard2Controller(this);
         w2c.toWizard1(event);
-        System.out.println(dh.getCustomer().getFirstName());
     }
     @FXML
     public void toWizard2(Event event) {
