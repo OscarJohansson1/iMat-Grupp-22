@@ -99,7 +99,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="252.0" layoutY="503.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: #036a10; -fx-border-color: #000000;" styleClass="search_button" stylesheets="@plaincy.css" text="Tillbaka till startsidan" textFill="WHITE">
+            <Button layoutX="252.0" layoutY="503.0" mnemonicParsing="false" onMouseClicked="#closeRecipeView" prefHeight="51.0" prefWidth="230.0" style="-fx-background-color: #036a10; -fx-border-color: #000000;" text="Tillbaka till startsidan" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

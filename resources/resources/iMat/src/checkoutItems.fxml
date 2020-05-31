@@ -50,6 +50,6 @@
             <TextField fx:id="checkoutItemTextField" layoutX="150.0" layoutY="10.0" prefHeight="26.0" prefWidth="38.0" style="-fx-border-color: #000000;" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="300.0" layoutY="6.0" prefHeight="40.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" />
+      <AnchorPane fx:id="paneForPen" layoutX="300.0" layoutY="6.0" prefHeight="40.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" />
    </children>
 </fx:root>

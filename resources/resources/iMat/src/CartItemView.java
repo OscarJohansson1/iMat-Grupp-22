@@ -47,4 +47,5 @@ public class CartItemView extends AnchorPane {
         this.cartItemLabel.setText(shoppingItem.getProduct().getName());
         this.cartItemPerKilo.setText(Math.round(shoppingItem.getAmount()) + " " + shoppingItem.getProduct().getUnitSuffix());
     }
+
 }

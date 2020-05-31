@@ -60,7 +60,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="nextButton4" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toCheckoutComplete" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
+            <Button fx:id="nextButton4" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toCheckoutComplete" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Slutför köp">
                <font>
                   <Font size="20.0" />
                </font>
