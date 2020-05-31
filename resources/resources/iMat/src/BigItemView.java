@@ -99,6 +99,7 @@ public class BigItemView extends AnchorPane {
             String onlyDigits = quantityItemsTextField.getText().replaceAll("[^0-9]+", "");
             quantityItemsTextField.setText(onlyDigits);
             quantity = Integer.parseInt(quantityItemsTextField.getText());
+
             //loop som kollar om produkten redan finns i shoppingcarten
             for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
                 //produkten hittades i shoppingcarten
@@ -115,6 +116,9 @@ public class BigItemView extends AnchorPane {
                 }
             }
             //produkten hittades inte
+            if(quantity==0){
+                return;
+            }
             datahandler.getShoppingCart().addProduct(product, quantity);
         }
     }

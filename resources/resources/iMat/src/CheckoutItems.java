@@ -22,7 +22,7 @@ public class CheckoutItems extends AnchorPane {
     @FXML AnchorPane checkoutItemEditPane;
     @FXML ImageView checkoutItemMinusImage;
     @FXML ImageView checkoutItemPlusImage;
-    @FXML TextField checkoutItemTextField;
+
     @FXML AnchorPane paneForPen;
 
     //private final Product product;
@@ -139,5 +139,6 @@ public class CheckoutItems extends AnchorPane {
             }
         });
     }
+
 
 }
