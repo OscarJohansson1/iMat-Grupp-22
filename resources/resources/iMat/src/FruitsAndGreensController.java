@@ -5,6 +5,9 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitPane;
@@ -13,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
@@ -628,7 +632,7 @@ public class FruitsAndGreensController extends AnchorPane {
     }
 
     @FXML
-    protected void nextCategory(ActionEvent event) {
+    protected void nextCategory(ActionEvent event) throws IOException {
         controller.differentDetailPane.getChildren().clear();
         Button tmp = (Button) event.getSource();
         String s = tmp.getText().substring(5);
@@ -638,6 +642,9 @@ public class FruitsAndGreensController extends AnchorPane {
             controller.differentDetailPane.getChildren().add(c);
         } else if (s.equals("Kassa")) {
             // kassa
+            System.out.println("hej");
+            controller.checkoutButton.fire();
+
         } else {
             FruitsAndGreensController c = new FruitsAndGreensController(controller, s);
             controller.differentDetailPane.getChildren().add(c);

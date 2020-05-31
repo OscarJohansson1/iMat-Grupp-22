@@ -10,114 +10,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.AnchorPane">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1200.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="wizardPane3" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Text layoutX="77.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala" underline="true" AnchorPane.topAnchor="68.626953125">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen ange informationen om kortet du vill använda vid köpet">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Korttyp:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <Text layoutX="77.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="cardnumber3" layoutX="124.0" layoutY="280.0" prefHeight="34.0" prefWidth="303.0" promptText="1234-1234-1234-1234-1234" style="-fx-border-color: #000000;">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button layoutX="77.0" layoutY="280.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
-               <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@sceneImages/baseline_payment_black_48dp.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Text layoutX="77.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giltighetstid:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="cardLasting3" layoutX="124.0" layoutY="370.0" prefHeight="34.0" prefWidth="115.0" promptText="MM/ÅÅ" style="-fx-border-color: #000000;">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button layoutX="77.0" layoutY="370.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
-               <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@sceneImages/baseline_event_black_48dp.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Text layoutX="302.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC:">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Text>
-            <TextField fx:id="cvcCode3" layoutX="351.0" layoutY="370.0" prefHeight="34.0" prefWidth="75.0" promptText="123" style="-fx-border-color: #000000;">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </TextField>
-            <Button layoutX="302.0" layoutY="370.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
-               <graphic>
-                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@sceneImages/baseline_lock_black_48dp.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="backButton3" layoutX="745.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="738.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_navigate_before_black_48dp.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextButton3" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard4" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="1115.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
-               </image>
-            </ImageView>
-            <RadioButton fx:id="mastercard3" layoutX="77.0" layoutY="185.0" mnemonicParsing="false" text="Mastercard">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </RadioButton>
-            <RadioButton fx:id="visaRadioButton3" layoutX="228.0" layoutY="185.0" mnemonicParsing="false" text="Visa">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </RadioButton>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="wizardPane4" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;">
          <children>
             <Text layoutX="77.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp" underline="true" AnchorPane.leftAnchor="77.0">
@@ -265,6 +159,112 @@
                   <Font size="21.0" />
                </font>
             </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="wizardPane3" prefHeight="481.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="77.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala" underline="true" AnchorPane.topAnchor="68.626953125">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vänligen ange informationen om kortet du vill använda vid köpet">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Korttyp:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="77.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cardnumber3" layoutX="124.0" layoutY="280.0" prefHeight="34.0" prefWidth="303.0" promptText="1234-1234-1234-1234-1234" style="-fx-border-color: #000000;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="77.0" layoutY="280.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/baseline_payment_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="77.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giltighetstid:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cardLasting3" layoutX="124.0" layoutY="370.0" prefHeight="34.0" prefWidth="115.0" promptText="MM/ÅÅ" style="-fx-border-color: #000000;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="77.0" layoutY="370.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/baseline_event_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="302.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVC:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cvcCode3" layoutX="351.0" layoutY="370.0" prefHeight="34.0" prefWidth="75.0" promptText="123" style="-fx-border-color: #000000;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button layoutX="302.0" layoutY="370.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="43.0" style="-fx-background-color: #ffffff; -fx-border-color: #000000;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sceneImages/baseline_lock_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="backButton3" layoutX="745.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard2" prefHeight="68.0" prefWidth="134.0" style="-fx-border-color: #000000;" text="Tillbaka">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="738.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_navigate_before_black_48dp.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="nextButton3" layoutX="925.0" layoutY="395.0" mnemonicParsing="false" onAction="#toWizard4" prefHeight="68.0" prefWidth="250.0" style="-fx-background-color: #2ba23a; -fx-border-color: #000000;" text="Nästa steg">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="51.0" fitWidth="57.0" layoutX="1115.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sceneImages/baseline_navigate_next_black_48dp.png" />
+               </image>
+            </ImageView>
+            <RadioButton fx:id="mastercard3" layoutX="77.0" layoutY="185.0" mnemonicParsing="false" text="Mastercard">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="visaRadioButton3" layoutX="228.0" layoutY="185.0" mnemonicParsing="false" text="Visa">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </RadioButton>
          </children>
       </AnchorPane>
    </children>

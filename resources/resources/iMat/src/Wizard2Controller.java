@@ -32,6 +32,10 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     private Controller controller;
     private CheckoutPaneController checkoutPaneController;
+    public Customer customer = dh.getCustomer();
+    public CreditCard creditCard = dh.getCreditCard();
+
+
     public Wizard2Controller(CheckoutPaneController cpc){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizard.2.fxml"));
         fxmlLoader.setRoot(this);
@@ -44,7 +48,6 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         }
 
         this.checkoutPaneController=cpc;
-        System.out.println("wizard2Controller konstruktor");
         checkoutPaneController.checkoutPane.getChildren().clear();
         checkoutPaneController.checkoutPane.getChildren().add(this);
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
@@ -55,48 +58,120 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Wizard2Controller initialize");
         wizardPane2.toFront();
-
+        setKnownInfo();
 
     }
+
+    private void setKnownInfo(){
+        addressField2.setText(customer.getAddress());
+        emailField2.setText(customer.getEmail());
+        surname2.setText(customer.getFirstName());
+        lastname2.setText(customer.getLastName());
+        postCity2.setText(customer.getPostAddress());
+        postcode2.setText(customer.getPostCode());
+        //mastercard3
+        //isaRadioButton3
+        cardnumber3.setText(creditCard.getCardNumber());
+        cardLasting3.setText(creditCard.getValidMonth() + "/" + creditCard.getValidYear());
+        cvcCode3.setText(String.valueOf(creditCard.getVerificationCode()));
+        addressDelivery4.setText(customer.getPostAddress());
+        cardForDelivery4.setText(creditCard.getCardNumber());
+
+    }
+
+
+    private void saveInfo(){
+        customer.setAddress(addressField2.getText());
+        customer.setEmail(emailField2.getText());
+        customer.setFirstName(surname2.getText());
+        customer.setLastName(lastname2.getText());
+        //dh.getCustomer().setMobilePhoneNumber();
+        //dh.getCustomer().setPhoneNumber();
+        customer.setPostAddress(postCity2.getText());
+        customer.setPostCode(postcode2.getText());
+        creditCard.setCardNumber(cardnumber3.getText());
+
+        /*
+        if (cardLasting3.getText().length()>1){
+            creditCard.setValidMonth(Integer.parseInt(cardLasting3.getText().substring(0,1)));
+        }
+        if (cardLasting3.getText().length()>3){
+            creditCard.setValidYear(Integer.parseInt(cardLasting3.getText().substring(3)));
+        }
+        if (cvcCode3.getText().length()==3){
+            creditCard.setVerificationCode(Integer.parseInt(cvcCode3.getText()));
+        }
+
+         */
+
+    }
+    /*
+    @FXML RadioButton mastercard3;@FXML RadioButton visaRadioButton3;
+    @FXML TextField cardnumber3;@FXML TextField cardLasting3;@FXML TextField cvcCode3;
+    private void addListenerCardType(){
+
+    }
+    private void addListenerCardnumber3(){
+
+    }
+    private void addListenerCardLasting3(){
+
+    }
+    private void addListenercvcCode3(){
+
+    }
+
+     */
+
+
     @FXML
     public void toWizard1(Event event) throws IOException {
-        System.out.println("till Wizard1");
+        saveInfo();
+        setKnownInfo();
         Wizard1Controller tmp = new Wizard1Controller(controller, checkoutPaneController);
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
         checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
+
     }
     @FXML
     public void toWizard2(Event event) {
+        saveInfo();
+        setKnownInfo();
         wizardPane2.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.png").toString()));
         checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
+
     }
     @FXML
     public void toWizard3(Event event) {
+        saveInfo();
+        setKnownInfo();
         wizardPane3.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
         checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.png").toString()));
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.1.png").toString()));
+
     }
     @FXML
     public void toWizard4(Event event){
+        saveInfo();
+        setKnownInfo();
         wizardPane4.toFront();
         checkoutPaneController.Step1Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-1.1.png").toString()));
         checkoutPaneController.Step2Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-2.1.png").toString()));
         checkoutPaneController.Step3Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-3.1.png").toString()));
         checkoutPaneController.Step4Image.setImage(new Image(getClass().getResource("/sceneImages/Wizard-4.png").toString()));
+
     }
 
     @FXML
     public void toCheckoutComplete(ActionEvent event) throws IOException {
-        System.out.println("toCheckoutComplete användes");
         FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
         Parent root = tmp.load();
         controller = tmp.getController();

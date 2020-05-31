@@ -38,7 +38,6 @@ public class Wizard1Controller extends AnchorPane implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Wizard1Controller initialize");
         for (ShoppingItem si : dh.getShoppingCart().getItems()){
             CheckoutItems tmp = new CheckoutItems(si);
             checkoutItemFlowPane.getChildren().add(tmp);

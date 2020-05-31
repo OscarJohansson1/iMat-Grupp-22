@@ -98,12 +98,10 @@ public class BigItemView extends AnchorPane {
 
     private void updateQuantity(boolean b){
         if (b){
-            System.out.println(product + " har lags till i kundvagnen");
             quantity++;
             quantityItemsTextField.setText(String.valueOf(quantity));
         }
         else {
-            System.out.println(product + " har tagits bort från kundvagnen");
             quantity--;
             quantityItemsTextField.setText(String.valueOf(quantity));
         }

@@ -28,14 +28,10 @@ public class CheckoutPaneController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("något");
-        //checkoutPane.getChildren().clear();
         Wizard1Controller tmp = new Wizard1Controller(controller, this);
-        //checkoutPane.getChildren().add(tmp);
     }
     public void setController(Controller c){
         this.controller = c;
-        System.out.println("setController i CheckoutPaneController");
     }
     @FXML
     public void toHomePageMouseEvent(MouseEvent event) throws IOException {
@@ -55,6 +51,7 @@ public class CheckoutPaneController implements Initializable{
     public void toWizard1(Event event) throws IOException {
         Wizard2Controller w2c = new Wizard2Controller(this);
         w2c.toWizard1(event);
+        System.out.println(dh.getCustomer().getFirstName());
     }
     @FXML
     public void toWizard2(Event event) {
@@ -89,17 +86,6 @@ public class CheckoutPaneController implements Initializable{
     }
     @FXML
     public void toHomePage (ActionEvent event) throws IOException {
-        System.out.println("to HomePage");
-       /*
-       Parent tmp = FXMLLoader.load(getClass().getResource("homePage.fxml"));
-       //kan man hitta controllern från denna?
-       Scene tmpScene = new Scene(tmp);
-
-       Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-       window.setScene(tmpScene);
-       window.show();
-
-        */
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(prepReturnToHomePage());
         window.show();

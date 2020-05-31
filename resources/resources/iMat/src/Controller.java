@@ -51,13 +51,12 @@ public class Controller implements Initializable{
     @FXML private ImageView homeButton; @FXML private Label fruitsAndGreens; @FXML private Label dairyItems;
     @FXML private Label breadItems; @FXML private Label fishItems; @FXML private Label meatItems;
     @FXML private Label pantryItems; @FXML private Label drinkItems; @FXML public AnchorPane differentDetailPane;
-    @FXML private FlowPane cartItemPane; @FXML private Button checkoutButton; @FXML private Label totalLabel;
+    @FXML private FlowPane cartItemPane; @FXML public Button checkoutButton; @FXML private Label totalLabel;
     @FXML private Label totalPrizeLabel; @FXML private AnchorPane homePagePane; @FXML private AnchorPane checkoutPane;
     @FXML private Button backToHomePageButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("controller initialiserades");
         loginPane.toBack();
     }
 
@@ -67,10 +66,6 @@ public class Controller implements Initializable{
         BigDecimal bd = BigDecimal.valueOf(value);
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
-    }
-    public Controller(){
-        System.out.println("controller skapades");
-
     }
 
     @FXML
@@ -123,7 +118,6 @@ public class Controller implements Initializable{
 
     @FXML
     public void toCheckout(ActionEvent event) throws IOException {
-        //TODO checkoutPane är inte klar ännu
         Parent tmp = FXMLLoader.load(getClass().getResource("checkoutPane.fxml"));
 
         //Parent tmp = FXMLLoader.load(getClass().getResource("wizard1.fxml"));
@@ -131,7 +125,6 @@ public class Controller implements Initializable{
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tmpScene);
         window.show();
-        System.out.println("till kassan");
     }
 
       /*
@@ -182,9 +175,6 @@ public class Controller implements Initializable{
             public void shoppingCartChanged(CartEvent cartEvent) {
                 totalPrizeLabel.setText(round(datahandler.getShoppingCart().getTotal(), 2) + " kr");
                 updateCart();
-                for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
-                    System.out.println(si.getProduct());
-                }
             }
         });
     }
@@ -199,7 +189,6 @@ public class Controller implements Initializable{
         fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
         fgc.itemViewPane.setVgap(20);
         fgc.itemViewPane.setHgap(20);
-        System.out.println("används");
         differentDetailPane.getChildren().add(fgc);
         loginPane.toBack();
     }
@@ -248,7 +237,6 @@ public class Controller implements Initializable{
         fgc.itemViewPane.setPadding(new Insets(10,10,10,27));
         fgc.itemViewPane.setVgap(20);
         fgc.itemViewPane.setHgap(20);
-        System.out.println("används");
         differentDetailPane.getChildren().add(fgc);
         loginPane.toBack();
     }
