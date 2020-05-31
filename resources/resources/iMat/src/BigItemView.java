@@ -93,6 +93,31 @@ public class BigItemView extends AnchorPane {
         datahandler.getShoppingCart().addProduct(product);
         updateQuantity(true);
     }
+    @FXML
+    public void changeQuantityFromTextField(ActionEvent event){
+        if (quantityItemsTextField.getText().length()>0){
+            String onlyDigits = quantityItemsTextField.getText().replaceAll("[^0-9]+", "");
+            quantityItemsTextField.setText(onlyDigits);
+            quantity = Integer.parseInt(quantityItemsTextField.getText());
+            //loop som kollar om produkten redan finns i shoppingcarten
+            for (ShoppingItem si : datahandler.getShoppingCart().getItems()){
+                //produkten hittades i shoppingcarten
+                if (si.getProduct()==product){
+                    si.setAmount(quantity);
+                    if (quantity == 0){
+                        datahandler.getShoppingCart().removeItem(si);
+                        return;
+                    }
+                    else {
+                        datahandler.getShoppingCart().fireShoppingCartChanged(si, true);
+                        return;
+                    }
+                }
+            }
+            //produkten hittades inte
+            datahandler.getShoppingCart().addProduct(product, quantity);
+        }
+    }
 
     @FXML
     protected void minusButtonActionPerformed (MouseEvent event){
@@ -142,6 +167,7 @@ public class BigItemView extends AnchorPane {
     }
 
      */
+
 
 
 
