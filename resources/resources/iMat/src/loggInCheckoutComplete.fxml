@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="logginCheckoutCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="815.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="logginCheckoutCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1200.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="224.0" layoutY="156.0" text="Ditt köp har genomförts">
+      <Label layoutX="377.0" layoutY="67.0" text="Ditt köp har genomförts">
          <font>
-            <Font name="Arial Rounded MT Bold" size="32.0" />
+            <Font name="Arial Rounded MT Bold" size="38.0" />
          </font>
       </Label>
-      <Label layoutX="96.0" layoutY="229.0" text="Tack för att du handlar hos oss på iMAT!">
+      <Label layoutX="233.0" layoutY="146.0" text="Tack för att du handlar hos oss på iMAT!">
          <font>
-            <Font name="Arial Rounded MT Bold" size="32.0" />
+            <Font name="Arial Rounded MT Bold" size="38.0" />
          </font>
       </Label>
-      <Button fx:id="checkoutCompleteButton" layoutX="178.0" layoutY="321.0" mnemonicParsing="false" onAction="#returnToHomepage" prefHeight="80.0" prefWidth="459.0" style="-fx-background-color: #97CE72;" text="Tryck här för att komma tillbaka till startsidan">
+      <Button fx:id="checkoutCompleteButton" layoutX="251.0" layoutY="238.0" mnemonicParsing="false" onAction="#returnToHomepage" prefHeight="132.0" prefWidth="707.0" styleClass="checkout_button" stylesheets="@plaincy.css" text="Tryck här för att komma tillbaka till startsidan">
          <font>
-            <Font name="Arial Rounded MT Bold" size="18.0" />
+            <Font name="Arial Rounded MT Bold" size="30.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </fx:root>
