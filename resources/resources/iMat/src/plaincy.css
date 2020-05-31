@@ -60,3 +60,11 @@
 .helptext:hover {
     -fx-underline: true;
 }
+
+.underlinetext {
+    -fx-underline: false;
+}
+
+.underlinetext:hover {
+    -fx-underline: true;
+}

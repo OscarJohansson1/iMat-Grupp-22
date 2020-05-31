@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,7 +14,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label fx:id="myFavoritesBig" layoutX="53.0" layoutY="100.0" onMouseClicked="#myFavoritesPress" text="Mina favoriter">
+      <Label fx:id="myFavoritesBig" layoutX="53.0" layoutY="100.0" onMouseClicked="#myFavoritesPress" styleClass="underlinetext" stylesheets="@plaincy.css" text="Mina favoriter">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,8 +25,11 @@
          <font>
             <Font size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
-      <Label fx:id="myDetialsBig" layoutX="53.0" layoutY="140.0" onMouseClicked="#myDetailsPress" text="Mina uppgifter">
+      <Label fx:id="myDetialsBig" layoutX="53.0" layoutY="140.0" onMouseClicked="#myDetailsPress" styleClass="underlinetext" stylesheets="@plaincy.css" text="Mina uppgifter">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,8 +40,11 @@
          <font>
             <Font size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
-      <Label fx:id="purchaseHistoryBig" layoutX="53.0" layoutY="180.0" onMouseClicked="#myHistoryPress" text="Köphistorik">
+      <Label fx:id="purchaseHistoryBig" layoutX="53.0" layoutY="180.0" onMouseClicked="#myHistoryPress" styleClass="underlinetext" stylesheets="@plaincy.css" text="Köphistorik">
          <graphic>
             <ImageView fitHeight="33.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -48,6 +55,9 @@
          <font>
             <Font size="18.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
    </children>
 </fx:root>
