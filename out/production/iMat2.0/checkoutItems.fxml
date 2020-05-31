@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -29,6 +30,9 @@
          <image>
             <Image url="@sceneImages/baseline_create_black_48dp.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
       <AnchorPane fx:id="checkoutItemEditPane" layoutX="301.0" layoutY="2.0" prefHeight="46.0" prefWidth="267.0">
          <children>
