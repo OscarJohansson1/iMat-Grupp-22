@@ -19,6 +19,7 @@ public class BigItemView extends AnchorPane {
     @FXML TextField quantityItemsTextField;
     @FXML ImageView minusItemImage;
     @FXML ImageView plusItemImage;
+    @FXML ImageView favoriteStarImage;
     public int quantity = 0;
     private final Product product;
     private final IMatDataHandler datahandler;
@@ -54,6 +55,21 @@ public class BigItemView extends AnchorPane {
         });
         minusItemImage.setOnMouseExited(m->{
             minusItemImage.setImage(new Image(getClass().getResource("/sceneImages/baseline_remove_circle_outline_black_18dp.png").toString()));
+        });
+        favoriteStarImage.setOnMouseMoved(m->{
+            favoriteStarImage.setImage(new Image(getClass().getResource("/sceneImages/yellow_star.png").toString()));
+        });
+        favoriteStarImage.setOnMouseClicked(m->{
+            if(datahandler.isFavorite(product)){
+                datahandler.removeFavorite(product);
+            } else {
+                datahandler.addFavorite(product);
+            }
+        });
+        favoriteStarImage.setOnMouseExited(m->{
+            if(!datahandler.isFavorite(product)) {
+                favoriteStarImage.setImage(new Image(getClass().getResource("/sceneImages/outline_star_border_black_48dp.png").toString()));
+            }
         });
     }
 
