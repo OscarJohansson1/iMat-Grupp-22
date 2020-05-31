@@ -214,6 +214,7 @@ public class Controller implements Initializable{
         differentDetailPane.getChildren().add(c);
         loginPane.toBack();
         resetCategoryLabels();
+        updateCart();
     }
     @FXML
     protected void showFruitsAndGreens(MouseEvent event){
