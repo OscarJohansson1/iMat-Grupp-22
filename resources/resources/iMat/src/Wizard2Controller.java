@@ -266,7 +266,9 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
 
     @FXML
     public void toCheckoutComplete(ActionEvent event) throws IOException {
-        FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
+        // Flytta kod till knappen på "Tack för beställning" sidan
+
+        /*FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
         Parent root = tmp.load();
         controller = tmp.getController();
         Scene scene = new Scene(root, 1200, 700);
@@ -277,7 +279,12 @@ public class Wizard2Controller extends AnchorPane implements Initializable {
         dh.getShoppingCart().clear();
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();
+        window.show();*/
+        checkoutPaneController.checkoutPane.getChildren().clear();
+        loggInCheckoutCompleteController temp = new loggInCheckoutCompleteController(checkoutPaneController);
+        checkoutPaneController.checkoutPane.getChildren().add(temp);
+        checkoutPaneController.setVisibleFalse();
+
 /*
         Parent tmp = FXMLLoader.load(getClass().getResource("homePage.fxml"));
         Scene tmpScene = new Scene(tmp);

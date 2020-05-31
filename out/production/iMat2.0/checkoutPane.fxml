@@ -70,7 +70,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #ffffff;">
                <children>
-                  <Label layoutX="33.0" layoutY="24.0" text="Kassa" underline="true">
+                  <Label fx:id="kassaLabel" layoutX="33.0" layoutY="24.0" text="Kassa" underline="true">
                      <font>
                         <Font name="Arial" size="39.0" />
                      </font>
@@ -84,22 +84,22 @@
                      </cursor>
                   </Button>
                   <AnchorPane fx:id="checkoutPane" layoutX="199.0" layoutY="99.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="1198.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="99.0" />
-                  <Text layoutX="355.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
+                  <Text fx:id="step2Label" layoutX="355.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn och adress">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="580.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
+                  <Text fx:id="step3Label" layoutX="580.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betala">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="737.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
+                  <Text fx:id="step4Label" layoutX="737.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avsluta köp">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
-                  <Text layoutX="198.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
+                  <Text fx:id="step1Label" layoutX="198.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorgen">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -109,17 +109,17 @@
                         <Image url="@sceneImages/Wizard-1.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="40.0" fitWidth="124.0" layoutX="273.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="line1" fitHeight="40.0" fitWidth="124.0" layoutX="273.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/streck.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="40.0" fitWidth="124.0" layoutX="453.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="line2" fitHeight="40.0" fitWidth="124.0" layoutX="453.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/streck.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="40.0" fitWidth="124.0" layoutX="634.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="line3" fitHeight="40.0" fitWidth="124.0" layoutX="634.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sceneImages/streck.png" />
                      </image>

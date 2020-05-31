@@ -6,8 +6,8 @@ import javafx.scene.control.Label;import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;import javafx.scene.layout.AnchorPane;import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 import javafx.stage.WindowEvent;
-import org.w3c.dom.Text;
 import se.chalmers.cse.dat216.project.*;import java.io.IOException;import java.math.BigDecimal;import java.math.RoundingMode;
 import java.net.URL;import java.util.*;import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;import javafx.event.ActionEvent;
@@ -22,7 +22,9 @@ public class CheckoutPaneController implements Initializable{
     //@FXML private Button continueAsGuestButton;
     //@FXML private FlowPane checkoutItemFlowPane;
     @FXML AnchorPane checkoutPane;@FXML ImageView Step1Image; @FXML ImageView Step2Image; @FXML ImageView Step3Image;@FXML ImageView Step4Image;
-    @FXML TextField searchBarCheckout; @FXML Button searchBarButtonCheckout; @FXML Label iMatLogo;
+    @FXML TextField searchBarCheckout; @FXML Button searchBarButtonCheckout; @FXML Label iMatLogo; @FXML private ImageView line1;
+    @FXML private ImageView line2; @FXML private ImageView line3; @FXML private Text step1Label; @FXML private Text step2Label;
+    @FXML private Text step3Label; @FXML private Text step4Label; @FXML private Label kassaLabel; @FXML private Button toTheHomepageButton;
     private IMatDataHandler dh = IMatDataHandler.getInstance();
     public Controller controller;
 
@@ -105,6 +107,21 @@ public class CheckoutPaneController implements Initializable{
         setController(controller);
 
         return scene;
+    }
+    public void setVisibleFalse(){
+        line1.setVisible(false);
+        line2.setVisible(false);
+        line3.setVisible(false);
+        step1Label.setVisible(false);
+        step2Label.setVisible(false);
+        step3Label.setVisible(false);
+        step4Label.setVisible(false);
+        Step1Image.setVisible(false);
+        Step2Image.setVisible(false);
+        Step3Image.setVisible(false);
+        Step4Image.setVisible(false);
+        kassaLabel.setVisible(false);
+        toTheHomepageButton.setVisible(false);
     }
 
 }

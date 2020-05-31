@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="logginCheckoutCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="logginCheckoutCompletePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="815.0" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="224.0" layoutY="156.0" text="Ditt köp har genomförts">
          <font>
@@ -18,10 +17,10 @@
             <Font name="Arial Rounded MT Bold" size="32.0" />
          </font>
       </Label>
-      <Button fx:id="checkoutCompleteButton" layoutX="178.0" layoutY="321.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="459.0" style="-fx-background-color: #97CE72;" text="Tryck här för att komma tillbaka till startsidan">
+      <Button fx:id="checkoutCompleteButton" layoutX="178.0" layoutY="321.0" mnemonicParsing="false" onAction="#returnToHomepage" prefHeight="80.0" prefWidth="459.0" style="-fx-background-color: #97CE72;" text="Tryck här för att komma tillbaka till startsidan">
          <font>
             <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
       </Button>
    </children>
-</AnchorPane>
+</fx:root>
