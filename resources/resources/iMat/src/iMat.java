@@ -53,7 +53,6 @@ public class iMat extends Application {
             Runtime.getRuntime().addShutdownHook(printingHook);
 
 
-
             //TODO skapa Wizard1Controller om det behövs
             //Wizard1Controller wiz = new Wizard1Controller();
             //controller.newWindow();

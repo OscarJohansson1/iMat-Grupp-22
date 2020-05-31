@@ -76,7 +76,7 @@ public class myHistoryController extends AnchorPane {
         } else {
             myHistoryDate.setText(("Datum: " + s.substring(first + 1, third)));
         }
-        myHistoryTime.setText("Tid: " + s.substring(third + 1, fourth));
+        myHistoryTime.setText("Tid: kl. " + s.substring(third + 1, fourth - 3));
     }
 
     public void writeTotalPrize(Order order){
