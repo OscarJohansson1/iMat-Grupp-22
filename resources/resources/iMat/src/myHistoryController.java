@@ -71,7 +71,7 @@ public class myHistoryController extends AnchorPane {
         int fourth = s.indexOf(" ", third + 1);
         if(s.substring(first + 1, second).equals("May")) {
             myHistoryDate.setText(("Datum: " + s.substring(second + 1, third) + " Maj"));
-        } else if (s.substring(first + 1, second).equals("June")) {
+        } else if (s.substring(first + 1, second).equals("Jun")) {
             myHistoryDate.setText(("Datum: " + s.substring(second + 1, third) + " Juli"));
         } else {
             myHistoryDate.setText(("Datum: " + s.substring(first + 1, third)));

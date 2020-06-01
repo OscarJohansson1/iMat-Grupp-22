@@ -22,7 +22,6 @@ public class iMat extends Application {
     public void start(Stage stage) throws Exception {
 
         try {
-
             FXMLLoader tmp = new FXMLLoader(getClass().getResource("homePage.fxml"));
             Parent root = tmp.load();
             controller = tmp.getController();

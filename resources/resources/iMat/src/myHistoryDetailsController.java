@@ -34,8 +34,8 @@ public class myHistoryDetailsController extends AnchorPane {
         int third = s.indexOf(" ", second + 1);
         if(s.substring(first + 1, second).equals("May")) {
             dateLabel.setText((s.substring(second + 1, third) + " Maj"));
-        } else if (s.substring(first + 1, second).equals("June")) {
-            dateLabel.setText((s.substring(second + 1, third) + " Juni"));
+        } else if (s.substring(first + 1, second).equals("Jun")) {
+            dateLabel.setText((s.substring(second + 2, third) + " Juni"));
         } else {
             dateLabel.setText((s.substring(first + 1, third)));
         }
